@@ -314,22 +314,23 @@ def json_to_md(filename,md_filename,
 
         if show_badge == True:
             # we don't like long string, break it!
+            # Modified by HuJiaming11: Updated GitHub username from Vincentqyw to HuJiaming11
             f.write((f"[contributors-shield]: https://img.shields.io/github/"
-                     f"contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge\n"))
-            f.write((f"[contributors-url]: https://github.com/Vincentqyw/"
-                     f"cv-arxiv-daily/graphs/contributors\n"))
-            f.write((f"[forks-shield]: https://img.shields.io/github/forks/Vincentqyw/"
-                     f"cv-arxiv-daily.svg?style=for-the-badge\n"))
-            f.write((f"[forks-url]: https://github.com/Vincentqyw/"
-                     f"cv-arxiv-daily/network/members\n"))
-            f.write((f"[stars-shield]: https://img.shields.io/github/stars/Vincentqyw/"
-                     f"cv-arxiv-daily.svg?style=for-the-badge\n"))
-            f.write((f"[stars-url]: https://github.com/Vincentqyw/"
-                     f"cv-arxiv-daily/stargazers\n"))
-            f.write((f"[issues-shield]: https://img.shields.io/github/issues/Vincentqyw/"
-                     f"cv-arxiv-daily.svg?style=for-the-badge\n"))
-            f.write((f"[issues-url]: https://github.com/Vincentqyw/"
-                     f"cv-arxiv-daily/issues\n\n"))
+                     f"contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge\n"))
+            f.write((f"[contributors-url]: https://github.com/HuJiaming11/"
+                     f"rl-arxiv-daily/graphs/contributors\n"))
+            f.write((f"[forks-shield]: https://img.shields.io/github/forks/HuJiaming11/"
+                     f"rl-arxiv-daily.svg?style=for-the-badge\n"))
+            f.write((f"[forks-url]: https://github.com/HuJiaming11/"
+                     f"rl-arxiv-daily/network/members\n"))
+            f.write((f"[stars-shield]: https://img.shields.io/github/stars/HuJiaming11/"
+                     f"rl-arxiv-daily.svg?style=for-the-badge\n"))
+            f.write((f"[stars-url]: https://github.com/HuJiaming11/"
+                     f"rl-arxiv-daily/stargazers\n"))
+            f.write((f"[issues-shield]: https://img.shields.io/github/issues/HuJiaming11/"
+                     f"rl-arxiv-daily.svg?style=for-the-badge\n"))
+            f.write((f"[issues-url]: https://github.com/HuJiaming11/"
+                     f"rl-arxiv-daily/issues\n\n"))
 
     logging.info(f"{task} finished")
 
