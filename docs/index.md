@@ -15,7 +15,6 @@ layout: default
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
 
-# Modified by HuJiaming11: Updated GitHub badge links from Vincentqyw/cv-arxiv-daily to HuJiaming11/rl-arxiv-daily
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
