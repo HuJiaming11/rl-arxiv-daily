@@ -43,6 +43,13 @@ def load_config(config_file:str) -> dict:
     with open(config_file,'r') as f:
         config = yaml.load(f,Loader=yaml.FullLoader)
         config['kv'] = pretty_filters(**config)
+        
+        # 读取领域筛选关键词
+        if 'domain_filters' in config:
+            config['domain_filters'] = config['domain_filters']
+        else:
+            config['domain_filters'] = {}
+        
         logging.info(f'config = {config}')
     return config
 
@@ -83,10 +90,42 @@ def get_code_link(qword:str) -> str:
         code_link = results["items"][0]["html_url"]
     return code_link
 
-def get_daily_papers(topic,query="slam", max_results=2):
+def filter_papers_by_domain(papers_data, domain_filters):
+    '''
+    对论文进行二次筛选，只保留自动驾驶或机器人相关的论文
+    @param papers_data: 字典格式的论文数据 {paper_id: paper_content}
+    @param domain_filters: 领域筛选关键词列表
+    @return: 筛选后的论文数据
+    '''
+    filtered_papers = {}
+    
+    for paper_id, paper_content in papers_data.items():
+        # 从论文内容中提取标题和摘要信息
+        # paper_content格式: "|**{date}**|**{title}**|{authors}|[{arxiv_id}]({url})|{code}|"
+        parts = paper_content.split('|')
+        if len(parts) >= 3:
+            title = parts[2].strip().replace('**', '').replace('**', '')
+            
+            # 检查标题是否包含任何领域关键词
+            match_found = False
+            for keyword in domain_filters:
+                if keyword.lower() in title.lower():
+                    match_found = True
+                    break
+            
+            # 如果标题匹配，保留该论文
+            if match_found:
+                filtered_papers[paper_id] = paper_content
+            else:
+                logging.info(f"Filtered out paper: {title} (no domain keyword match)")
+    
+    return filtered_papers
+
+def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None):
     """
     @param topic: str
     @param query: str
+    @param domain_filters: list, 领域筛选关键词列表
     @return paper_with_code: dict
     """
     # output
@@ -112,6 +151,18 @@ def get_daily_papers(topic,query="slam", max_results=2):
         comments            = result.comment
 
         logging.info(f"Time = {update_time} title = {paper_title} author = {paper_first_author}")
+
+        # 🔍 二次筛选：检查论文标题是否包含领域关键词
+        if domain_filters:
+            domain_match = False
+            for keyword in domain_filters:
+                if keyword.lower() in paper_title.lower():
+                    domain_match = True
+                    break
+            
+            if not domain_match:
+                logging.info(f"Filtered out paper: {paper_title} (no domain keyword match)")
+                continue  # 跳过不匹配的论文
 
         # eg: 2108.09112v1 -> 2108.09112
         ver_pos = paper_id.find('v')
@@ -346,14 +397,29 @@ def demo(**config):
     publish_wechat = config['publish_wechat']
     show_badge = config['show_badge']
 
+    # 🔍 获取领域筛选关键词
+    domain_filters = []
+    if 'domain_filters' in config:
+        for domain, filters in config['domain_filters'].items():
+            domain_filters.extend(filters)
+    
+    if domain_filters:
+        logging.info(f"Domain filtering enabled with keywords: {domain_filters}")
+    else:
+        logging.info("No domain filtering enabled")
+
     b_update = config['update_paper_links']
     logging.info(f'Update Paper Link = {b_update}')
     if config['update_paper_links'] == False:
         logging.info(f"GET daily papers begin")
         for topic, keyword in keywords.items():
             logging.info(f"Keyword: {topic}")
-            data, data_web = get_daily_papers(topic, query = keyword,
-                                            max_results = max_results)
+            data, data_web = get_daily_papers(
+                topic, 
+                query = keyword,
+                max_results = max_results,
+                domain_filters = domain_filters  # 🔍 传递领域筛选关键词
+            )
             data_collector.append(data)
             data_collector_web.append(data_web)
             print("\n")

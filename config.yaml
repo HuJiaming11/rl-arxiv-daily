@@ -37,3 +37,29 @@ keywords:
             "Diffusion Policy",
             "Flow-matching"
         ]
+
+# 二次筛选关键词：用于在获取的论文中进行领域过滤
+domain_filters:
+    autonomous_driving:
+        - "Autonomous Driving"
+        - "Self-driving"
+        - "Self driving"
+        - "Autonomous vehicle"
+        - "Autonomous vehicles"
+        - "Intelligent vehicle"
+        - "Intelligent vehicles"
+        - "Vehicle control"
+        - "path plan"
+        - "trajectory plan"
+        - "motion plan"
+    robotics:
+        - "Robot"
+        - "Robotics"
+        - "Robotic"
+        - "Manipulation"
+        - "Mobile robot"
+        - "Mobile robots"
+        - "Robotic control"
+        - "Robot control"
+        - "Embodied"
+        - "Embodied AI"
