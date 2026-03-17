@@ -4,41 +4,17 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href=#slam>SLAM</a></li>
-    <li><a href=#sfm>SFM</a></li>
-    <li><a href=#visual-localization>Visual Localization</a></li>
-    <li><a href=#keypoint-detection>Keypoint Detection</a></li>
-    <li><a href=#image-matching>Image Matching</a></li>
-    <li><a href=#nerf>NeRF</a></li>
+    <li><a href=#reinforcement-learning>Reinforcement Learning</a></li>
+    <li><a href=#imitation-learning-sft>Imitation Learning & SFT</a></li>
   </ol>
 </details>
 
-## SLAM
+## Reinforcement Learning
 
 |Publish Date|Title|Authors|PDF|Code|
 |---|---|---|---|---|
 
-## SFM
-
-|Publish Date|Title|Authors|PDF|Code|
-|---|---|---|---|---|
-
-## Visual Localization
-
-|Publish Date|Title|Authors|PDF|Code|
-|---|---|---|---|---|
-
-## Keypoint Detection
-
-|Publish Date|Title|Authors|PDF|Code|
-|---|---|---|---|---|
-
-## Image Matching
-
-|Publish Date|Title|Authors|PDF|Code|
-|---|---|---|---|---|
-
-## NeRF
+## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|
 |---|---|---|---|---|
