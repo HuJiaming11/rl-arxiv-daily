@@ -228,10 +228,10 @@ def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None, fi
             
             total_fetched = end_index
             
-            # 如果这批次没有找到任何新论文，说明已经没有更多相关论文了
-            if not new_papers_found:
-                logging.info(f"No matching papers found in iteration {iteration + 1}, stopping search")
-                break
+            # # 如果这批次没有找到任何新论文，说明已经没有更多相关论文了
+            # if not new_papers_found:
+            #     logging.info(f"No matching papers found in iteration {iteration + 1}, stopping search")
+            #     break
             
             matched_count = len(content) - matched_count
             logging.info(f"Iteration {iteration + 1} found {matched_count} matching papers, total: {len(content)}/{final_max_results}")
