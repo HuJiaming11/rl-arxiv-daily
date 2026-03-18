@@ -1,0 +1,100 @@
+def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None, final_max_results=None):
+    """
+    @param topic: str
+    @param query: str
+    @param domain_filters: list, 领域筛选关键词列表
+    @param final_max_results: int, 最终要筛选的论文数量，如果为None则使用max_results
+    @return paper_with_code: dict
+    """
+    # 如果没有指定最终目标数量，则使用max_results
+    if final_max_results is None:
+        final_max_results = max_results
+    
+    # output
+    content = dict()
+    content_to_web = dict()
+    
+    # 如果启用了领域筛选，需要获取更多论文来确保最终有足够数量
+    # 我们使用倍数来获取论文，比如2倍或3倍
+    if domain_filters:
+        # 根据目标数量，动态计算需要获取的论文数量
+        # 使用3倍的目标数量来获取，确保有足够的候选
+        fetch_results = max(final_max_results * 3, max_results)
+        logging.info(f"Domain filtering enabled, will fetch {fetch_results} papers to ensure {final_max_results} final papers")
+    else:
+        fetch_results = max_results
+    
+    search_engine = arxiv.Search(
+        query = query,
+        max_results = fetch_results,
+        sort_by = arxiv.SortCriterion.SubmittedDate
+    )
+
+    matched_count = 0  # 记录匹配的论文数量
+    for result in search_engine.results():
+
+        paper_id            = result.get_short_id()
+        paper_title         = result.title
+        paper_url           = result.entry_id
+        paper_abstract      = result.summary.replace("\n"," ")
+        paper_authors       = get_authors(result.authors)
+        paper_first_author  = get_authors(result.authors,first_author = True)
+        primary_category    = result.primary_category
+        publish_time        = result.published.date()
+        update_time         = result.updated.date()
+        comments            = result.comment
+
+        logging.info(f"Time = {update_time} title = {paper_title} author = {paper_first_author}")
+
+        # 🔍 二次筛选：检查论文标题是否包含领域关键词
+        if domain_filters:
+            domain_match = False
+            for keyword in domain_filters:
+                if keyword.lower() in paper_title.lower():
+                    domain_match = True
+                    break
+            
+            if not domain_match:
+                logging.info(f"Filtered out paper: {paper_title} (no domain keyword match)")
+                continue  # 跳过不匹配的论文
+            
+            matched_count += 1
+            logging.info(f"Matched paper {matched_count}/{final_max_results}: {paper_title}")
+
+        # eg: 2108.09112v1 -> 2108.09112
+        ver_pos = paper_id.find('v')
+        if ver_pos == -1:
+            paper_key = paper_id
+        else:
+            paper_key = paper_id[0:ver_pos]
+        paper_url = arxiv_url + 'abs/' + paper_key
+
+        # Since PapersWithCode API is deprecated, we no longer fetch code links
+        # Papers will be listed without code links
+        content[paper_key] = "|**{}**|**{}**|{} et.al.|[{}]({})|null|\n".format(
+               update_time,paper_title,paper_first_author,paper_key,paper_url)
+        content_to_web[paper_key] = "- {}, **{}**, {} et.al., Paper: [{}]({})".format(
+               update_time,paper_title,paper_first_author,paper_url,paper_url)
+
+        # TODO: select useful comments
+        comments = None
+        if comments != None:
+            content_to_web[paper_key] += f", {comments}\n"
+        else:
+            content_to_web[paper_key] += f"\n"
+
+        # 如果启用了领域筛选且已经达到目标数量，停止获取更多论文
+        if domain_filters and len(content) >= final_max_results:
+            logging.info(f"Reached target of {final_max_results} papers, stopping search")
+            break
+
+    data = {topic:content}
+    data_web = {topic:content_to_web}
+    
+    if domain_filters:
+        logging.info(f"Domain filtering complete: found {len(content)} papers matching domain criteria (target: {final_max_results})")
+    else:
+        logging.info(f"Found {len(content)} papers (no domain filtering)")
+    
+    return data,data_web
+

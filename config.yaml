@@ -6,6 +6,9 @@ show_authors: True
 show_links: True
 show_badge: True
 max_results: 10
+# 最终要筛选的论文数量（启用领域筛选时生效）
+# 如果不设置，默认使用 max_results 的值
+final_max_results: 10
 
 publish_readme: True
 publish_gitpage: True
