@@ -90,37 +90,6 @@ def get_code_link(qword:str) -> str:
         code_link = results["items"][0]["html_url"]
     return code_link
 
-def filter_papers_by_domain(papers_data, domain_filters):
-    '''
-    对论文进行二次筛选，只保留自动驾驶或机器人相关的论文
-    @param papers_data: 字典格式的论文数据 {paper_id: paper_content}
-    @param domain_filters: 领域筛选关键词列表
-    @return: 筛选后的论文数据
-    '''
-    filtered_papers = {}
-    
-    for paper_id, paper_content in papers_data.items():
-        # 从论文内容中提取标题和摘要信息
-        # paper_content格式: "|**{date}**|**{title}**|{authors}|[{arxiv_id}]({url})|{code}|"
-        parts = paper_content.split('|')
-        if len(parts) >= 3:
-            title = parts[2].strip().replace('**', '').replace('**', '')
-            
-            # 检查标题是否包含任何领域关键词
-            match_found = False
-            for keyword in domain_filters:
-                if keyword.lower() in title.lower():
-                    match_found = True
-                    break
-            
-            # 如果标题匹配，保留该论文
-            if match_found:
-                filtered_papers[paper_id] = paper_content
-            else:
-                logging.info(f"Filtered out paper: {title} (no domain keyword match)")
-    
-    return filtered_papers
-
 def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None, final_max_results=None):
     """
     @param topic: str
@@ -170,7 +139,6 @@ def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None, fi
                 break
             
             matched_count = len(content)  # 记录当前匹配的论文数量
-            new_papers_found = False
             
             for result in results:
                 paper_id            = result.get_short_id()
@@ -197,7 +165,6 @@ def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None, fi
                     logging.info(f"Filtered out paper: {paper_title} (no domain keyword match)")
                     continue  # 跳过不匹配的论文
                 
-                new_papers_found = True
                 
                 # eg: 2108.09112v1 -> 2108.09112
                 ver_pos = paper_id.find('v')
@@ -227,11 +194,6 @@ def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None, fi
                     break
             
             total_fetched = end_index
-            
-            # # 如果这批次没有找到任何新论文，说明已经没有更多相关论文了
-            # if not new_papers_found:
-            #     logging.info(f"No matching papers found in iteration {iteration + 1}, stopping search")
-            #     break
             
             matched_count = len(content) - matched_count
             logging.info(f"Iteration {iteration + 1} found {matched_count} matching papers, total: {len(content)}/{final_max_results}")
