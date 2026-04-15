@@ -263,7 +263,7 @@ def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None, fi
                     
                     # 使用offset参数来获取从指定位置开始的论文
                     client = arxiv.Client()
-                    results = list(client.results(search_engine.results, offset=start_index))
+                    results = list(client.results(search_engine, offset=start_index))
                     
                     # 如果获取的结果数量少于预期，说明已经没有更多论文了
                     if len(results) < batch_size:
