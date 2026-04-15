@@ -562,7 +562,7 @@ def json_to_md(filename,md_filename,
                     f.write("|Publish Date|Title|Authors|PDF|Code|摘要|\n" + "|---|---|---|---|---|---|\n")
                 else:
                     f.write("| Publish Date | Title | Authors | PDF | Code | 摘要 |\n")
-                    f.write("|:---------|:-----------------------|:---------|:------|:------|:------|\n")
+                    f.write("|:---------|:-----------------------|:---------|:------|:------|:-------------------------------------|\n")
 
             # sort papers by date
             day_content = sort_papers(day_content)
