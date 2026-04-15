@@ -121,20 +121,13 @@ def summarize_paper_with_llm(paper_title: str, paper_abstract: str, config: dict
     # 构建提示词
     prompt = f"""请用中文对以下论文进行总结，严格按照以下格式输出，总字数控制在300字左右：
 
-【问题】简述研究问题（1-2句话）
-
-【方法】重点说明方法创新，使用分点列举格式，关键概念用**加粗**标记：
-1. **核心概念1**：具体说明
-2. **核心概念2**：具体说明
-3. **核心概念3**：具体说明
-
-【结论】总结主要成果、效果和意义（1-2句话）
+【问题】简述研究问题（1-2句话）【方法】重点说明方法创新，使用分点列举格式，关键概念用**加粗**标记：1. **核心概念1**：具体说明 2. **核心概念2**：具体说明 3. **核心概念3**：具体说明【结论】总结主要成果、效果和意义（1-2句话）
 
 论文标题：{paper_title}
 
 论文摘要：{paper_abstract}
 
-请严格按照上述格式输出，不需要其他解释。"""
+请严格按照上述格式输出，所有内容在同一行内，不要包含换行符，不需要其他解释。"""
 
     # 智谱AI API端点
     api_url = "https://open.bigmodel.cn/api/paas/v4/chat/completions"
@@ -328,10 +321,12 @@ def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None, fi
                 paper_summary = summarize_paper_with_llm(paper_title, paper_abstract, config)
                 logging.info(f"论文摘要: {paper_summary[:100]}...")
 
-                # Since PapersWithCode API is deprecated, we no longer fetch code links
+# Since PapersWithCode API is deprecated, we no longer fetch code links
                 # Papers will be listed without code links
+                # 处理摘要中的换行符，避免破坏表格格式
+                paper_summary_clean = paper_summary.replace('\n', ' ').replace('\r', '')
                 content[paper_key] = "|**{}**|**{}**|{} et.al.|[{}]({})|null|{}|\n".format(
-                       update_time,paper_title,paper_first_author,paper_key,paper_url,paper_summary)
+                       update_time,paper_title,paper_first_author,paper_key,paper_url,paper_summary_clean)
                 content_to_web[paper_key] = "- {}, **{}**, {} et.al., Paper: [{}]({}), Summary: {}".format(
                        update_time,paper_title,paper_first_author,paper_url,paper_url,paper_summary)
 
@@ -390,8 +385,10 @@ def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None, fi
 
             # Since PapersWithCode API is deprecated, we no longer fetch code links
             # Papers will be listed without code links
+            # 处理摘要中的换行符，避免破坏表格格式
+            paper_summary_clean = paper_summary.replace('\n', ' ').replace('\r', '')
             content[paper_key] = "|**{}**|**{}**|{} et.al.|[{}]({})|null|{}|\n".format(
-                   update_time,paper_title,paper_first_author,paper_key,paper_url,paper_summary)
+                   update_time,paper_title,paper_first_author,paper_key,paper_url,paper_summary_clean)
             content_to_web[paper_key] = "- {}, **{}**, {} et.al., Paper: [{}]({}), Summary: {}".format(
                    update_time,paper_title,paper_first_author,paper_url,paper_url,paper_summary)
 
