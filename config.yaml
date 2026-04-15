@@ -69,7 +69,7 @@ domain_filters:
 
 # 大模型API配置
 llm_enabled: True  # 是否启用大模型论文总结功能
-llm_api_key: "your_zhipu_ai_api_key_here"  # 智谱AI API密钥（也可以通过环境变量ZHIPU_API_KEY设置）
+llm_api_key: "413227c6df3b4d1daba3ad2fe4687da3.60Npu0FmohgIaUnS"  # 智谱AI API密钥（也可以通过环境变量ZHIPU_API_KEY设置）
 llm_model: "glm-4"  # 模型名称
 llm_max_retries: 3  # API调用失败时的最大重试次数
 llm_timeout: 60  # API调用超时时间（秒）
