@@ -90,12 +90,128 @@ def get_code_link(qword:str) -> str:
         code_link = results["items"][0]["html_url"]
     return code_link
 
-def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None, final_max_results=None):
+def summarize_paper_with_llm(paper_title: str, paper_abstract: str, config: dict) -> str:
+    """
+    使用智谱AI API对论文进行中文总结
+    @param paper_title: 论文标题
+    @param paper_abstract: 论文摘要
+    @param config: 配置字典，包含API密钥、模型名称等
+    @return: 论文的中文摘要，如果失败则返回错误信息
+    """
+    if not config.get('llm_enabled', False):
+        return "未启用大模型总结功能"
+    
+    api_key = config.get('llm_api_key', '')
+    model = config.get('llm_model', 'glm-4')
+    max_retries = config.get('llm_max_retries', 3)
+    timeout = config.get('llm_timeout', 60)
+    verify_ssl = config.get('llm_verify_ssl', True)
+    
+    # 优先使用环境变量中的API密钥
+    import os
+    env_api_key = os.environ.get('ZHIPU_API_KEY', '')
+    if env_api_key:
+        api_key = env_api_key
+        logging.info("使用环境变量ZHIPU_API_KEY中的API密钥")
+    
+    if not api_key or api_key == "your_zhipu_ai_api_key_here":
+        logging.warning("智谱AI API密钥未配置，跳过摘要生成")
+        return "API密钥未配置"
+    
+    # 构建提示词
+    prompt = f"""请用中文对以下论文进行总结，严格按照以下格式输出，总字数控制在300字左右：
+
+【问题】简述研究问题（1-2句话）【方法】重点说明方法创新，使用分点列举格式，关键概念用**加粗**标记：1. **核心概念1**：具体说明 2. **核心概念2**：具体说明 3. **核心概念3**：具体说明【结论】总结主要成果、效果和意义（1-2句话）
+
+论文标题：{paper_title}
+
+论文摘要：{paper_abstract}
+
+请严格按照上述格式输出，所有内容在同一行内，不要包含换行符，不需要其他解释。"""
+
+    # 智谱AI API端点
+    api_url = "https://open.bigmodel.cn/api/paas/v4/chat/completions"
+    
+    # 智谱AI需要使用JWT token进行认证
+    # 这里我们直接使用API key，因为智谱AI支持直接使用API key
+    # 请求头
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
+    
+    # 请求体
+    payload = {
+        "model": model,
+        "messages": [
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ],
+        "temperature": 0.7,
+        "max_tokens": 500
+    }
+    
+    # 重试机制
+    for attempt in range(max_retries):
+        try:
+            logging.info(f"正在调用智谱AI API生成摘要 (尝试 {attempt + 1}/{max_retries})")
+            
+            # 如果禁用SSL验证，添加警告
+            if not verify_ssl:
+                import urllib3
+                urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+                logging.warning("SSL证书验证已禁用，请确保在安全的环境中使用")
+            
+            response = requests.post(api_url, headers=headers, json=payload, timeout=timeout, verify=verify_ssl)
+            response.raise_for_status()
+            
+            result = response.json()
+            
+            # 提取生成的摘要
+            if 'choices' in result and len(result['choices']) > 0:
+                summary = result['choices'][0]['message']['content'].strip()
+                logging.info(f"成功生成论文摘要: {paper_title[:50]}...")
+                return summary
+            else:
+                logging.error(f"智谱AI API返回格式异常: {result}")
+                return "摘要生成失败：API返回格式异常"
+                
+        except requests.exceptions.Timeout:
+            logging.warning(f"智谱AI API调用超时 (尝试 {attempt + 1}/{max_retries})")
+            if attempt < max_retries - 1:
+                continue
+            return "摘要生成失败：API调用超时"
+            
+        except requests.exceptions.RequestException as e:
+            error_msg = str(e)
+            # 检查是否是SSL相关错误
+            if 'SSL' in error_msg or 'certificate' in error_msg.lower():
+                logging.warning(f"智谱AI API调用失败，SSL证书问题 (尝试 {attempt + 1}/{max_retries}): {error_msg}")
+                logging.warning("建议：在config.yaml中设置 llm_verify_ssl: False 来绕过SSL验证（注意安全风险）")
+                if attempt < max_retries - 1:
+                    continue
+                return f"摘要生成失败：SSL证书验证失败，请设置 llm_verify_ssl: False"
+            else:
+                logging.warning(f"智谱AI API调用失败 (尝试 {attempt + 1}/{max_retries}): {error_msg}")
+                if attempt < max_retries - 1:
+                    continue
+                return f"摘要生成失败：{error_msg}"
+            
+        except (KeyError, IndexError, json.JSONDecodeError) as e:
+            logging.error(f"智谱AI API响应解析失败: {str(e)}")
+            return "摘要生成失败：响应解析异常"
+    
+    return "摘要生成失败：超过最大重试次数"
+
+def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None, final_max_results=None, config=None):
     """
     @param topic: str
     @param query: str
     @param domain_filters: list, 领域筛选关键词列表
     @param final_max_results: int, 最终要筛选的论文数量，如果为None则使用max_results
+    @param config: dict, 配置字典，包含大模型API配置
     @return paper_with_code: dict
     """
     # 如果没有指定最终目标数量，则使用max_results
@@ -124,15 +240,42 @@ def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None, fi
             
             logging.info(f"Iteration {iteration + 1}/{max_iterations}: fetching papers {start_index}-{end_index}")
             
-            search_engine = arxiv.Search(
-                query = query,
-                max_results = end_index,
-                sort_by = arxiv.SortCriterion.SubmittedDate
-            )
+            # 添加arxiv API 429错误的重试逻辑
+            max_arxiv_retries = 5
+            arxiv_retry_delay = 5  # 初始延迟5秒
+            results = []
             
-            # 获取结果并跳过之前已经处理过的论文
-            results = list(search_engine.results())
-            results = results[start_index:]  # 只处理新获取的论文
+            for arxiv_retry in range(max_arxiv_retries):
+                try:
+                    search_engine = arxiv.Search(
+                        query = query,
+                        max_results = end_index,
+                        sort_by = arxiv.SortCriterion.SubmittedDate
+                    )
+                    
+                    # 获取结果并跳过之前已经处理过的论文
+                    results = list(search_engine.results())
+                    results = results[start_index:]  # 只处理新获取的论文
+                    break  # 成功获取结果，退出重试循环
+                    
+                except arxiv.HTTPError as e:
+                    if e.status == 429:  # 速率限制错误
+                        if arxiv_retry < max_arxiv_retries - 1:
+                            # 指数退避：每次重试延迟时间翻倍
+                            delay = arxiv_retry_delay * (2 ** arxiv_retry)
+                            logging.warning(f"arxiv API速率限制，等待 {delay} 秒后重试 (尝试 {arxiv_retry + 1}/{max_arxiv_retries})")
+                            import time
+                            time.sleep(delay)
+                            continue
+                        else:
+                            logging.error(f"arxiv API速率限制，已达到最大重试次数 {max_arxiv_retries}")
+                            raise
+                    else:
+                        # 其他HTTP错误，直接抛出
+                        raise
+                except Exception as e:
+                    logging.error(f"获取arxiv论文时发生错误: {str(e)}")
+                    raise
             
             if not results:
                 logging.info("No more papers available, stopping search")
@@ -174,12 +317,18 @@ def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None, fi
                     paper_key = paper_id[0:ver_pos]
                 paper_url = arxiv_url + 'abs/' + paper_key
 
-                # Since PapersWithCode API is deprecated, we no longer fetch code links
+                # 调用大模型API生成论文摘要
+                paper_summary = summarize_paper_with_llm(paper_title, paper_abstract, config)
+                logging.info(f"论文摘要: {paper_summary[:100]}...")
+
+# Since PapersWithCode API is deprecated, we no longer fetch code links
                 # Papers will be listed without code links
-                content[paper_key] = "|**{}**|**{}**|{} et.al.|[{}]({})|null|\n".format(
-                       update_time,paper_title,paper_first_author,paper_key,paper_url)
-                content_to_web[paper_key] = "- {}, **{}**, {} et.al., Paper: [{}]({})".format(
-                       update_time,paper_title,paper_first_author,paper_url,paper_url)
+                # 处理摘要中的换行符，避免破坏表格格式
+                paper_summary_clean = paper_summary.replace('\n', ' ').replace('\r', '')
+                content[paper_key] = "|**{}**|**{}**|{} et.al.|[{}]({})|null|{}|\n".format(
+                       update_time,paper_title,paper_first_author,paper_key,paper_url,paper_summary_clean)
+                content_to_web[paper_key] = "- {}, **{}**, {} et.al., Paper: [{}]({}), Summary: {}".format(
+                       update_time,paper_title,paper_first_author,paper_url,paper_url,paper_summary)
 
                 # TODO: select useful comments
                 comments = None
@@ -230,12 +379,18 @@ def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None, fi
                 paper_key = paper_id[0:ver_pos]
             paper_url = arxiv_url + 'abs/' + paper_key
 
+            # 调用大模型API生成论文摘要
+            paper_summary = summarize_paper_with_llm(paper_title, paper_abstract, config)
+            logging.info(f"论文摘要: {paper_summary[:100]}...")
+
             # Since PapersWithCode API is deprecated, we no longer fetch code links
             # Papers will be listed without code links
-            content[paper_key] = "|**{}**|**{}**|{} et.al.|[{}]({})|null|\n".format(
-                   update_time,paper_title,paper_first_author,paper_key,paper_url)
-            content_to_web[paper_key] = "- {}, **{}**, {} et.al., Paper: [{}]({})".format(
-                   update_time,paper_title,paper_first_author,paper_url,paper_url)
+            # 处理摘要中的换行符，避免破坏表格格式
+            paper_summary_clean = paper_summary.replace('\n', ' ').replace('\r', '')
+            content[paper_key] = "|**{}**|**{}**|{} et.al.|[{}]({})|null|{}|\n".format(
+                   update_time,paper_title,paper_first_author,paper_key,paper_url,paper_summary_clean)
+            content_to_web[paper_key] = "- {}, **{}**, {} et.al., Paper: [{}]({}), Summary: {}".format(
+                   update_time,paper_title,paper_first_author,paper_url,paper_url,paper_summary)
 
             # TODO: select useful comments
             comments = None
@@ -404,10 +559,10 @@ def json_to_md(filename,md_filename,
 
             if use_title == True :
                 if to_web == False:
-                    f.write("|Publish Date|Title|Authors|PDF|Code|\n" + "|---|---|---|---|---|\n")
+                    f.write("|Publish Date|Title|Authors|PDF|Code|摘要|\n" + "|---|---|---|---|---|---|\n")
                 else:
-                    f.write("| Publish Date | Title | Authors | PDF | Code |\n")
-                    f.write("|:---------|:-----------------------|:---------|:------|:------|\n")
+                    f.write("| Publish Date | Title | Authors | PDF | Code | 摘要 |\n")
+                    f.write("|:---------|:-----------------------|:---------|:------|:------|:------|\n")
 
             # sort papers by date
             day_content = sort_papers(day_content)
@@ -483,7 +638,8 @@ def demo(**config):
                 query = keyword,
                 max_results = max_results,
                 domain_filters = domain_filters,  # 🔍 传递领域筛选关键词
-                final_max_results = final_max_results  # 🔍 传递最终目标论文数量
+                final_max_results = final_max_results,  # 🔍 传递最终目标论文数量
+                config = config  # 🔍 传递配置参数用于API调用
             )
             data_collector.append(data)
             data_collector_web.append(data_web)
