@@ -13,12 +13,12 @@ layout: default
     vertical-align: top;
   }
   /* 根据你的表格列数（共6列）设置宽度比例 */
-  table th:nth-child(1), table td:nth-child(1) { width: 10%; }  /* 发布日期 */
-  table th:nth-child(2), table td:nth-child(2) { width: 18%; }  /* 标题 */
-  table th:nth-child(3), table td:nth-child(3) { width: 15%; }  /* 作者 */
-  table th:nth-child(4), table td:nth-child(4) { width: 7%; }   /* PDF */
-  table th:nth-child(5), table td:nth-child(5) { width: 7%; }   /* 代码 */
-  table th:nth-child(6), table td:nth-child(6) { width: 43%; }  /* 摘要（最后一列） */
+  table th:nth-child(1), table td:nth-child(1) { width: 5%; }  /* 发布日期 */
+  table th:nth-child(2), table td:nth-child(2) { width: 15%;}  /* 标题 */
+  table th:nth-child(3), table td:nth-child(3) { width: 10%;}  /* 作者 */
+  table th:nth-child(4), table td:nth-child(4) { width: 5%; }   /* PDF */
+  table th:nth-child(5), table td:nth-child(5) { width: 5%; }   /* 代码 */
+  table th:nth-child(6), table td:nth-child(6) { width: 60%;}  /* 摘要（最后一列） */
 </style>
 
 ## Updated on 2026.04.15

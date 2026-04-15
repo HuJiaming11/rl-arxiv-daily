@@ -240,22 +240,35 @@ def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None, fi
             
             logging.info(f"Iteration {iteration + 1}/{max_iterations}: fetching papers {start_index}-{end_index}")
             
+            # 添加批次间延迟，避免速率限制
+            if iteration > 0:  # 第一次请求不需要延迟
+                import time
+                batch_delay = 5  # 每批次之间等待5秒
+                logging.info(f"等待 {batch_delay} 秒后开始下一批次请求...")
+                time.sleep(batch_delay)
+            
             # 添加arxiv API 429错误的重试逻辑
-            max_arxiv_retries = 5
-            arxiv_retry_delay = 5  # 初始延迟5秒
+            max_arxiv_retries = 10  # 增加重试次数
+            arxiv_retry_delay = 10     # 增加初始延迟时间
             results = []
             
             for arxiv_retry in range(max_arxiv_retries):
                 try:
+                    # 修改为每次只获取batch_size数量的论文，避免重复获取
                     search_engine = arxiv.Search(
                         query = query,
-                        max_results = end_index,
+                        max_results = batch_size,  # 每次只获取新的一批数据
                         sort_by = arxiv.SortCriterion.SubmittedDate
                     )
                     
-                    # 获取结果并跳过之前已经处理过的论文
-                    results = list(search_engine.results())
-                    results = results[start_index:]  # 只处理新获取的论文
+                    # 使用offset参数来获取从指定位置开始的论文
+                    client = arxiv.Client()
+                    results = list(client.results(search_engine.results, offset=start_index))
+                    
+                    # 如果获取的结果数量少于预期，说明已经没有更多论文了
+                    if len(results) < batch_size:
+                        logging.info(f"获取到的论文数量 {len(results)} 少于预期 {batch_size}，可能已到达结果末尾")
+                    
                     break  # 成功获取结果，退出重试循环
                     
                 except arxiv.HTTPError as e:
@@ -519,6 +532,25 @@ def json_to_md(filename,md_filename,
 
         if (use_title == True) and (to_web == True):
             f.write("---\n" + "layout: default\n" + "---\n\n")
+            # 添加CSS样式控制表格列宽度
+            f.write("<style>\n")
+            f.write("  table {\n")
+            f.write("    table-layout: fixed;\n")
+            f.write("    width: 100%;\n")
+            f.write("  }\n")
+            f.write("  table th, table td {\n")
+            f.write("    word-wrap: break-word;\n")
+            f.write("    padding: 8px;\n")
+            f.write("    vertical-align: top;\n")
+            f.write("  }\n")
+            f.write("  /* 根据表格列数（共6列）设置宽度比例 */\n")
+            f.write("  table th:nth-child(1), table td:nth-child(1) { width: 5%; }  /* 发布日期 */\n")
+            f.write("  table th:nth-child(2), table td:nth-child(2) { width: 15%; }  /* 标题 */\n")
+            f.write("  table th:nth-child(3), table td:nth-child(3) { width: 10%; }  /* 作者 */\n")
+            f.write("  table th:nth-child(4), table td:nth-child(4) { width: 5%; }   /* PDF */\n")
+            f.write("  table th:nth-child(5), table td:nth-child(5) { width: 5%; }   /* 代码 */\n")
+            f.write("  table th:nth-child(6), table td:nth-child(6) { width: 60%; }  /* 摘要（最后一列） */\n")
+            f.write("</style>\n\n")
 
         # if show_badge == True:
         #     f.write(f"[![Contributors][contributors-shield]][contributors-url]\n")
