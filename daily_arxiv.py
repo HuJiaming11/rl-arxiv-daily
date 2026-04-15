@@ -242,15 +242,42 @@ def get_daily_papers(topic, query="slam", max_results=2, domain_filters=None, fi
             
             logging.info(f"Iteration {iteration + 1}/{max_iterations}: fetching papers {start_index}-{end_index}")
             
-            search_engine = arxiv.Search(
-                query = query,
-                max_results = end_index,
-                sort_by = arxiv.SortCriterion.SubmittedDate
-            )
+            # 添加arxiv API 429错误的重试逻辑
+            max_arxiv_retries = 5
+            arxiv_retry_delay = 5  # 初始延迟5秒
+            results = []
             
-            # 获取结果并跳过之前已经处理过的论文
-            results = list(search_engine.results())
-            results = results[start_index:]  # 只处理新获取的论文
+            for arxiv_retry in range(max_arxiv_retries):
+                try:
+                    search_engine = arxiv.Search(
+                        query = query,
+                        max_results = end_index,
+                        sort_by = arxiv.SortCriterion.SubmittedDate
+                    )
+                    
+                    # 获取结果并跳过之前已经处理过的论文
+                    results = list(search_engine.results())
+                    results = results[start_index:]  # 只处理新获取的论文
+                    break  # 成功获取结果，退出重试循环
+                    
+                except arxiv.HTTPError as e:
+                    if e.status == 429:  # 速率限制错误
+                        if arxiv_retry < max_arxiv_retries - 1:
+                            # 指数退避：每次重试延迟时间翻倍
+                            delay = arxiv_retry_delay * (2 ** arxiv_retry)
+                            logging.warning(f"arxiv API速率限制，等待 {delay} 秒后重试 (尝试 {arxiv_retry + 1}/{max_arxiv_retries})")
+                            import time
+                            time.sleep(delay)
+                            continue
+                        else:
+                            logging.error(f"arxiv API速率限制，已达到最大重试次数 {max_arxiv_retries}")
+                            raise
+                    else:
+                        # 其他HTTP错误，直接抛出
+                        raise
+                except Exception as e:
+                    logging.error(f"获取arxiv论文时发生错误: {str(e)}")
+                    raise
             
             if not results:
                 logging.info("No more papers available, stopping search")
