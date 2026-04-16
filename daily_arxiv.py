@@ -536,7 +536,7 @@ def json_to_md(filename,md_filename,
             f.write("<style>\n")
             f.write("  /* 控制整个页面的最大宽度，提升大屏幕阅读体验 */\n")
             f.write("  body {\n")
-            f.write("    max-width: 1400px;\n")
+            f.write("    max-width: 2200px;\n")
             f.write("    margin: 0 auto;\n")
             f.write("    padding: 20px;\n")
             f.write("  }\n")
