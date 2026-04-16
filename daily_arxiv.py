@@ -532,32 +532,9 @@ def json_to_md(filename,md_filename,
 
         if (use_title == True) and (to_web == True):
             f.write("---\n" + "layout: default\n" + "---\n\n")
-            # 添加CSS样式控制表格列宽度
-            f.write("<style>\n")
-            f.write("  /* 控制整个页面的最大宽度，提升大屏幕阅读体验 */\n")
-            f.write("  body {\n")
-            f.write("    max-width: 2200px;\n")
-            f.write("    margin: 0 auto;\n")
-            f.write("    padding: 20px;\n")
-            f.write("  }\n")
-
-            f.write("  table {\n")
-            f.write("    table-layout: fixed;\n")
-            f.write("    width: 100%;\n")
-            f.write("  }\n")
-            f.write("  table th, table td {\n")
-            f.write("    word-wrap: break-word;\n")
-            f.write("    padding: 8px;\n")
-            f.write("    vertical-align: top;\n")
-            f.write("  }\n")
-            f.write("  /* 根据表格列数（共6列）设置宽度比例 */\n")
-            f.write("  table th:nth-child(1), table td:nth-child(1) { width: 5%; }  /* 发布日期 */\n")
-            f.write("  table th:nth-child(2), table td:nth-child(2) { width: 15%; }  /* 标题 */\n")
-            f.write("  table th:nth-child(3), table td:nth-child(3) { width: 10%; }  /* 作者 */\n")
-            f.write("  table th:nth-child(4), table td:nth-child(4) { width: 5%; }   /* PDF */\n")
-            f.write("  table th:nth-child(5), table td:nth-child(5) { width: 5%; }   /* 代码 */\n")
-            f.write("  table th:nth-child(6), table td:nth-child(6) { width: 60%; }  /* 摘要（最后一列） */\n")
-            f.write("</style>\n\n")
+            # 引用外部CSS文件，提升样式优先级和可维护性
+            # 使用相对路径，因为CSS文件在docs/assets/css/custom.css
+            f.write("<link rel=\"stylesheet\" href=\"assets/css/custom.css\">\n\n")
 
         # if show_badge == True:
         #     f.write(f"[![Contributors][contributors-shield]][contributors-url]\n")
