@@ -534,6 +534,13 @@ def json_to_md(filename,md_filename,
             f.write("---\n" + "layout: default\n" + "---\n\n")
             # 添加CSS样式控制表格列宽度
             f.write("<style>\n")
+            f.write("  /* 控制整个页面的最大宽度，提升大屏幕阅读体验 */\n")
+            f.write("  body {\n")
+            f.write("    max-width: 1400px;\n")
+            f.write("    margin: 0 auto;\n")
+            f.write("    padding: 20px;\n")
+            f.write("  }\n")
+
             f.write("  table {\n")
             f.write("    table-layout: fixed;\n")
             f.write("    width: 100%;\n")
