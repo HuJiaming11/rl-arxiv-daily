@@ -74,3 +74,4 @@ llm_model: "glm-4"  # 模型名称
 llm_max_retries: 3  # API调用失败时的最大重试次数
 llm_timeout: 60  # API调用超时时间（秒）
 llm_verify_ssl: False  # 是否验证SSL证书（由于网络环境SSL证书问题，暂时设为False）
+llm_api_call_delay: 2  # API调用之间的延迟时间（秒），避免触发速率限制

@@ -106,9 +106,11 @@ def summarize_paper_with_llm(paper_title: str, paper_abstract: str, config: dict
     max_retries = config.get('llm_max_retries', 3)
     timeout = config.get('llm_timeout', 60)
     verify_ssl = config.get('llm_verify_ssl', True)
+    api_call_delay = config.get('llm_api_call_delay', 2)  # API调用延迟时间（秒）
     
     # 优先使用环境变量中的API密钥
     import os
+    import time  # 添加time模块导入
     env_api_key = os.environ.get('ZHIPU_API_KEY', '')
     if env_api_key:
         api_key = env_api_key
@@ -173,6 +175,12 @@ def summarize_paper_with_llm(paper_title: str, paper_abstract: str, config: dict
             if 'choices' in result and len(result['choices']) > 0:
                 summary = result['choices'][0]['message']['content'].strip()
                 logging.info(f"成功生成论文摘要: {paper_title[:50]}...")
+                
+                # API调用成功后添加延迟，避免触发速率限制
+                if api_call_delay > 0:
+                    logging.info(f"等待 {api_call_delay} 秒后继续...")
+                    time.sleep(api_call_delay)
+                
                 return summary
             else:
                 logging.error(f"智谱AI API返回格式异常: {result}")
