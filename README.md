@@ -1,4 +1,4 @@
-## Updated on 2026.04.27
+## Updated on 2026.04.28
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -92,12 +92,13 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260427>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260428>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-04-26**|**Tube Diffusion Policy: Reactive Visual-Tactile Policy Learning for Contact-rich Manipulation**|Teng Xue et.al.|[2604.23609](http://arxiv.org/abs/2604.23609)|null|<think> 好的，用户让我用中文精简总结这篇论文，严格按照问题、方法、结论的格式，控制在300字以内。首先，我需要仔细阅读论文摘要，抓住核心内容。  问题部分应该指出当前方法的不足。摘要提到现有模仿学习依赖动作分块，这在接触丰富场景中无法快速反应，因为物理不确定性和高频触觉反馈需要即时控制。所以问题就是现有方法在动态环境中的反应不足。  方法部分要突出核心创新点。论文提出Tube Diffusion Policy（TDP），结合扩散模型和管道反馈控制。这里的关键是生成模型构建观察条件反馈流，形成动作管道，允许快速适应。需要避免技术细节，直接说明方法的核心。  结论部分要总结效果。摘要提到TDP在多个基准测试中表现优于现有方法，并在真实实验中验证了鲁棒性，同时减少去噪步骤适合实时控制。需要强调这些结果。  用户要求严格格式，同一行内，不换行，不带其他解释。需要检查字数，确保不超过300字。可能需要调整用词，比如“行动分块”改为“动作分块”，“反应控制”等。要确保每个部分简洁，突出创新点，如“生成模型构建反馈流”、“动作管道”等。  最后检查是否符合所有要求：问题、方法、结论，格式正确，字数控制，没有多余内容。可能需要多次精简，比如合并句子，使用更简短的表达。例如，问题部分可以合并为“现有模仿学习依赖动作分块，难以应对接触丰富场景中的物理不确定性和高频触觉反馈的快速反应需求”。方法部分强调生成模型和管道反馈控制，结论部分提到性能提升和实时应用。 </think> 问题：现有模仿学习依赖动作分块，难以应对接触丰富场景中的物理不确定性和高频触觉反馈的快速反应需求；方法：提出Tube Diffusion Policy，结合扩散模型生成观察条件反馈流构建动作管道实现动态控制；结论：在多个基准测试中性能优于基线，验证了实时高频率触觉反馈下的鲁棒性和低去噪步骤优势。|
 |**2026-04-23**|**FingerEye: Continuous and Unified Vision-Tactile Sensing for Dexterous Manipulation**|Zhixuan Xu et.al.|[2604.20689](http://arxiv.org/abs/2604.20689)|null|
 |**2026-04-22**|**Stability-Driven Motion Generation for Object-Guided Human-Human Co-Manipulation**|Jiahao Xu et.al.|[2604.20336](http://arxiv.org/abs/2604.20336)|null|
 |**2026-04-15**|**HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System**|Tianshuo Yang et.al.|[2604.14125](http://arxiv.org/abs/2604.14125)|null|
@@ -154,7 +155,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260427>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260428>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
