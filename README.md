@@ -1,4 +1,4 @@
-## Updated on 2026.04.28
+## Updated on 2026.04.29
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -13,6 +13,7 @@
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-04-28**|**KinDER: A Physical Reasoning Benchmark for Robot Learning and Planning**|Yixuan Huang et.al.|[2604.25788](http://arxiv.org/abs/2604.25788)|null|<think> 好的，我现在需要处理用户的查询，帮他精简总结这篇论文。首先，用户的要求很明确，要用中文，严格按照问题、方法、结论的格式，总字数控制在300字以内，还要突出核心创新点，避免技术细节，直接输出，不能换行。  首先，我得仔细阅读论文摘要，抓住关键点。论文标题是KinDER，一个机器人学习与规划的物理推理基准。摘要里提到机器人系统需要处理自身、环境和任务带来的运动学、动力学约束。他们提出了KinDER，包含25个生成的环境，兼容Gym的Python库，参数化技能和演示，以及13个基线评估套件，覆盖任务规划、模仿学习、强化学习等方法。环境分五个核心挑战：空间关系、多物体非抓取操作、工具使用、组合几何约束、动态约束，这些与感知、语言理解无关。实验显示现有方法很多环境无法解决，说明现有方法有缺陷，还做了虚实结合的实验，最后开放源码。  接下来要总结成问题、方法、结论。问题部分要说明当前机器人物理推理的挑战和现有方法的不足。方法部分突出KinDER的设计，比如生成的环境、评估套件、五个核心挑战的分离。结论强调实验结果和开放源码的意义。  需要注意用户要求避免技术细节，比如具体的25个环境或13个基线可能不需要详细说明，而是概括为“多模态评估框架”或“标准化评估套件”。核心创新点在于环境设计分五个独立挑战，以及虚实实验验证。要确保语言精简，符合字数限制。  现在检查是否符合格式：问题、方法、结论，同一行，无换行，不包含其他解释。可能需要调整用词，比如“ procedurally generated environments”翻译为“生成式环境”，“disentangled from perception”翻译为“与感知解耦”。确保每个部分不超过字数，比如问题部分可能需要压缩，如“机器人系统需解决物理约束问题，现有方法存在显著缺陷”。  最后，整合所有信息，确保不超过300字，并严格按照用户格式输出。可能需要多次调整，比如将“标准化评估套件”简化为“标准化评估框架”，或者“多模态评估”来涵盖不同方法。确保结论部分提到虚实实验和开源，突出实际应用价值。 </think> 问题：机器人系统需解决物理约束问题，现有方法|
 |**2026-04-23**|**X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation**|Yan Ning et.al.|[2604.21541](http://arxiv.org/abs/2604.21541)|null|
 |**2026-04-23**|**Learn Weightlessness: Imitate Non-Self-Stabilizing Motions on Humanoid Robot**|Yucheng Xin et.al.|[2604.21351](http://arxiv.org/abs/2604.21351)|null|
 |**2026-04-14**|**Tree Learning: A Multi-Skill Continual Learning Framework for Humanoid Robots**|Yifei Yan et.al.|[2604.12909](http://arxiv.org/abs/2604.12909)|null|
@@ -92,12 +93,13 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260428>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260429>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-04-28**|**KinDER: A Physical Reasoning Benchmark for Robot Learning and Planning**|Yixuan Huang et.al.|[2604.25788](http://arxiv.org/abs/2604.25788)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
 |**2026-04-26**|**Tube Diffusion Policy: Reactive Visual-Tactile Policy Learning for Contact-rich Manipulation**|Teng Xue et.al.|[2604.23609](http://arxiv.org/abs/2604.23609)|null|<think> 好的，用户让我用中文精简总结这篇论文，严格按照问题、方法、结论的格式，控制在300字以内。首先，我需要仔细阅读论文摘要，抓住核心内容。  问题部分应该指出当前方法的不足。摘要提到现有模仿学习依赖动作分块，这在接触丰富场景中无法快速反应，因为物理不确定性和高频触觉反馈需要即时控制。所以问题就是现有方法在动态环境中的反应不足。  方法部分要突出核心创新点。论文提出Tube Diffusion Policy（TDP），结合扩散模型和管道反馈控制。这里的关键是生成模型构建观察条件反馈流，形成动作管道，允许快速适应。需要避免技术细节，直接说明方法的核心。  结论部分要总结效果。摘要提到TDP在多个基准测试中表现优于现有方法，并在真实实验中验证了鲁棒性，同时减少去噪步骤适合实时控制。需要强调这些结果。  用户要求严格格式，同一行内，不换行，不带其他解释。需要检查字数，确保不超过300字。可能需要调整用词，比如“行动分块”改为“动作分块”，“反应控制”等。要确保每个部分简洁，突出创新点，如“生成模型构建反馈流”、“动作管道”等。  最后检查是否符合所有要求：问题、方法、结论，格式正确，字数控制，没有多余内容。可能需要多次精简，比如合并句子，使用更简短的表达。例如，问题部分可以合并为“现有模仿学习依赖动作分块，难以应对接触丰富场景中的物理不确定性和高频触觉反馈的快速反应需求”。方法部分强调生成模型和管道反馈控制，结论部分提到性能提升和实时应用。 </think> 问题：现有模仿学习依赖动作分块，难以应对接触丰富场景中的物理不确定性和高频触觉反馈的快速反应需求；方法：提出Tube Diffusion Policy，结合扩散模型生成观察条件反馈流构建动作管道实现动态控制；结论：在多个基准测试中性能优于基线，验证了实时高频率触觉反馈下的鲁棒性和低去噪步骤优势。|
 |**2026-04-23**|**FingerEye: Continuous and Unified Vision-Tactile Sensing for Dexterous Manipulation**|Zhixuan Xu et.al.|[2604.20689](http://arxiv.org/abs/2604.20689)|null|
 |**2026-04-22**|**Stability-Driven Motion Generation for Object-Guided Human-Human Co-Manipulation**|Jiahao Xu et.al.|[2604.20336](http://arxiv.org/abs/2604.20336)|null|
@@ -155,7 +157,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260428>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260429>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
