@@ -27,7 +27,7 @@ layout: default
   table th:nth-child(6), table td:nth-child(6) { width: 60%; }  /* 摘要（最后一列） */
 </style>
 
-## Updated on 2026.05.01
+## Updated on 2026.05.02
 > Usage instructions: [here](./docs/README.md#usage)
 
 ## Reinforcement Learning
