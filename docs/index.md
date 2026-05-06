@@ -27,13 +27,16 @@ layout: default
   table th:nth-child(6), table td:nth-child(6) { width: 60%; }  /* 摘要（最后一列） */
 </style>
 
-## Updated on 2026.05.05
+## Updated on 2026.05.06
 > Usage instructions: [here](./docs/README.md#usage)
 
 ## Reinforcement Learning
 
 | Publish Date | Title | Authors | PDF | Code | 摘要 |
 |:---------|:-----------------------|:---------|:------|:------|:-------------------------------------|
+|**2026-05-05**|**SigLoMa: Learning Open-World Quadrupedal Loco-Manipulation from Ego-Centric Vision**|Shiyi Chen et.al.|[2605.03846](http://arxiv.org/abs/2605.03846)|null|<think> 好的，我需要帮用户精简总结这篇论文。首先，用户要求严格按照【问题】【方法】，总字数控制在300字以内，并且突出核心创新点，避免技术细节。用户还特别强调要直接输出总结内容，同一行内，不要换行符和其他解释。  首先看论文标题和摘要。问题部分主要是设计开放世界的四足移动抓取系统面临的挑战，包括传统强化学习使用外感知的样本效率低、虚实差距大，视觉追踪的延迟与高频率控制冲突，导致依赖外部捕捉和计算。方法部分提到了Sigma Points、自研的卡尔曼滤波、主动采样课程和时序编码结合模拟随机行走漂移。结论是SigLoMa在低延迟下有效执行任务，性能接近人类操作。  需要将问题、方法、结论分别提炼。问题要简明，突出挑战：开放世界四足移动抓取的样本效率低、虚实差距大、视觉延迟与控制频率冲突。方法部分要强调Sigma Points和卡尔曼滤波，以及主动采样和时序编码。结论要说明低延迟下的有效性和性能。  注意用户要求不要技术细节，所以Sigma Points作为几何表示，卡尔曼滤波用于状态估计，主动采样课程和时序编码处理盲区和样本效率。结论部分提到5Hz检测器和任务执行效果。  现在组合起来，确保不超过300字，同一行，没有换行。检查是否符合格式，问题、方法、结论是否清晰，核心创新点是否突出。可能需要调整用词，比如“Sigma Points”和“ego-centric Kalman Filter”是关键，主动采样和时序编码也要提到。确保每个部分简洁，没有冗余。 </think> 【问题】开放世界四足移动抓取系统面临样本效率低、虚实差距大、视觉延迟与控制频率冲突等挑战；【方法】提出Sigma Points几何表示提升感知效率， ego-centric Kalman Filter实现高频状态估计，结合主动采样课程和时序编码处理视觉盲区与样本稀缺；【结论】在5Hz视觉检测下成功执行动态抓取，性能接近人类操作且无需外部捕捉。|
+|**2026-05-05**|**SOAR: Real-Time Joint Optimization of Order Allocation and Robot Scheduling in Robotic Mobile Fulfillment Systems**|Yibang Tang et.al.|[2605.03842](http://arxiv.org/abs/2605.03842)|null|<think> 好的，我现在需要帮用户用中文精简总结这篇论文，严格按照问题、方法、结论的格式，控制在300字以内。首先，我得仔细阅读用户提供的论文摘要，抓住核心内容。  论文标题是SOAR，关于实时联合优化订单分配和机器人调度。问题部分应该提到实时约束和决策耦合的挑战，以及现有方法的问题，比如分解任务导致局部优化或计算成本高。方法部分要突出SOAR的创新点，比如统一框架、事件驱动的MDP、异构图Transformer和奖励塑造。结论需要说明实验结果，比如效率提升和延迟低，还有代码开源。  用户强调要突出核心创新点，避免技术细节，所以得用简洁的语言。同时要严格按照格式，所有内容在同一行，不用换行，不加其他解释。需要检查字数是否在限制内，可能需要调整措辞，比如“软订单分配”简化为“软分配”等。确保问题、方法、结论各部分清晰，没有冗余信息。最后确认格式正确，没有使用任何markdown，符合用户的所有要求。 </think> 问题：实时联合优化订单分配与机器人调度存在强耦合决策、现有方法或牺牲全局最优或计算成本过高；方法：SOAR采用事件驱动MDP框架统一优化，通过软分配观测和异构图Transformer融合多阶段知识，结合奖励塑造提升长周期任务效果；结论：在真实场景中使全局完成时间减少7.5%、平均订单处理提速15.4%，延迟低于100ms且具备虚实部署验证。|
+|**2026-05-05**|**RoboAlign-R1: Distilled Multimodal Reward Alignment for Robot Video World Models**|Hao Wu et.al.|[2605.03821](http://arxiv.org/abs/2605.03821)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
 |**2026-05-04**|**Enhancing RL Generalizability in Robotics through SHAP Analysis of Algorithms and Hyperparameters**|Lingxiao Kong et.al.|[2605.02867](http://arxiv.org/abs/2605.02867)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
 |**2026-05-01**|**Learning while Deploying: Fleet-Scale Reinforcement Learning for Generalist Robot Policies**|Yi Wang et.al.|[2605.00416](http://arxiv.org/abs/2605.00416)|null|
 |**2026-04-29**|**ATLAS: An Annotation Tool for Long-horizon Robotic Action Segmentation**|Sergej Stanovcic et.al.|[2604.26637](http://arxiv.org/abs/2604.26637)|null|
