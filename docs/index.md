@@ -27,7 +27,7 @@ layout: default
   table th:nth-child(6), table td:nth-child(6) { width: 60%; }  /* 摘要（最后一列） */
 </style>
 
-## Updated on 2026.05.06
+## Updated on 2026.05.08
 > Usage instructions: [here](./docs/README.md#usage)
 
 ## Reinforcement Learning
@@ -124,6 +124,7 @@ layout: default
 
 | Publish Date | Title | Authors | PDF | Code | 摘要 |
 |:---------|:-----------------------|:---------|:------|:------|:-------------------------------------|
+|**2026-05-07**|**OA-WAM: Object-Addressable World Action Model for Robust Robot Manipulation**|Yushan Liu et.al.|[2605.06481](http://arxiv.org/abs/2605.06481)|null|<think> 好的，用户让我总结一篇关于OA-WAM的论文，按照问题、方法、结论的格式，控制在300字以内，还要突出核心创新点，避免技术细节。首先，我需要仔细阅读用户提供的摘要，抓住关键点。  问题部分，用户提到现有WAM方法用整体图像、视频token或全局潜在表示，导致难以针对特定物体行动，特别是在场景变化时物体身份与上下文混淆。这应该是问题的核心。  方法部分，OA-WAM分解帧为N+1个槽状态，包括机器人槽和N个物体槽，每个槽有地址向量和内容向量。地址向量用于路由注意力，分离动作对象和内容。还有世界头预测下一帧，流程匹配解码器处理连续动作。需要强调槽结构、地址路由和分离对象与内容。  结论部分，OA-WAM在多个基准上表现优异，尤其在几何轴任务上达到SOTA，且干预测试显示地址槽的有效性，对比 holistic方法效果更好。要突出结果的优势和有效性。  用户要求严格格式，同一行内，无换行，无其他解释。需要检查字数，确保不超过300字。同时要避免技术细节，比如具体的模型结构如transformer层、注意力机制的具体实现，只保留核心创新点。  可能需要注意术语的一致性，比如“address-only keys”可以简化为“地址路由机制”。另外，确保问题、方法、结论之间逻辑连贯，突出OA-WAM如何解决现有问题，采用什么方法，结果如何。  现在需要将问题、方法、结论各部分用简洁的语言表达，确保符合用户格式要求。例如：  问题：现有WAM用整体表示，难以针对特定物体行动，场景变化时物体身份与上下文混淆。  方法：OA-WAM分解帧为槽状态，地址向量路由注意力，分离对象与内容，世界头预测，流程匹配解码。  结论：在多个基准上表现优异，几何轴SOTA，干预测试显示地址槽有效性，对比holistic方法提升明显。  检查字数，确保在限制内，没有多余信息，格式正确。确认没有技术细节，如具体的实验结果数值可能可以省略，但用户提供的摘要中有具体数据，可能需要保留关键数据如97.8%、79.3%等，但用户示例中没有包含，可能用户希望避免具体数值，所以可能需要调整。根据用户示例，他们|
 |**2026-05-01**|**MSACT: Multistage Spatial Alignment for Stable Low-Latency Fine Manipulation**|Xianbo Cai et.al.|[2605.00475](http://arxiv.org/abs/2605.00475)|null|
 |**2026-05-01**|**Stereo Multistage Spatial Attention for Real-Time Mobile Manipulation Under Visual Scale Variation and Disturbances**|Xianbo Cai et.al.|[2605.00471](http://arxiv.org/abs/2605.00471)|null|
 |**2026-05-01**|**Learning while Deploying: Fleet-Scale Reinforcement Learning for Generalist Robot Policies**|Yi Wang et.al.|[2605.00416](http://arxiv.org/abs/2605.00416)|null|
