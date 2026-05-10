@@ -1,4 +1,4 @@
-## Updated on 2026.05.08
+## Updated on 2026.05.10
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -99,13 +99,13 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260508>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260510>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
-|**2026-05-07**|**OA-WAM: Object-Addressable World Action Model for Robust Robot Manipulation**|Yushan Liu et.al.|[2605.06481](http://arxiv.org/abs/2605.06481)|null|<think> 好的，用户让我总结一篇关于OA-WAM的论文，按照问题、方法、结论的格式，控制在300字以内，还要突出核心创新点，避免技术细节。首先，我需要仔细阅读用户提供的摘要，抓住关键点。  问题部分，用户提到现有WAM方法用整体图像、视频token或全局潜在表示，导致难以针对特定物体行动，特别是在场景变化时物体身份与上下文混淆。这应该是问题的核心。  方法部分，OA-WAM分解帧为N+1个槽状态，包括机器人槽和N个物体槽，每个槽有地址向量和内容向量。地址向量用于路由注意力，分离动作对象和内容。还有世界头预测下一帧，流程匹配解码器处理连续动作。需要强调槽结构、地址路由和分离对象与内容。  结论部分，OA-WAM在多个基准上表现优异，尤其在几何轴任务上达到SOTA，且干预测试显示地址槽的有效性，对比 holistic方法效果更好。要突出结果的优势和有效性。  用户要求严格格式，同一行内，无换行，无其他解释。需要检查字数，确保不超过300字。同时要避免技术细节，比如具体的模型结构如transformer层、注意力机制的具体实现，只保留核心创新点。  可能需要注意术语的一致性，比如“address-only keys”可以简化为“地址路由机制”。另外，确保问题、方法、结论之间逻辑连贯，突出OA-WAM如何解决现有问题，采用什么方法，结果如何。  现在需要将问题、方法、结论各部分用简洁的语言表达，确保符合用户格式要求。例如：  问题：现有WAM用整体表示，难以针对特定物体行动，场景变化时物体身份与上下文混淆。  方法：OA-WAM分解帧为槽状态，地址向量路由注意力，分离对象与内容，世界头预测，流程匹配解码。  结论：在多个基准上表现优异，几何轴SOTA，干预测试显示地址槽有效性，对比holistic方法提升明显。  检查字数，确保在限制内，没有多余信息，格式正确。确认没有技术细节，如具体的实验结果数值可能可以省略，但用户提供的摘要中有具体数据，可能需要保留关键数据如97.8%、79.3%等，但用户示例中没有包含，可能用户希望避免具体数值，所以可能需要调整。根据用户示例，他们|
+|**2026-05-07**|**OA-WAM: Object-Addressable World Action Model for Robust Robot Manipulation**|Yushan Liu et.al.|[2605.06481](http://arxiv.org/abs/2605.06481)|null|<think> 好的，我现在需要处理用户的查询，帮他精简总结一篇论文。首先，我得仔细阅读用户的要求，确保完全理解。用户希望用中文，严格按照【问题】【方法】，总字数控制在300字以内，并且要突出核心创新点，避免技术细节。输出格式必须严格按照指定，所有内容在同一行，不要换行符，不要其他解释。  首先，我需要分析论文的摘要。论文标题是OA-WAM，提出了一种对象可寻址的世界动作模型，用于鲁棒机器人抓取。问题部分应该是现有WAM方法在处理特定对象时的不足，比如使用整体图像或全局潜在表示，难以在指令中准确寻址对象，特别是在场景变化时对象身份与上下文纠缠。方法部分则是OA-WAM的创新点，分解帧为N+1个槽位，每个槽位有持久地址向量和时变内容向量，通过路由注意力分离对象选择和动作解码，同时保持因果结构。结论部分需要说明实验结果，比如在多个基准测试中的表现优于基线，以及因果测试中的优势。  接下来要检查是否符合用户格式要求。用户要求严格按照【问题】【方法】，总字数300字以内。需要确保问题和方法部分简洁，突出核心创新，比如对象槽位分解、地址路由机制、因果结构等。避免技术细节，比如具体的模型架构或参数设置，只保留关键点。  然后要确保语言精简，用最少的字表达清楚。例如，问题部分可以总结为现有方法难以在指令中寻址特定对象，特别是场景变化时。方法部分强调槽位分解、地址向量、路由注意力、因果融合等。结论部分提到性能提升和因果测试结果。  最后检查格式是否正确，所有内容在同一行，没有换行符，没有多余的解释。确保字数不超过限制，可能需要多次调整措辞，比如将“路由注意力通过地址仅的键”简化为“地址路由注意力分离对象选择与动作解码”，同时保持核心信息不变。  现在，整合所有信息，确保每个部分准确无误，符合用户要求。可能还需要对比基线结果，如LIBERO和SimplerEnv的数据，以及因果测试的cosine值，以突出OA-WAM的优势。最终生成一个紧凑的总结，满足所有用户指定的格式和内容要求。 </think> 【问题】现有世界动作模型(WAM)通过全局图像|
 |**2026-05-01**|**MSACT: Multistage Spatial Alignment for Stable Low-Latency Fine Manipulation**|Xianbo Cai et.al.|[2605.00475](http://arxiv.org/abs/2605.00475)|null|
 |**2026-05-01**|**Stereo Multistage Spatial Attention for Real-Time Mobile Manipulation Under Visual Scale Variation and Disturbances**|Xianbo Cai et.al.|[2605.00471](http://arxiv.org/abs/2605.00471)|null|
 |**2026-05-01**|**Learning while Deploying: Fleet-Scale Reinforcement Learning for Generalist Robot Policies**|Yi Wang et.al.|[2605.00416](http://arxiv.org/abs/2605.00416)|null|
@@ -167,7 +167,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260508>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260510>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
