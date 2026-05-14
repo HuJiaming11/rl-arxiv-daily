@@ -1,4 +1,4 @@
-## Updated on 2026.05.13
+## Updated on 2026.05.14
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -13,6 +13,8 @@
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-05-13**|**RoboEvolve: Co-Evolving Planner-Simulator for Robotic Manipulation with Limited Data**|Harold Haodong Chen et.al.|[2605.13775](http://arxiv.org/abs/2605.13775)|null|<think> 好的，我现在需要帮用户用中文精简总结这篇论文，严格按照问题、方法、结论的格式，控制在300字以内。首先，我得仔细阅读用户提供的论文信息，确保不遗漏关键点。  论文标题是RoboEvolve，主要解决机器人抓取任务的数据不足问题。摘要里提到传统方法如VLM和VGM存在语义空间不匹配和物理幻觉的问题。他们的方法是用一个VLM规划器和一个VGM模拟器互相强化，形成进化循环。核心创新点在于昼夜双阶段机制：白天探索用语义控制的奖励发现物理行为，晚上巩固通过“失败”案例优化。还有渐进式课程学习，数据效率高，500张未标注种子图就能超越全监督方法，并且持续学习能力强。  用户要求突出核心创新，避免技术细节。所以问题部分要简明点出数据稀缺和现有模型的缺陷。方法部分要强调双阶段和课程学习，结论则突出效果和效率。需要注意格式，所有内容在同一行，不换行，不带解释。要检查字数，确保不超过300字。可能需要调整用词，比如“语义-空间不匹配”和“物理幻觉”要准确。然后组合成三部分，确保流畅自然。最后再检查是否符合用户的所有要求，特别是格式和字数限制。 </think> 问题：机器人抓取任务因物理交互数据稀缺导致可扩展性受限，现有数据生成模型存在语义-空间不匹配与物理幻觉问题；方法：提出RoboEvolve框架，通过VLM规划器与VGM模拟器昼夜双阶段协同进化，白天以语义控制多粒度奖励探索物理行为，夜间利用"近失"失败案例优化策略，结合自主渐进式课程学习；结论：相比基线提升30绝对点与48%成功率，仅需500未标注种子图实现50倍数据效率提升，并具备持续学习抗遗忘能力。|
+|**2026-05-13**|**Robot Squid Game: Quadrupedal Locomotion for Traversing Narrow Tunnels**|Amir Hossain Raj et.al.|[2605.13665](http://arxiv.org/abs/2605.13665)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
 |**2026-05-11**|**Plan in Sandbox, Navigate in Open Worlds: Learning Physics-Grounded Abstracted Experience for Embodied Navigation**|Zhixuan Shen et.al.|[2605.10118](http://arxiv.org/abs/2605.10118)|null|<think> 好的，我现在需要处理用户的查询，帮他精简总结一篇论文。首先，我得仔细阅读用户的要求，确保完全理解。用户希望用中文，严格按照【问题】【方法】，总字数控制在300字以内，并且要突出核心创新点，避免技术细节。  论文的标题是“Plan in Sandbox, Navigate in Open Worlds: Learning Physics-Grounded Abstracted Experience for Embodied Navigation”，摘要里提到VLMs在具身导航中的表现受限于数据不足和模拟环境的问题。他们提出的SAGE框架通过三个阶段解决这些问题，效果显著。  接下来，我需要按照用户指定的格式来组织内容。用户要求分【问题】和【方法】，结论部分可能不需要，但根据示例，用户可能希望包含结论。不过仔细看用户给的示例回复，他们确实包含了【结论】，所以可能用户之前的描述有误。需要再仔细看用户的问题描述。  用户提供的示例回复是：【问题】具身导航中VLMs因开放世界数据缺乏及仿真环境局限性导致迁移困难；【方法】提出SAGE框架，通过构建物理约束语义环境（Genesis）、强化学习蒸馏经验（Evolution）和抽象到现实的导航（Navigation）三阶段；【结论】在A-EQA上成功率达53.21%，提升9.7%，并验证了物理部署的有效性。  所以用户实际上希望包括【问题】【方法】【结论】，但原问题部分可能用户有笔误。现在需要严格按照用户给出的格式，即【问题】【方法】，总字数控制在300字以内，但用户提供的示例却包含了结论。可能用户希望按照标题中的三个部分，但问题描述中的格式是【问题】【方法】，总字数控制在300字以内，可能用户有矛盾。  需要再仔细看用户的问题描述：  用户要求：“请用中文精简总结以下论文，严格按照【问题】【方法】，总字数控制在300字以内：  【问题】 【方法】 【结论】  论文标题：...”  看起来用户可能希望按照三个部分来总结，但问题描述中只提到【问题】【方法】，可能用户有误。但根据示例回复，用户确实希望包含结论。所以可能需要按照三个部分来总结，但总字数控制在300字以内。不过用户提供的示例回复中，三个部分的总字数应该不超过300字。  现在需要处理论文内容：  问题部分：VLMs在具身导航|
 |**2026-05-11**|**Beyond Self-Play and Scale: A Behavior Benchmark for Generalization in Autonomous Driving**|Aron Distelzweig et.al.|[2605.10034](http://arxiv.org/abs/2605.10034)|null|<think> 好的，我需要帮用户总结这篇论文，按照指定格式，控制在300字以内，突出核心创新点，避免技术细节。首先，我得仔细阅读用户提供的论文摘要，提取关键信息。  论文标题是“Beyond Self-Play and Scale: A Behavior Benchmark for Generalization in Autonomous Driving”，核心问题应该是现有自动驾驶的强化学习（RL）在规模化训练后缺乏标准评估，导致性能未知。方法部分提到了 BehaviorBench，涵盖三个轴：评估、复杂性和行为多样性。评估方面，连接PufferDrive到nuPlan，还有内部评估框架。复杂性方面，从WOMD提取需要多智能体交互的数据。行为多样性方面，引入多种交通 agent，不只是IDM。结论是纯自博弈的RL政策过拟合，提出混合规划器。  用户要求严格按照【问题】【方法】，总字数300以内，直接输出，同一行，无换行，无解释。需要确保每个部分简洁，突出创新点。问题部分要说明现有评估不足，方法部分分三个创新点，结论指出过拟合问题及解决方案。  现在检查是否符合要求：问题是否明确，方法是否涵盖三个核心创新，结论是否点出核心发现和解决方法。确保没有技术细节，如具体模型名称或算法步骤，只保留关键点。字数方面，当前草稿大约200字左右，符合要求。最后确保格式正确，没有换行，用【】括起各部分，用中文。 </think> 【问题】自动驾驶规模化强化学习政策缺乏标准化评估体系，无法验证其泛化能力与多场景适应性；【方法】构建BehaviorBench基准测试，从评估接口（连接PufferDrive与nuPlan）、复杂场景（基于WOMD的多智能体交互数据集）及行为多样性（多类型交通agent）三方面突破传统单一评估框架；【结论】揭示纯自博弈RL政策存在训练对手过拟合问题，提出混合规划器融合PPO政策与规则基规划器提升泛化能力。|
 |**2026-05-08**|**123D: Unifying Multi-Modal Autonomous Driving Data at Scale**|Daniel Dauner et.al.|[2605.08084](http://arxiv.org/abs/2605.08084)|null|
@@ -103,12 +105,13 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260513>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260514>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-05-13**|**SID: Sliding into Distribution for Robust Few-Demonstration Manipulation**|Yicheng Ma et.al.|[2605.13428](http://arxiv.org/abs/2605.13428)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
 |**2026-05-12**|**Morphologically Equivariant Flow Matching for Bimanual Mobile Manipulation**|Max Siebenborn et.al.|[2605.12228](http://arxiv.org/abs/2605.12228)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
 |**2026-05-11**|**HeteroGenManip: Generalizable Manipulation For Heterogeneous Object Interactions**|Zhenhao Shen et.al.|[2605.10201](http://arxiv.org/abs/2605.10201)|null|<think> 好的，我需要帮用户总结这篇论文，严格按照指定的格式，控制在300字以内，突出核心创新点，避免技术细节。首先，用户给了一个结构：问题、方法、结论，每部分用方括号括起来，中间用竖线分隔。  先看论文摘要。问题部分提到，通用跨类型物体交互操作在机器人中是关键但困难的，主要挑战是确定接触点和规划后续轨迹。现有方法用端到端学习，导致误差累积，而且依赖单一模型，无法捕捉不同类别物体的特征。  方法部分，作者提出了HeteroGenManip，分两阶段：第一阶段是结构引导的抓取模块，利用结构先验对齐初始接触状态，减少抓取不确定性。第二阶段是多基础模型扩散策略，通过双流交叉注意力整合几何信息和部件特征，路由到专用模型。  结论部分，实验显示该方法在仿真和现实任务中分别提升31%和36.7%，实现了跨类别和跨任务的泛化。  现在需要精简这些内容，突出创新点。问题要简明，说明现有方法的不足。方法部分强调两阶段框架和两个核心模块。结论突出性能提升和泛化能力。  检查字数，确保不超过300字。用户要求所有内容在同一行，无换行，格式正确。最后确认是否遗漏核心创新点，比如分阶段、结构先验、双流注意力、跨模型路由等。确保不包含技术细节，如具体模块名称可能需要简化，但用户给的例子中保留了模块名称，所以可能需要保留。  最终整理成：问题：跨类型物体交互需解决接触点定位和轨迹规划，现有端到端方法误差累积且模型单一。方法：提出两阶段框架，结构引导抓取减少不确定性，多基础模型扩散策略路由到专用模型。结论：实验显示性能提升31%-36.7%，实现跨类别和任务泛化。 </think> [问题]跨类型物体交互需解决接触点定位和轨迹规划，现有端到端方法误差累积且模型单一；[方法]提出两阶段框架：结构引导抓取减少不确定性，多基础模型扩散策略路由到专用模型；[结论]实验显示性能提升31%-36.7%，实现跨类别和任务泛化|
 |**2026-05-11**|**Data-Asymmetric Latent Imagination and Reranking for 3D Robotic Imitation Learning**|Lianghao Luo et.al.|[2605.10166](http://arxiv.org/abs/2605.10166)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
@@ -175,7 +178,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260513>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260514>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
