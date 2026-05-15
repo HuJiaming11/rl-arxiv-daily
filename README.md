@@ -1,4 +1,4 @@
-## Updated on 2026.05.14
+## Updated on 2026.05.15
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -105,12 +105,14 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260514>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260515>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-05-14**|**Learning Direct Control Policies with Flow Matching for Autonomous Driving**|Marcello Ceresini et.al.|[2605.14832](http://arxiv.org/abs/2605.14832)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
+|**2026-05-13**|**MAPLE: Latent Multi-Agent Play for End-to-End Autonomous Driving**|Rajeev Yasarla et.al.|[2605.14201](http://arxiv.org/abs/2605.14201)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
 |**2026-05-13**|**SID: Sliding into Distribution for Robust Few-Demonstration Manipulation**|Yicheng Ma et.al.|[2605.13428](http://arxiv.org/abs/2605.13428)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
 |**2026-05-12**|**Morphologically Equivariant Flow Matching for Bimanual Mobile Manipulation**|Max Siebenborn et.al.|[2605.12228](http://arxiv.org/abs/2605.12228)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
 |**2026-05-11**|**HeteroGenManip: Generalizable Manipulation For Heterogeneous Object Interactions**|Zhenhao Shen et.al.|[2605.10201](http://arxiv.org/abs/2605.10201)|null|<think> 好的，我需要帮用户总结这篇论文，严格按照指定的格式，控制在300字以内，突出核心创新点，避免技术细节。首先，用户给了一个结构：问题、方法、结论，每部分用方括号括起来，中间用竖线分隔。  先看论文摘要。问题部分提到，通用跨类型物体交互操作在机器人中是关键但困难的，主要挑战是确定接触点和规划后续轨迹。现有方法用端到端学习，导致误差累积，而且依赖单一模型，无法捕捉不同类别物体的特征。  方法部分，作者提出了HeteroGenManip，分两阶段：第一阶段是结构引导的抓取模块，利用结构先验对齐初始接触状态，减少抓取不确定性。第二阶段是多基础模型扩散策略，通过双流交叉注意力整合几何信息和部件特征，路由到专用模型。  结论部分，实验显示该方法在仿真和现实任务中分别提升31%和36.7%，实现了跨类别和跨任务的泛化。  现在需要精简这些内容，突出创新点。问题要简明，说明现有方法的不足。方法部分强调两阶段框架和两个核心模块。结论突出性能提升和泛化能力。  检查字数，确保不超过300字。用户要求所有内容在同一行，无换行，格式正确。最后确认是否遗漏核心创新点，比如分阶段、结构先验、双流注意力、跨模型路由等。确保不包含技术细节，如具体模块名称可能需要简化，但用户给的例子中保留了模块名称，所以可能需要保留。  最终整理成：问题：跨类型物体交互需解决接触点定位和轨迹规划，现有端到端方法误差累积且模型单一。方法：提出两阶段框架，结构引导抓取减少不确定性，多基础模型扩散策略路由到专用模型。结论：实验显示性能提升31%-36.7%，实现跨类别和任务泛化。 </think> [问题]跨类型物体交互需解决接触点定位和轨迹规划，现有端到端方法误差累积且模型单一；[方法]提出两阶段框架：结构引导抓取减少不确定性，多基础模型扩散策略路由到专用模型；[结论]实验显示性能提升31%-36.7%，实现跨类别和任务泛化|
@@ -178,7 +180,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260514>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260515>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
