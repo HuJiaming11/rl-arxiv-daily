@@ -1,4 +1,4 @@
-## Updated on 2026.05.15
+## Updated on 2026.05.16
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -105,14 +105,14 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260515>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260516>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
 |**2026-05-14**|**Learning Direct Control Policies with Flow Matching for Autonomous Driving**|Marcello Ceresini et.al.|[2605.14832](http://arxiv.org/abs/2605.14832)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
-|**2026-05-13**|**MAPLE: Latent Multi-Agent Play for End-to-End Autonomous Driving**|Rajeev Yasarla et.al.|[2605.14201](http://arxiv.org/abs/2605.14201)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
+|**2026-05-13**|**MAPLE: Latent Multi-Agent Play for End-to-End Autonomous Driving**|Rajeev Yasarla et.al.|[2605.14201](http://arxiv.org/abs/2605.14201)|null|<think> 好的，我现在需要帮用户总结这篇论文，按照他们的格式要求。首先，用户给了一个论文的摘要，我得仔细理解里面的内容。论文标题是MAPLE，关于潜在多智能体游戏用于端到端自动驾驶的。问题部分应该是在说现有的VLA模型在闭环设置中容易变得脆弱，因为传统模仿学习框架训练的。方法部分提到了两个训练阶段，监督微调加强化学习，还有多样性奖励。结论是MAPLE在Bench2Drive上表现最好，而且不需要外部模拟器，可扩展。  用户要求用中文精简总结，分问题、方法、结论三部分，每部分用方括号括起来，总字数控制在300字以内。还要突出核心创新点，避免技术细节。同时要严格按照格式，所有内容在同一行，不要换行，不要其他解释。  首先，我需要确认问题部分的核心：闭环环境中VLA模型脆弱，传统方法不可扩展且无法完全建模反应环境。方法部分要强调潜在空间的多智能体滚出，分两个阶段训练，加上多样性奖励。结论则是性能提升和可扩展性，不需要模拟器。  然后检查是否符合字数要求。可能需要调整用词，比如“闭环训练框架”可以简化为“闭环训练”，或者“动态驾驶场景”改为“动态场景”。还要确保不遗漏关键点，比如不依赖外部模拟器，可扩展性，多样性奖励等。  最后，确保格式正确，没有换行，用【】括起来，各部分之间用竖线分隔。检查是否有技术细节，比如“监督微调”和“强化学习”是否足够简洁。可能需要合并句子，比如“通过潜在空间的多智能体滚出”来简化描述。  现在组合起来，确保每部分准确且符合要求。可能需要多次调整，比如问题部分是否准确，方法是否突出创新点，结论是否明确结果。最后检查字数，确保不超过300字。 </think> 【问题】闭环环境中VLA模型因传统模仿学习框架训练易脆弱且现有闭环监督方法不可扩展且无法完全建模动态反应环境   【方法】提出MAPLE框架通过潜在空间多智能体动态滚出实现闭环训练，分阶段进行监督微调（基于真实轨迹）与强化学习（全局及智能体特异性奖励），引入多样性奖励鼓励生成未 logged 行为，无需外部模拟器   【|
 |**2026-05-13**|**SID: Sliding into Distribution for Robust Few-Demonstration Manipulation**|Yicheng Ma et.al.|[2605.13428](http://arxiv.org/abs/2605.13428)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
 |**2026-05-12**|**Morphologically Equivariant Flow Matching for Bimanual Mobile Manipulation**|Max Siebenborn et.al.|[2605.12228](http://arxiv.org/abs/2605.12228)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
 |**2026-05-11**|**HeteroGenManip: Generalizable Manipulation For Heterogeneous Object Interactions**|Zhenhao Shen et.al.|[2605.10201](http://arxiv.org/abs/2605.10201)|null|<think> 好的，我需要帮用户总结这篇论文，严格按照指定的格式，控制在300字以内，突出核心创新点，避免技术细节。首先，用户给了一个结构：问题、方法、结论，每部分用方括号括起来，中间用竖线分隔。  先看论文摘要。问题部分提到，通用跨类型物体交互操作在机器人中是关键但困难的，主要挑战是确定接触点和规划后续轨迹。现有方法用端到端学习，导致误差累积，而且依赖单一模型，无法捕捉不同类别物体的特征。  方法部分，作者提出了HeteroGenManip，分两阶段：第一阶段是结构引导的抓取模块，利用结构先验对齐初始接触状态，减少抓取不确定性。第二阶段是多基础模型扩散策略，通过双流交叉注意力整合几何信息和部件特征，路由到专用模型。  结论部分，实验显示该方法在仿真和现实任务中分别提升31%和36.7%，实现了跨类别和跨任务的泛化。  现在需要精简这些内容，突出创新点。问题要简明，说明现有方法的不足。方法部分强调两阶段框架和两个核心模块。结论突出性能提升和泛化能力。  检查字数，确保不超过300字。用户要求所有内容在同一行，无换行，格式正确。最后确认是否遗漏核心创新点，比如分阶段、结构先验、双流注意力、跨模型路由等。确保不包含技术细节，如具体模块名称可能需要简化，但用户给的例子中保留了模块名称，所以可能需要保留。  最终整理成：问题：跨类型物体交互需解决接触点定位和轨迹规划，现有端到端方法误差累积且模型单一。方法：提出两阶段框架，结构引导抓取减少不确定性，多基础模型扩散策略路由到专用模型。结论：实验显示性能提升31%-36.7%，实现跨类别和任务泛化。 </think> [问题]跨类型物体交互需解决接触点定位和轨迹规划，现有端到端方法误差累积且模型单一；[方法]提出两阶段框架：结构引导抓取减少不确定性，多基础模型扩散策略路由到专用模型；[结论]实验显示性能提升31%-36.7%，实现跨类别和任务泛化|
@@ -180,7 +180,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260515>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260516>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
