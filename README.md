@@ -1,4 +1,4 @@
-## Updated on 2026.05.25
+## Updated on 2026.05.27
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -110,12 +110,13 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260525>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260527>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-05-26**|**TPS-Drive: Task-Guided Representation Purification for VLM-based Autonomous Driving**|Jiaxiang Li et.al.|[2605.27038](http://arxiv.org/abs/2605.27038)|null|<think> 好的，用户让我用中文精简总结一篇论文，严格按照【问题】【方法】，总字数控制在300字以内。首先，我需要仔细阅读用户提供的论文摘要，理解其中的核心内容。  论文标题是TPS-Drive，主要针对VLM在自动驾驶中的问题，即语义推理与精确3D空间预测的桥梁作用未被有效解决。问题部分应该包括现有方法的两个路径：文本对齐方法导致空间幻觉，密集视觉方法导致表示干扰。方法部分要突出任务导向的表示净化，特别是Agent-Centric Tokenizer，使用3D检测头指导的向量量化，重新分配代码书容量，隔离冗余。结论部分需要提到实验结果，比如碰撞率降低和新的安全记录。  用户要求突出核心创新点，避免技术细节，直接输出总结，并且严格按照格式，同一行内，无换行符。需要检查字数是否在300字以内，同时确保问题、方法、结论分明，没有多余的解释。  现在需要将问题、方法、结论用简洁的语言表达出来，确保每个部分的关键点都涵盖。例如，问题部分要说明现有方法的两个问题和导致的后果；方法部分强调任务导向的表示净化和三个阶段训练；结论部分包括实验验证的结果和性能提升。  最后检查格式是否符合要求，确保没有使用换行符，各部分用方括号括起，中间用竖线分隔，总字数是否达标。可能还需要调整措辞，使其更精炼，同时保持信息完整。 </think> 【问题】Vision-Language Models（VLMs）在自动驾驶中面临语义推理与精确3D空间预测的桥梁缺失问题，现有方法或导致空间幻觉或产生冗余干扰；【方法】提出TPS-Drive框架，通过任务导向的表示净化机制，设计Agent-Centric Tokenizer利用冻结的3D检测头指导的向量量化，重新分配代码书容量聚焦动态目标，结合解耦的推理流程与渐进式三阶段训练；【结论】在nuScenes和NAVSIMv1/v2中实现碰撞率降低与安全记录突破，验证了空间表示优化对自动驾驶规划的有效性。|
 |**2026-05-22**|**Semantically Structured Mixture-of-Experts for Compositional Robotic Manipulation**|Chengyu Deng et.al.|[2605.23477](http://arxiv.org/abs/2605.23477)|null|
 |**2026-05-21**|**Factored Diffusion Policies:Compositionally Generalized Robot Control with a Single Score Network**|Sayan Mitra et.al.|[2605.22596](http://arxiv.org/abs/2605.22596)|null|
 |**2026-05-20**|**Distill to Think, Foresee to Act: Cognitive-Physical Reinforcement Learning for Autonomous Driving**|Yang Wu et.al.|[2605.21139](http://arxiv.org/abs/2605.21139)|null|
@@ -195,7 +196,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260525>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260527>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
