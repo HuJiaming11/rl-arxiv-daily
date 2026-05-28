@@ -1,4 +1,4 @@
-## Updated on 2026.05.27
+## Updated on 2026.05.28
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -13,6 +13,8 @@
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-05-27**|**Beyond Binary: Sim-to-Real Dexterous Manipulation with Physics-Grounded Contact Representation**|Jiahe Pan et.al.|[2605.28812](http://arxiv.org/abs/2605.28812)|null|<think> 好的，我需要帮用户总结这篇论文，严格按照要求的格式和字数限制。首先，用户给了一个具体的结构：问题、方法、结论，每部分要突出核心创新点，避免技术细节，控制在300字以内，并且所有内容在同一行，不要换行。  先看论文标题和摘要。问题部分主要讲的是在接触丰富的抓取中，真实世界数据收集困难，现有的仿真到现实的强化学习方法通过简化触觉数据到低维特征，牺牲了数据的丰富性，导致无法有效用于复杂抓取。核心问题就是触觉数据简化导致信息损失，影响复杂任务的表现。  方法部分，论文提出了CoP（质心压力点），基于物理原理的触觉表示，保留密集接触信息同时保持仿真到现实的鲁棒性。还提出了基于可微分动力学的传感器校准方案，无需真实力测量就能估计触点方向。需要突出这两个创新点：CoP的物理基础和校准方法。  结论部分，在两个盲测任务中，CoP条件的策略实现了零样本迁移，优于其他基线。分析显示策略自动编码了任务相关的物理属性，比如物体质量。结论的核心是CoP有效，并且策略能自动学习物理属性。  现在需要将这些浓缩成问题、方法、结论三部分，每部分简洁。注意不要技术细节，比如“不同iable dynamics”可以简化为“可微分动力学校准”。检查字数，确保不超过300字，并且同一行，无换行。  可能的总结结构： 问题：仿真到现实抓取中触觉数据简化导致信息损失，影响复杂任务表现； 方法：提出基于物理的质心压力点（CoP）触觉表示，结合可微分动力学校准传感器； 结论：CoP条件策略实现零样本迁移，自动编码物理属性，优于基线。  检查是否符合要求，核心创新点是否突出，有没有多余细节。确认后按格式输出，同一行，无换行。 </think> 问题：仿真到现实抓取中触觉数据简化导致信息损失，影响复杂任务表现；方法：提出基于物理的质心压力点（CoP）触觉表示，结合可微分动力学校准传感器；结论：CoP条件策略实现零样本迁移，自动编码物理属性，优于基线|
+|**2026-05-27**|**SARAD: LLM-Based Safety-Aware Hybrid Reinforcement Learning with Collision Prediction for Autonomous Driving**|Kangyu Wu et.al.|[2605.28583](http://arxiv.org/abs/2605.28583)|null|<think> 好的，我需要帮用户精简总结这篇论文，按照指定的格式输出。首先，我得仔细阅读用户提供的论文摘要，理解其中的核心问题和创新方法。  论文标题是SARAD，结合了LLM和强化学习，用于自动驾驶的安全和效率。问题部分应该包括传统DRL的不足和LLMs的实时性问题。方法部分要突出SARAD的创新点，比如用RAG增强的LLM指导决策，注意力鉴别器和碰撞预测模块。结论要说明实验结果，比如在Highway-Env中的性能提升。  用户要求严格控制在300字以内，避免技术细节，突出核心创新。我需要确保每个部分简洁明了，不换行，同一行内完成。检查格式是否正确，问题、方法、结论是否准确对应，有没有遗漏关键点。最后确认字数是否符合要求，没有多余的解释。 </think> 问题：自动驾驶决策面临传统DRL unsafe random exploration和LLM实时性不足的双重挑战；方法：SARAD融合LLM与DRL，采用RAG增强LLM决策并引入注意力鉴别器整合专家知识，设计碰撞预测模块；结论：在Highway-Env中验证SARAD显著提升安全性与效率。|
 |**2026-05-22**|**Robotic Strawberry Harvesting with Robust Vision and Deep Reinforcement Learning based Sim-to-Real Control**|Al Bashir et.al.|[2605.23863](http://arxiv.org/abs/2605.23863)|null|
 |**2026-05-20**|**roto 2.0: The Robot Tactile Olympiad**|Elle Miller et.al.|[2605.21429](http://arxiv.org/abs/2605.21429)|null|
 |**2026-05-20**|**Learning Robust Dexterous In-Hand Manipulation from Joint Sensors with Proprioceptive Transformer**|Senlan Yao et.al.|[2605.21330](http://arxiv.org/abs/2605.21330)|null|
@@ -110,12 +112,15 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260527>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260528>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-05-27**|**Imitation Learning for Robot Assistance in Open Surgery: A Multi-Policy Evaluation on Suture Following**|Xucheng Wang et.al.|[2605.28736](http://arxiv.org/abs/2605.28736)|null|<think> 好的，我需要帮用户用中文精简总结这篇论文，严格按照【问题】【方法】，总字数控制在300字以内。首先，我得仔细阅读用户提供的论文摘要，抓住核心内容。  论文的问题是关于机器人辅助开放手术中的缝合法（suture following），具体是抓-拉-释放动作。用户强调要突出创新点，避免技术细节，所以得把重点放在问题和方法上，结论部分也要简明。  接下来，方法部分提到评估了四种不同的模仿学习策略，包括ACT、Diffusion Policy、SmolVLA和π₀，在数据集大小、摄像头视角和背景变化三个临床相关维度上测试。关键创新点应该是π₀在预训练视觉语言模型上的表现，数据效率高，鲁棒性强，轨迹平滑，适合手术流程。还有在部署测试中达到了92%的缝合完成率。  结论部分需要说明这些发现证明了协作机器人辅助在开放手术中的可行性，并指出深度感知和末端执行器设计是临床转化的关键。要注意字数限制，确保每部分简洁，不换行，同一行内完成。检查是否有技术细节可以省略，比如具体的配置数量或帧数，只保留核心数据如92%的完成率。最后确认格式是否符合要求，没有换行符，各部分用【】括起，用中文输出。 </think> 【问题】机器人辅助开放手术中缝合法（抓-拉-释放动作）的协作机器人控制难题，需解决多维度临床场景下的精准跟随问题【方法】评估ACT、Diffusion Policy、SmolVLA、π₀四种模仿学习策略在数据集、视角、背景变化下的表现，发现π₀基于预训练视觉语言模型实现最优数据效率（92%临床缝合完成率）、强抗背景干扰和流畅轨迹【结论】协作机器人手术可行，深度感知与末端执行器设计为临床转化关键|
+|**2026-05-27**|**DriveWAM: Video Generative Priors Enable Scalable World-Action Modeling for Autonomous Driving**|Chen Shi et.al.|[2605.28544](http://arxiv.org/abs/2605.28544)|null|<think> 好的，我现在需要帮用户精简总结这篇论文。首先，用户的要求很明确，要严格按照【问题】【方法】，总字数控制在300字以内，并且要突出核心创新点，避免技术细节。直接输出总结，不要换行符和其他解释。  先看论文标题和摘要。标题是DriveWAM，重点在于视频生成先验和可扩展的世界动作建模。摘要里提到，预训练的基础模型对自动驾驶很重要，但现有的视觉语言模型主要用静态图像-文本对，而视频生成模型能捕捉时空动态，更适合驾驶。DriveWAM将预训练的视频扩散Transformer改编为自回归视频动作策略，统一视频和动作流，用联合流匹配目标，保留架构同时适应动作生成。还有场景演化的驾驶引导，用冻结的VLM生成语义意图指导生成。另外有选择性KV内存，通过相关性缓存选择保持内存池 bounded。实验显示性能强，数据扩展到100k片段验证潜力。  接下来要提炼问题和方法。问题应该是现有自动驾驶模型依赖静态图像，缺乏时空动态和动作建模，导致难以扩展。方法包括三个核心点：1）将视频扩散模型改编为自回归动作策略，统一时空流；2）引入场景演化引导，用VLM生成语义意图；3）选择性KV内存优化长期记忆。结论是实验和扩展数据证明了有效性。  现在需要检查是否符合用户要求：核心创新点是否突出，有没有技术细节。比如“联合流匹配目标”可能算技术细节，可以简化为“联合训练目标”或者“统一流训练”。选择性KV内存可以简化为“选择性记忆优化”。确保每个部分不超过300字，同一行，无换行。  最后组合成：问题：自动驾驶依赖静态视觉模型，缺乏时空动作建模与可扩展性。方法：改编视频扩散模型为自回归策略，统一时空流；引入场景演化语义引导；选择性KV记忆优化长期记忆。结论：实验验证有效性和数据扩展潜力。  检查字数，大概在100字左右，符合要求。确保没有技术细节，突出创新点。用户可能希望快速了解论文贡献，所以重点在模型改编、场景引导和记忆优化这三个方法。结论部分提到实验结果和扩展数据，显示潜力。这样应该满足用户需求。 </think> 【问题】自动驾驶依赖静态视觉模型缺乏时空动作建模与可扩展性【方法】改编视频|
+|**2026-05-27**|**ProgVLA: Progress-Aware Robot Manipulation Skill Learning**|Seungsu Kim et.al.|[2605.28231](http://arxiv.org/abs/2605.28231)|null|<think> 嗯，用户让我用中文精简总结这篇论文，严格按照【问题】【方法】，总字数控制在300字以内。首先，我需要仔细阅读论文的摘要，找出核心问题和方法。  问题部分，论文提到的是机器人抓取任务中，现有模型在计算资源有限的情况下处理长序列的效率不足，导致成功率和泛化能力差。特别是长任务和多目标任务中表现更差。  方法部分，他们提出了ProgVLA，主要创新点有两个：一是用两阶段Perceiver resampling压缩多模态数据，固定控制token；二是用辅助的进度头通过离线强化学习训练，估计任务进度，结合优势流匹配模仿学习。这两个部分需要突出，避免技术细节。  结论部分需要说明结果，比如模型参数少但效果比大模型好，特别是在长任务和多任务中，同时指出进度头和视觉微调是主要贡献。  用户强调要突出核心创新点，避免技术细节，所以得把压缩和多模态编码、进度头和强化学习结合这些点讲清楚。还要注意格式，严格按照问题、方法、结论，同一行，无换行，不用其他解释。总字数要控制在300以内，可能需要精简语言，比如用“压缩多模态长序列”代替详细描述。检查是否每个部分都涵盖了关键点，没有遗漏重要信息。最后确保语句通顺，符合用户要求。 </think> 【问题】机器人抓取任务中长序列多模态数据处理能力不足，计算资源受限时成功率和泛化能力差，尤其长任务与多目标场景表现更弱【方法】ProgVLA通过两阶段Perceiver resampling压缩多模态数据为固定控制token，结合辅助进度头利用离线强化学习估计任务进度，实现优势流匹配的进度感知模仿学习【结论】0.1B参数模型在长任务和多目标场景超越大基线，进度头与视觉微调是主要贡献，有效提升计算效率与任务适应性|
 |**2026-05-26**|**TPS-Drive: Task-Guided Representation Purification for VLM-based Autonomous Driving**|Jiaxiang Li et.al.|[2605.27038](http://arxiv.org/abs/2605.27038)|null|<think> 好的，用户让我用中文精简总结一篇论文，严格按照【问题】【方法】，总字数控制在300字以内。首先，我需要仔细阅读用户提供的论文摘要，理解其中的核心内容。  论文标题是TPS-Drive，主要针对VLM在自动驾驶中的问题，即语义推理与精确3D空间预测的桥梁作用未被有效解决。问题部分应该包括现有方法的两个路径：文本对齐方法导致空间幻觉，密集视觉方法导致表示干扰。方法部分要突出任务导向的表示净化，特别是Agent-Centric Tokenizer，使用3D检测头指导的向量量化，重新分配代码书容量，隔离冗余。结论部分需要提到实验结果，比如碰撞率降低和新的安全记录。  用户要求突出核心创新点，避免技术细节，直接输出总结，并且严格按照格式，同一行内，无换行符。需要检查字数是否在300字以内，同时确保问题、方法、结论分明，没有多余的解释。  现在需要将问题、方法、结论用简洁的语言表达出来，确保每个部分的关键点都涵盖。例如，问题部分要说明现有方法的两个问题和导致的后果；方法部分强调任务导向的表示净化和三个阶段训练；结论部分包括实验验证的结果和性能提升。  最后检查格式是否符合要求，确保没有使用换行符，各部分用方括号括起，中间用竖线分隔，总字数是否达标。可能还需要调整措辞，使其更精炼，同时保持信息完整。 </think> 【问题】Vision-Language Models（VLMs）在自动驾驶中面临语义推理与精确3D空间预测的桥梁缺失问题，现有方法或导致空间幻觉或产生冗余干扰；【方法】提出TPS-Drive框架，通过任务导向的表示净化机制，设计Agent-Centric Tokenizer利用冻结的3D检测头指导的向量量化，重新分配代码书容量聚焦动态目标，结合解耦的推理流程与渐进式三阶段训练；【结论】在nuScenes和NAVSIMv1/v2中实现碰撞率降低与安全记录突破，验证了空间表示优化对自动驾驶规划的有效性。|
 |**2026-05-22**|**Semantically Structured Mixture-of-Experts for Compositional Robotic Manipulation**|Chengyu Deng et.al.|[2605.23477](http://arxiv.org/abs/2605.23477)|null|
 |**2026-05-21**|**Factored Diffusion Policies:Compositionally Generalized Robot Control with a Single Score Network**|Sayan Mitra et.al.|[2605.22596](http://arxiv.org/abs/2605.22596)|null|
@@ -196,7 +201,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260527>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260528>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
