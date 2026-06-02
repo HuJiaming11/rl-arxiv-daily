@@ -1,4 +1,4 @@
-## Updated on 2026.06.01
+## Updated on 2026.06.02
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -113,12 +113,15 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260601>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260602>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-06-01**|**Co-training with Ego-centric Video and Demonstration for Robot Navigation Task**|Shoya Kuno et.al.|[2606.01951](http://arxiv.org/abs/2606.01951)|null|<think> 好的，我现在需要处理用户的这个请求。首先，用户希望我精简总结一篇论文，按照【问题】【方法】，总字数控制在300字以内，并且严格按照指定格式输出，所有内容在同一行内，不换行，不包含其他解释。  首先，我得仔细阅读用户提供的论文摘要，理解其核心内容。论文标题是“Co-training with Ego-centric Video and Demonstration for Robot Navigation Task”。摘要中提到的问题在于VLA模型需要大量高质量数据，而收集这些数据在真实机器人上成本高且耗时。之前的研究用egocentric人类视频增强操作数据集，但移动机器人导航中存在视角变化的问题。  接下来，用户要求突出核心创新点，避免技术细节。我需要确定论文的主要贡献。根据摘要，他们的方法是将egocentric步行视频转换为移动机器人模仿学习的数据集，通过估计相机运动并将其转化为机器人动作表示，然后联合训练VLA模型，结合人类数据和机器人数据，提升语言理解和动作生成能力。实验表明在水果搜索任务中有效。  现在需要按照【问题】【方法】的格式来总结。问题部分要简明指出数据收集困难，视角变化挑战。方法部分要说明他们如何利用人类egocentric视频，转换数据，联合训练。注意字数限制，确保不超过300字，同时保持简洁。  需要检查是否遗漏了关键点，比如视角变化的挑战和联合训练的效果。同时要确保不包含技术细节，比如具体的相机运动估计方法或实验设置。还要注意格式要求，所有内容在同一行，不换行，正确使用中文标点，没有其他解释。  最后，验证总结是否符合用户的所有要求：格式正确，核心创新点突出，字数控制，没有多余内容。可能需要调整措辞，确保信息准确且简洁。 </think> 【问题】Vision-language-action模型依赖大规模高质量数据收集成本高且视角变化导致移动机器人导航数据不足【方法】提出将人类egocentric视频通过相机运动估计转换为机器人动作表示并联合训练VLA模型提升语言理解与动作生成能力【结论】在水果搜索任务中验证人类视频提供有效可扩展数据源|
+|**2026-05-31**|**Expanding Spatial and Temporal Context for Robotic Imitation Learning With Scene Graphs**|Jianing Qian et.al.|[2606.01072](http://arxiv.org/abs/2606.01072)|null|<think> 好的，我现在需要帮用户总结这篇论文。首先，用户的要求很明确，要严格按照【问题】【方法】，总字数控制在300字以内，并且突出核心创新点，避免技术细节。用户还特别强调要直接输出总结内容，不要换行符和其他解释。  首先，我得仔细阅读论文的摘要。问题部分提到机器人模仿学习在现实环境中面临空间和时间上的挑战，比如大空间导致部分观测和需要长期推理的任务。方法部分是使用场景图作为显式结构化的记忆机制，动态维护物体间关系及其时间演变，帮助机器人保留历史上下文，提升效率和泛化能力。结论部分提到实验证明方法有效，尤其在长期推理和部分观测场景下。  接下来要确保总结符合格式，问题、方法、结论各部分要简洁。需要突出核心创新点，也就是使用场景图作为记忆机制，动态捕捉物体关系和时间变化。避免技术细节，比如不具体说模拟实验和真实实验，只说实验验证。  然后检查字数，确保不超过300字。用户给的例子是中文，所以要保持中文。同时，所有内容在同一行，没有换行符，这可能需要调整标点符号，比如用逗号分隔而不是换行。  可能会遇到的问题是如何在有限的字数内准确传达核心点。需要精简语言，比如“动态维护物体间关系及其时间演变”可以简化为“动态捕捉物体关系及时间演变”。同时确保问题和方法对应，结论明确结果。  最后，检查格式是否正确，有没有遗漏的部分，比如是否严格按照用户提供的结构，有没有多余的解释。确保输出完全符合用户的要求，没有使用任何Markdown格式，纯文本，并且在一行内。 </think> 问题：机器人模仿学习在现实大空间环境中面临部分观测和长时序推理挑战；方法：创新性引入动态场景图作为显式记忆机制，通过结构化建模物体关系及时间演化实现上下文累积与推理优化；结论：该方法在模拟与真实场景实验中显著提升政策性能，尤其在长时序依赖和部分观测条件下展现优异的泛化能力与推理效率。|
+|**2026-05-30**|**DriveAnchor: Progressive Anchor-based Flow Learning for Autonomous Driving Planning**|Limin Yan et.al.|[2606.00519](http://arxiv.org/abs/2606.00519)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
 |**2026-05-29**|**Surface Constraint Policy for Learning Surface-Constrained and Dynamically Feasible Robot Skills**|Shuai Ke et.al.|[2605.31321](http://arxiv.org/abs/2605.31321)|null|
 |**2026-05-29**|**DeMaVLA: A Vision-Language-Action Foundation Model for Generalizable Deformable Manipulation**|Taiyi Su et.al.|[2605.31286](http://arxiv.org/abs/2605.31286)|null|
 |**2026-05-27**|**Imitation Learning for Robot Assistance in Open Surgery: A Multi-Policy Evaluation on Suture Following**|Xucheng Wang et.al.|[2605.28736](http://arxiv.org/abs/2605.28736)|null|
@@ -204,7 +207,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260601>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260602>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
