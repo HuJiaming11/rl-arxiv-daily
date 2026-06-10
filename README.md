@@ -1,4 +1,4 @@
-## Updated on 2026.06.08
+## Updated on 2026.06.10
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -116,12 +116,15 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260608>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260610>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-06-09**|**TacForeSight: Force-Guided Tactile World Model for Contact-Rich Manipulation**|Yujie Zang et.al.|[2606.11184](http://arxiv.org/abs/2606.11184)|null|<think> 好的，我现在需要帮用户总结这篇论文。首先，用户的要求很明确，要严格按照【问题】【方法】，总字数控制在300字以内，并且突出核心创新点，避免技术细节。用户还特别强调要直接输出总结内容，所有内容在同一行内，不能有换行符或其他解释。  首先，我需要仔细阅读论文的摘要，找出关键问题和核心方法。问题部分提到接触丰富的操作需要机器人感知和调节动态的物理交互，尤其是处理动态接触过渡和复杂表面几何。现有方法虽然结合了触觉或力反馈，但很少考虑全局力和局部触觉传感器的非对称时空作用。  接下来是方法部分，论文提出了TacForeSight框架，包含两个核心组件：TacForceWM和Predictive Tactile-Conditioned Policy。TacForceWM是一个触觉世界模型，预测短期的触觉潜在动态，使用双指触觉观察和腕部高频力和扭矩信号的条件。另一个组件是预测触觉条件化策略，利用预测的潜在作为先验，通过交叉注意力建模触觉演变，并通过触觉引导的门控模块融合视觉和触觉特征。整个框架在紧凑潜在空间内进行预测，适合实时推断。  结论部分需要总结成果，即实验表明该方法在五个任务和三种干扰设置中优于基线，尤其在动态干扰下表现突出，并且数据集和代码公开。  现在需要将这些信息精简，确保符合格式要求。问题部分要简明，方法部分突出核心创新点，比如双模态融合、时空角色建模、预测策略等。结论部分强调实验结果和公开性。  需要注意避免技术细节，比如具体的模块名称可能不需要全称，但用户示例中用了缩写，可能需要保留。同时检查字数，确保不超过300字，并且所有内容在同一行，没有换行符。最后确认是否符合用户的所有要求，比如格式、核心创新点、字数限制等。 </think> 【问题】接触丰富操作需机器人实时感知调节动态物理交互，现有方法未充分建模全局力与局部触觉的非对称时空作用【方法】提出TacForeSight框架，通过TacForceWM模型预测短时触觉动态（融合腕部高频力/扭矩与双指触觉），设计预测触觉条件化策略（交叉注意力建模触觉演变+触觉引导门控融合多模态特征|
+|**2026-06-09**|**IMPACT: Learning Internal-Model Predictive Control for Forceful Robotic Manipulation**|Jiawei Gao et.al.|[2606.10818](http://arxiv.org/abs/2606.10818)|null|<think> 好的，我现在需要处理用户的请求，帮他精简总结一篇论文。首先，我得仔细阅读用户提供的资料，确保完全理解他的要求。  用户给的论文标题是IMPACT: Learning Internal-Model Predictive Control for Forceful Robotic Manipulation。摘要里提到，现有的学习方法通常使用模仿学习策略，输出目标末端执行器的位置，通过低级阻抗控制器跟踪。但存在的问题是，隐式方法在物体重量变化时泛化不好，而显式方法需要专用硬件，增加复杂性。IMPACT框架将任务规划与内部模型预测控制解耦，实验证明在成功率、泛化、安全性和能效上有改进。  用户的要求是严格按照【问题】【方法】，总字数控制在300字以内，突出核心创新点，避免技术细节，直接输出总结内容，且所有内容在同一行，不换行，不带其他解释。  首先，我需要确定问题的核心。问题在于现有方法隐式和显式控制的不足：隐式泛化差，显式需要硬件。方法部分要强调IMPACT的解耦，任务规划和内部模型预测控制。结论需要提到实验结果，如成功率、泛化、安全、能效。  接下来要精简语言，确保每个部分简洁。问题部分要简明指出两种方法的缺陷。方法部分突出框架的创新点，即解耦。结论部分用实验结果支持。  然后检查字数，确保不超过300字。同时，用户要求所有内容在同一行，不换行，所以需要用空格分隔，而不是换行符。例如：【问题】现有方法隐式控制泛化差，显式控制需专用硬件，系统复杂；【方法】IMPACT框架解耦任务规划与内部模型预测控制；【结论】实验验证其高成功率、跨重量泛化、安全性及能效提升。  最后，确认是否符合格式，没有技术细节，突出创新点，并且严格遵循用户的格式要求。可能需要注意术语的准确性，比如“内部模型预测控制”是否正确，以及是否遗漏了关键点。确保所有信息准确，没有错误。 </think> 【问题】现有方法隐式控制泛化差，显式控制需专用硬件，系统复杂；【方法】IMPACT框架解耦任务规划与内部模型预测控制，隐式实现动态交互；【结论】实验验证其高成功率、跨重量泛化、安全性及能效|
+|**2026-06-09**|**Test-time Adversarial Takeover: A Real-time Hijacking Interface against Robotic Diffusion Policies**|Zi Yin et.al.|[2606.10371](http://arxiv.org/abs/2606.10371)|null|<think> 好的，我现在需要处理用户的查询，帮他精简总结一篇论文。首先，我要仔细阅读用户的要求，确保完全理解。用户希望按照【问题】【方法】，总字数控制在300字以内，并且突出核心创新点，避免技术细节。输出格式必须严格按照指定，所有内容在同一行，不要换行符或其他解释。  首先，我需要解析论文的标题和摘要。论文标题是“Test-time Adversarial Takeover: A Real-time Hijacking Interface against Robotic Diffusion Policies”，摘要提到扩散模型生成的动作在视觉条件上有漏洞，攻击者可以通过实时劫持接口远程操控机器人。之前的研究多集中在干扰，而他们提出了更强大的Test-time Adversarial Takeover（TAKO），通过小词汇量的通用补丁实时切换，影响视觉条件路径，导致生成推断中的持续偏差。自然目标基线失败是因为受害者策略无法监督自身分布外目标偏移。在四个任务中，所有设置下攻击者成功100%。  接下来，我需要按照用户指定的格式【问题】【方法】来总结。问题部分要简明扼要，说明攻击目标和方法。方法部分要突出创新点，比如小词汇补丁、实时切换、视觉条件路径影响等。同时要避免技术细节，比如具体的模型名称DDPM、DDIM等不需要提及，只需说明三个生成推断家族。  需要注意用户强调的核心创新点：TAKO攻击、小词汇通用补丁、实时切换、视觉条件路径的持续偏差，以及自然基线失败的原因。这些都需要在总结中体现。  然后检查字数，确保不超过300字。可能需要多次精简，比如将“通过小词汇量的通用补丁”简化为“小词汇通用补丁”，去掉冗余词汇。同时确保所有内容在同一行，没有换行符，符合格式要求。  最后，验证是否符合所有用户要求：格式正确，核心创新点突出，技术细节省略，字数控制。确认无误后输出结果。 </think> 【问题】扩散模型驱动的机器人视觉条件政策易受实时对抗劫持威胁，传统干扰攻击无法实现远程全向操控【方法】提出Test-time Adversarial Takeover（TAKO），设计小词汇通用补丁通过可微分推断生成，劫持时动态切换补丁影响视觉条件路径导致生成持续偏移，破解目标策略监督失效机制，|
 |**2026-06-05**|**Spline Policy: A Structured Representation for Robot Policies**|Mengze Tian et.al.|[2606.07386](http://arxiv.org/abs/2606.07386)|null|
 |**2026-06-05**|**ActionMap: Robot Policy Learning via Voxel Action Heatmap**|Pei Yang et.al.|[2606.06904](http://arxiv.org/abs/2606.06904)|null|
 |**2026-06-04**|**Multi-Resolution Tactile Imitation Learning for Contact-Rich Robotic Manipulation**|Rickmer Krohn et.al.|[2606.06281](http://arxiv.org/abs/2606.06281)|null|
@@ -215,7 +218,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260608>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260610>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
