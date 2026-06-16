@@ -1,4 +1,4 @@
-## Updated on 2026.06.15
+## Updated on 2026.06.16
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -13,6 +13,8 @@
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-06-15**|**VENOM: Versatile Embodied Network for Omni-bodied Motion tracking**|Siddharth Padmanabhan et.al.|[2606.16696](http://arxiv.org/abs/2606.16696)|null|<think> 好的，我需要帮用户用中文精简总结这篇论文，严格按照【问题】【方法】，总字数控制在300字以内。首先，我得仔细阅读用户提供的论文摘要，抓住核心内容。  论文的问题是关于多机器人体的全身运动跟踪，特别是使用演示数据实现专家级别的表达性跟踪，而现有的方法通常将控制问题分解为上下身控制，存在不足。用户要求突出核心创新点，避免技术细节，所以我要确保总结不涉及太多技术术语，只保留关键点。  接下来是方法部分。论文提出VENOM模型，基于GPT的全身运动跟踪器，不需要分解上下身控制。他们还创建了一个多机器人体数据集VENOM Dataset，包含状态、动作和奖励，训练了VENOM和基线模型。实验结果显示VENOM性能优于MLP监督学习，且在无奖励反馈的情况下接近专家水平。  现在需要将这些信息浓缩成问题和方法，同时符合格式要求。问题要明确当前研究的挑战，方法要突出创新点如GPT模型和数据集。要注意字数限制，确保不超过300字，并且所有内容在同一行，不换行，不加其他解释。  检查是否有遗漏的核心创新点：GPT-based、跨身体控制、无需分解、多机器人数据集、对比基线结果。这些都要包含进去。避免技术细节如具体的算法结构或训练过程，保持简洁。  最后，确认格式是否正确，是否严格按照用户提供的模板，确保没有换行符或多余的解释。现在可以组合成最终的总结。 </think> 【问题】多机器人体全身运动跟踪需专家级表达且传统方法依赖上下身分解控制存在局限；【方法】提出VENOM基于GPT的跨身体控制模型训练于多机器人数据集VENOM Dataset无需上下身分解，结合状态动作奖励数据；【结论】VENOM在无奖励反馈下实现接近专家能力的稳定跟踪，优于MLP监督学习且适应不同机器人体。|
+|**2026-06-15**|**Reinforcement Learning with Inner-loop Dynamics Estimator for Aerial Manipulation under Uncertainty**|Shivansh Pratap Singh et.al.|[2606.16621](http://arxiv.org/abs/2606.16621)|null|<think> 好的，我需要帮用户用中文精简总结这篇论文，严格按照【问题】【方法】，总字数控制在300字以内。首先，我得仔细阅读用户提供的论文摘要，理解核心内容。  论文的问题是关于无人机机械臂在快速运动、负载变化和动态不确定下的直接 whole-body 操纵难题。现有的方法可能依赖准确的耦合动态模型，这在不确定环境中效果不佳。用户要求突出创新点，避免技术细节，所以我要抓住关键点：问题在于直接控制中的模型不准确，方法则是分层框架结合强化学习和内环动态估计器。  接下来，我需要按照格式来组织内容。问题部分要简明，说明在动态不确定条件下的直接控制困难。方法部分要强调分层框架，外环用RL映射目标到指令，内环用估计器补偿不确定性。结论部分要指出结合学习和估计器提高了精度和鲁棒性。  要注意字数限制，总字数300以内，所以每部分要简洁。可能需要调整用词，比如“动态不确定”代替更长的描述。同时检查是否符合用户格式要求，所有内容在同一行，无换行，无其他解释。  最后，确保核心创新点突出：分层控制、RL外环和估计器内环的结合，以及实验验证的结果。避免提到PID和INDI+PID等细节，只保留关键比较结果，如跟踪误差减少和任务成功率提升。检查格式是否正确，有没有遗漏的部分，确保完全符合用户的要求。 </think> 【问题】无人机机械臂在快速运动、负载变化及动态不确定条件下实现直接 whole-body 操纵存在难题，传统方法依赖精确动态模型且控制精度不足【方法】提出分层控制框架，外环通过强化学习将末端执行器目标映射为协调指令，内环基于动态估计器补偿执行中的惯性偏移和不确定性，无需系统模型知识【结论】实验表明结合学习协调与估计器补偿可降低跟踪误差提升任务成功率，验证分层结构在动态环境下的鲁棒性和精度优势|
 |**2026-06-12**|**AgentSpec: Understanding Embodied Agent Scaffolds Through Controlled Composition**|Jixuan Chen et.al.|[2606.14674](http://arxiv.org/abs/2606.14674)|null|
 |**2026-06-12**|**Kine2Go: Kinematic dataset for the Unitree Go2 robot with diverse gaits and motions**|Władysław Pałucki et.al.|[2606.14433](http://arxiv.org/abs/2606.14433)|null|
 |**2026-06-12**|**Robust Fall Recovery for Armless Bipedal-Wheeled Robots Via Force-Guided Learning**|Haidong Hou et.al.|[2606.14270](http://arxiv.org/abs/2606.14270)|null|
@@ -122,12 +124,14 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260615>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260616>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-06-15**|**Steering Generative Reinforcement Learning into Stable Robotic Controller**|Yixuan Wang et.al.|[2606.16572](http://arxiv.org/abs/2606.16572)|null|<think> 好的，我现在需要帮用户总结这篇论文。首先，用户的要求很明确：用中文精简总结，严格按照【问题】【方法】，总字数控制在300字以内，还要突出核心创新点，避免技术细节，直接输出总结，并且所有内容在同一行内，不要换行。  首先，我得仔细阅读论文的摘要。问题部分主要是说现有的扩散和流生成策略在强化学习中的应用虽然能通过迭代动作生成丰富的随机探索，但随机性不适合高维机器人系统，小动作变化会导致不一致的运动和降低鲁棒性。方法部分，他们提出了SteerGenPO，用隐式空间强化学习框架，将训练好的生成策略引导成鲁棒确定性的控制器。关键点是将随机的隐式采样替换为学习的隐式演员，预测状态相关的隐式输入，分离探索和控制：生成策略在训练时用随机采样探索，部署时用确定性的隐式引导控制。结论部分是在六个Isaac Lab基准和Unitree G1任务上验证，结果显示优于经典RL和生成RL基线，确定性隐式引导带来更稳定的行为和可靠的指令响应。  接下来要确保总结符合格式，问题、方法、结论各部分要简洁。用户强调要突出核心创新点，所以需要抓住替换随机采样为隐式演员，分离探索和控制这两个关键点。避免技术细节，比如具体的隐式空间框架名称可能可以简化，但用户给的例子中用了SteerGenPO，所以可能需要保留。同时要检查字数，确保不超过300字。  然后，按照用户要求，所有内容在同一行，不换行，没有其他解释。可能需要多次调整措辞，确保信息准确且符合格式。比如问题部分要简明，方法部分突出替换和分离，结论部分强调结果和优势。最后检查是否符合所有要求，比如没有换行符，没有多余的解释，核心创新点是否突出。 </think> 【问题】高维机器人系统中生成强化学习策略的随机性导致动作累积不稳定，降低控制鲁棒性；【方法】提出SteerGenPO通过隐式演员预测状态依赖隐式输入替代随机采样，分离训练时随机探索与部署时确定性隐式引导控制；【结论】在六项基准任务和Unitree G1上实现更稳定运动与可靠指令响应，优于经典RL和生成RL基线。|
+|**2026-06-15**|**APEX: Adaptive Policy Execution for Precise Manipulation**|Mengfei Zhao et.al.|[2606.16504](http://arxiv.org/abs/2606.16504)|null|<think> 好的，我现在需要帮用户精简总结这篇论文，按照指定的格式。首先，我得仔细阅读用户提供的论文摘要，理解问题和方法的核心。  论文标题是APEX: Adaptive Policy Execution for Precise Manipulation。问题部分提到，现有的模仿学习方法生成高层动作参考，但执行时存在差距，因为政策不了解底层控制动力学，导致动作偏差，影响精度。之前的方法修改政策或控制器，但需要侵入式调整，而用户的问题是在两者都是黑盒的情况下如何解决。  方法部分，APEX是在政策和控制器之间插入一个框架，动态生成可行参考，并在测试时根据状态反馈调整，有收敛保证。结论是实验显示跟踪误差减少41.2%，成功率提升4.8-25.8%。  用户要求突出创新点，避免技术细节，严格格式，同一行，无换行。需要检查是否符合字数限制，300字以内。现在要组织语言，确保问题、方法、结论准确，且简洁。可能需要注意术语的一致性，比如“执行差距”、“黑盒”等。最后确保没有多余的解释，严格按照格式输出。 </think> 问题：高层动作参考与低层控制动力学不匹配导致执行差距，传统方法需修改黑盒政策或控制器；方法：插入APEX框架动态重构可行参考并测试时自适应调整，保证收敛性；结论：跟踪误差降低41.2%，成功率提升4.8-25.8%。|
 |**2026-06-12**|**Spatially Conditioned Diffusion Policy: Learning Precise and Robust Manipulation with a Single RGB Camera**|Seoyoon Kim et.al.|[2606.14535](http://arxiv.org/abs/2606.14535)|null|
 |**2026-06-12**|**Kine2Go: Kinematic dataset for the Unitree Go2 robot with diverse gaits and motions**|Władysław Pałucki et.al.|[2606.14433](http://arxiv.org/abs/2606.14433)|null|
 |**2026-06-12**|**Hy-Embodied-0.5-VLA: From Vision-Language-Action Models to a Real-World Robot Learning Stack**|He Zhang et.al.|[2606.14409](http://arxiv.org/abs/2606.14409)|null|
@@ -233,7 +237,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260615>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260616>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
