@@ -1,4 +1,4 @@
-## Updated on 2026.06.22
+## Updated on 2026.06.23
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -13,6 +13,8 @@
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-06-21**|**Scalable Multi-Task Data Generation via Reinforcement Learning for Language-Conditioned Bimanual Dexterous Manipulation**|Zechu Li et.al.|[2606.22471](http://arxiv.org/abs/2606.22471)|null|<think> 好的，用户让我用中文精简总结一篇论文，按照【问题】【方法】，总字数控制在300字以内，还要突出核心创新点，避免技术细节。首先，我需要仔细阅读论文的摘要，找出问题的核心和提出的方法。  论文标题是关于使用强化学习生成多任务数据，用于语言引导的双手灵巧抓取。摘要里提到的问题是训练通用政策时缺乏大规模高质量数据，合成数据在仿真中可以解决人类演示视频的不足，比如形态不匹配、物理交互缺失和动作不可行。现有方法基于人类远程操控，任务多样性有限，因为对象中心轨迹匹配忽略了机器人执行的可行性。强化学习虽然 scalable，但受限于手工设计的任务特定奖励。  接下来，方法部分，他们提出了一个系统化的强化学习数据生成流程，包括通用化奖励设计、有效的域随机化，以及语言条件化的任务注释。实验显示生成的数据显著提高了三个任务的泛化能力。  现在需要按照格式【问题】【方法】，突出创新点。问题要简明，方法要说明核心创新，比如通用奖励、域随机化、语言注释。结论可能不需要，因为用户给的模板里没有结论，但用户提供的例子中有结论，可能要看具体要求。不过用户这次的指示是严格按照给出的格式，即【问题】【方法】，所以可能不需要结论部分。  需要注意用户强调要所有内容在同一行，不要换行，不要包含其他解释。所以需要将问题和方法浓缩成两行，每行用【】括起来，中间用空格分隔，总字数控制在300字以内。核心创新点是奖励设计、域随机化、语言注释，以及多任务数据生成。需要确保语言简洁，避免技术细节，比如不提具体实验或模型结构。  可能需要多次调整，确保符合格式和字数要求。例如：  【问题】训练双手灵巧抓取时缺乏大规模高质量数据，现有合成数据方法任务多样性不足且依赖手工奖励设计；【方法】提出基于强化学习的多任务数据生成框架，通过通用奖励设计、域随机化和语言条件化任务注释提升数据质量与多样性，增强政策泛化能力。  检查字数，确保不超过300字，同时突出创新点。可能需要进一步精简，比如“语言条件化任务注释”可以简化为“语言条件化标注”等。确保每个部分都准确反映论文内容，没有遗漏关键点。|
+|**2026-06-21**|**FlowDPG: Deterministic Policy Gradient on Flow Matching Policies for Real-World Manipulation**|Kexin Shi et.al.|[2606.22303](http://arxiv.org/abs/2606.22303)|null|<think> 好的，我需要帮用户用中文精简总结这篇论文，按照问题、方法、结论的格式，控制在300字以内。首先，我得仔细阅读用户提供的论文摘要，抓住核心内容。  论文标题是FlowDPG，关于在流匹配策略上使用确定性策略梯度（DDPG）的改进。问题部分应该提到现实中的强化学习在机器人操作中的挑战，尤其是流匹配策略的BPTT问题。方法部分要突出FlowDPG的创新点，比如蒸馏框架、两个互补向量，以及避免BPTT。结论部分需要说明实验结果，比如92%的成功率，优于其他方法。  用户要求突出核心创新点，避免技术细节，所以需要简化术语，比如“BPTT-free distillation framework”可以翻译为“无需回传的蒸馏框架”。同时要确保结构正确，严格按照问题、方法、结论的顺序，每部分用方括号括起来，且所有内容在同一行，无换行符。  检查字数，确保不超过300字。可能需要调整用词，比如“数值不稳定性”代替“numerically fragile”，更简洁。最后确认是否符合格式要求，没有多余的解释或换行。 </think> [问题]现实机器人操作强化学习面临流匹配策略训练困难，因需通过BPTT回传多步ODE计算噪声到动作，导致计算成本高且数值不稳定；[方法]FlowDPG设计BPTT-free蒸馏框架，将critic梯度蒸馏为速度场，融合示范驱动的可行性速度和critic驱动的价值修正速度；[结论]在AirPods装配任务中实现92%端到端成功率，优于价值条件、辅助模块适应和伴随梯度方法。|
 |**2026-06-18**|**Generating Robot Hands from Human Demonstrations**|Sha Yi et.al.|[2606.20549](http://arxiv.org/abs/2606.20549)|null|
 |**2026-06-18**|**A Neuromorphic Reinforcement Learning Framework for Efficient Pathfinding in Robotic Mobile Fulfillment Systems**|Junzhe Xu et.al.|[2606.20031](http://arxiv.org/abs/2606.20031)|null|
 |**2026-06-16**|**WireCraft: A Simulation Benchmark for Industrial DLO Manipulation**|Chongyu Zhu et.al.|[2606.18097](http://arxiv.org/abs/2606.18097)|null|
@@ -127,12 +129,16 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260622>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260623>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-06-21**|**ARP: Enhancing Quantized Skill Abstractions via Visual Alignment and Iterative Refinement for Robotic Manipulation**|Yuntian Wang et.al.|[2606.22480](http://arxiv.org/abs/2606.22480)|null|<think> 好的，用户让我总结一篇论文，按照【问题】【方法】，总字数控制在300字以内。首先，我需要仔细阅读论文的摘要，找出核心问题和方法。  论文标题是ARP: Enhancing Quantized Skill Abstractions via Visual Alignment and Iterative Refinement for Robotic Manipulation。摘要里提到，学习长时视-动政策是挑战，现有的基于离散量化的技能模仿学习虽然有效，但存在视觉语义对齐不足和连续动作生成精度问题。ARP的解决方案包括视觉-动作对齐目标和轻量级迭代残差头。  用户要求突出核心创新点，避免技术细节。我需要把问题部分简化为现有方法的不足，方法部分强调ARP的两个创新点。注意格式必须严格按照【问题】【方法】，所有内容在同一行，不换行，不带其他解释。  检查字数，确保不超过300字。可能需要精简语言，比如“离散量化技能表示”代替详细描述。确认问题部分准确，方法部分涵盖视觉对齐和迭代细化，结论部分可能用户没要求，但原问题里有结论部分，但用户给的例子中没有，可能需要看用户的具体指示。根据用户提供的例子，他们可能不需要结论，但根据用户的问题结构，可能需要包括。不过用户给的例子中输出只有问题和方法，所以可能不需要结论。需要再仔细看用户的要求。  用户的问题结构是【问题】【方法】，总字数控制在300字以内，所以可能不需要结论部分。但原问题中的模板有【结论】，但用户可能希望按照他们的例子来，即不包含结论。需要确认用户给的例子，用户提供的例子中输出只有问题和方法，所以可能不需要结论。因此，总结时应只包含问题和方法。  现在组织语言：问题部分要指出现有方法在视觉对齐和动作生成上的不足；方法部分说明ARP的两个创新点。确保核心创新点突出，如视觉对齐、迭代细化，避免技术细节如“共享潜在空间”等。最终检查格式和字数是否符合要求。 </think> 【问题】学习长时视-动政策面临复杂行为技能视觉语义对齐不足和连续动作生成精度低的问题；【方法】ARP通过视觉-动作对齐目标和迭代残差头实现技能细化与精准执行|
+|**2026-06-21**|**Do Rigid-Body Simulators Dream of Soft Robots? Learning Contact-Rich Manipulation for Tendon-Driven Continuum Robots**|Chengnan Shentu et.al.|[2606.22397](http://arxiv.org/abs/2606.22397)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
+|**2026-06-21**|**FlowDPG: Deterministic Policy Gradient on Flow Matching Policies for Real-World Manipulation**|Kexin Shi et.al.|[2606.22303](http://arxiv.org/abs/2606.22303)|null|<think> 好的，我需要帮用户用中文精简总结这篇论文，按照问题、方法、结论的格式，控制在300字以内。首先，我得仔细阅读论文摘要，抓住核心内容。  问题部分：论文提到现实中的强化学习在机械臂操作中困难，尤其是流匹配策略，因为需要反向传播通过时间（BPTT）来处理多步常微分方程，导致计算成本高且数值不稳定。这应该是问题的核心。  方法部分：他们提出了FlowDPG，一种基于确定性策略梯度（DDPG）的方法，通过蒸馏批评家的梯度到速度场，绕过BPTT。结合了示范驱动的速度和批评家驱动的修正，分三点贡献：无BPTT的蒸馏框架、与标准DPPG的联系、在AirPods装配任务中的验证。  结论部分：FlowDPG在长周期、多阶段、双臂组装任务中成功率达到92%，优于其他方法，如价值条件、辅助模块适应和伴随式批评家梯度方法。还有视频和更多结果在项目页面上。  现在需要把这些内容压缩成三个部分，每部分简洁，突出创新点，避免技术细节。注意字数限制，确保同一行，无换行，不包含其他解释。检查是否符合用户格式要求，确保关键点如BPTT绕过、蒸馏框架、成功率和对比结果都涵盖进去。可能需要注意术语的准确翻译，比如“flow matching policies”译为“流匹配策略”，“BPTT”保持缩写。最后确保总字数在300以内，可能需要调整措辞，比如用“突破性”或“显著”来强调效果。 </think> 问题：现实强化学习在机械臂流匹配策略中因BPTT计算成本高且数值不稳定导致训练困难；方法：FlowDPG通过蒸馏批评家梯度至速度场绕过BPTT，结合示范驱动的可行速度与批评家驱动的价值修正，提出无BPTT蒸馏框架并建立与标准DPPG的数学联系；结论：FlowDPG在AirPods双臂装配任务中实现92%端到端成功率，优于价值条件、辅助模块适应等主流方法，提供项目页面视频验证。|
+|**2026-06-20**|**CoRDE: Concept-Prior Routed Diffusion Experts for Structural Generalization in Robot Manipulation**|Haidong Huang et.al.|[2606.21935](http://arxiv.org/abs/2606.21935)|null|<think> 好的，我现在需要处理用户的查询，帮他精简总结这篇论文。首先，我得仔细阅读用户的要求，确保完全理解。用户希望用中文，严格按照【问题】【方法】，总字数控制在300字以内，并且要突出核心创新点，避免技术细节。  论文标题是CoRDE，主要解决机器人操作中的结构泛化问题。摘要里提到扩散模型在多任务和长周期场景下存在结构泛化不足，梯度冲突，纯数据驱动的MoE方法有路由崩溃和参数爆炸的问题。CoRDE的创新点包括概念编码器指导路由，熵控责任推断，低秩适配的专家池。  用户要求结构是【问题】【方法】，所以我要先明确问题部分。问题应该是多任务长周期下结构泛化不足，梯度冲突，MoE方法的路由崩溃和参数爆炸。方法部分要突出概念编码器、软映射矩阵、熵控责任、低秩适配专家池，以及理论分析和实验结果。  需要注意避免技术细节，比如具体的LoRA实现不需要提，但要说明参数高效。核心创新点包括结构引导的路由机制和低秩适配，这两个是关键。然后要检查字数，确保不超过300字，并且所有内容在同一行，没有换行符。  现在组织语言，确保每个部分简洁。问题部分要涵盖场景、主要挑战和现有方法的问题。方法部分要列出CoRDE的创新点，包括指导机制、责任推断、参数优化，以及理论和实验结果。最后检查格式是否符合要求，有没有多余的解释，确保严格按照用户的格式输出。 </think> 【问题】多任务长周期机器人操作中扩散模型存在结构泛化不足、梯度冲突，纯数据驱动MoE方法面临路由崩溃和参数爆炸挑战【方法】CoRDE通过冻结概念编码器提取语义分布，设计软映射矩阵实现熵控责任推断，结合低秩适配专家池控制参数规模，理论保证路由质量与行为多样性平衡，实验验证其优于基线路由稳定性与生成质量【结论】|
 |**2026-06-18**|**CoLI: A Reproducible Platform for Continuum Robot Learning via Monolithic 3D Printing and Isomorphic Teleoperation**|Ziyuan Tang et.al.|[2606.20389](http://arxiv.org/abs/2606.20389)|null|
 |**2026-06-18**|**Frequency-Aware Flow Matching for Continuous and Consistent Robotic Action Generation**|Jianing Guo et.al.|[2606.20135](http://arxiv.org/abs/2606.20135)|null|
 |**2026-06-18**|**Co-policy: Responsive Human-Robot Co-Creation for Musical Performances**|Xuetao Li et.al.|[2606.19914](http://arxiv.org/abs/2606.19914)|null|
@@ -247,7 +253,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260622>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260623>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
