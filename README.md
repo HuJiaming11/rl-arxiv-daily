@@ -1,4 +1,4 @@
-## Updated on 2026.06.29
+## Updated on 2026.06.30
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -138,12 +138,14 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260629>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260630>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-06-29**|**OpenSPM: An Environment-Transferable Robotic Key Spatial Pose Memory and Closed-Loop High-Frequency Flow-Matching Action Generation Model**|Iok Tong Lei et.al.|[2606.29936](http://arxiv.org/abs/2606.29936)|null|<think> 好的，我现在需要帮用户总结这篇论文，按照指定的格式来。首先，用户要求用中文精简总结，控制在300字以内，分问题、方法、结论三部分，并且要突出核心创新点，避免技术细节。  先看看论文标题和摘要。标题提到OpenSPM是一个环境可迁移的机器人关键空间姿态记忆和闭环高频流动匹配动作生成模型。摘要里说，开放环境下的桌面上机器人操作需要语义理解、精确几何姿态估计和高频动作生成。现有的端到端VLA模型语义泛化好，但缺乏几何约束，训练成本高。他们提出OpenSPM，结合空间姿态记忆和流动匹配模型，用语义条件的三维感知和卡尔曼滤波跟踪6D姿态，提取关键空间姿态作为可迁移的记忆条目，然后根据自然语言指令检索并迁移到新场景，生成高频动作片段，结合实时反馈和残差修正，减少误差累积。实验显示成功率高，控制频率高，计算成本低。  接下来要提炼问题和方法。问题应该是开放环境中机器人需要语义理解、几何估计和高频动作生成，但现有模型语义好但缺乏几何约束，训练成本高。方法则是OpenSPM框架，包括空间姿态记忆和流动匹配模型，提取关键记忆，迁移到新场景，生成动作，加上反馈和修正。结论是实验效果不错，成功率高，频率高，计算成本低，验证了记忆结构和闭环修正的重要性。  需要注意用户要求不要技术细节，所以像卡尔曼滤波、SE(3)变换这些可能不需要提。核心创新点应该是环境可迁移的记忆、闭环残差修正、高频动作生成结合低计算成本。要确保每个部分简洁，不超过300字，并且严格按照格式，同一行，无换行符。  现在检查是否符合要求：问题部分明确现有模型的不足，方法部分突出创新点，结论部分结果和验证。字数应该没问题，核心点都涵盖了。最后确保没有多余的解释，直接输出总结。 </think> 问题：开放环境桌面机器人需语义理解、几何姿态估计及高频动作生成，但端到端VLA模型语义泛化强但缺乏几何约束且训练成本高；方法：提出OpenSPM框架，通过语义条件三维感知与卡尔曼滤波跟踪6D姿态，提取可迁移对象中心化空间姿态记忆，结合自然语言指令检索、SE(3)场景迁移|
+|**2026-06-28**|**CORE: Common Outcome Regularities from Action-Free Visual Demonstrations for Robot Manipulation**|Juyi Sheng et.al.|[2606.29517](http://arxiv.org/abs/2606.29517)|null|<think> 好的，我需要帮用户精简总结这篇论文，严格按照问题、方法、结论的格式，控制在300字以内，突出核心创新点，避免技术细节。首先，我得仔细阅读用户提供的论文摘要。  论文标题是CORE，全称是提取动作无关视觉演示中的通用结果规律，用于机器人操作。问题部分应该指出机器人模仿学习依赖昂贵的机器人演示，而人类视频等动作无关的视觉演示难以利用，因为缺乏可执行的机器人动作和体积分歧。  接下来是方法。用户提到CORE的核心创新是专注于终端状态而非显式动作。方法部分需要说明CORE如何训练终端结果编码器，通过对比和辅助时间目标，然后聚合成功终端嵌入到视觉目标原型，最后将这些原型作为全局目标条件输入机器人策略。这里要避免技术细节，比如具体的编码器结构或对比方法。  结论部分要强调结果，相比语言指令，视觉原型提供更具体的几何和物理约束，并在多个数据集上显著提升成功率，比如Meta-World、RoboTwin 2.0和真实世界，分别提高了3.9、11.1和17.0个百分点，并优于文本条件版本。  现在需要检查是否符合格式要求：问题、方法、结论，每部分用【】括起，总字数不超过300，同一行不换行。要确保核心创新点突出，比如不转移显式动作，而是利用终端状态的稳定特征，以及视觉目标原型带来的优势。  可能需要注意术语的简化，比如“对比和辅助时间目标”可以简化为“对比与时间辅助训练”或者保持原样，但用户要求避免技术细节，所以可能需要更概括。另外，确保数据集和百分比准确无误，用户给的例子是正确的。  最后检查字数，确保不超过限制。现在组合起来：  【问题】机器人模仿学习依赖昂贵演示，动作无关视觉演示（如人类视频）因缺乏可执行动作和体积分歧难以利用；【方法】CORE提取视觉演示中成功轨迹的终端状态共性（稳定物体配置、空间关系、接触约束），训练终端编码器生成视觉目标原型，将其作为全局目标条件注入机器人策略；【结论】相比语言指令，视觉原型提供更具体约束，在Meta-World、RoboTwin 2.0和真实世界使成功率提升+3.9/11.1/17.0%，优于|
 |**2026-06-26**|**LLawCo: Learning Laws of Cooperation for Modeling Embodied Multi-Agent Behavior**|Qinhong Zhou et.al.|[2606.28182](http://arxiv.org/abs/2606.28182)|null|
 |**2026-06-25**|**Bridging Handheld and Teleoperated Supervision for Contact-Rich Manipulation via State-Gated Experts**|Vidullan Surendran et.al.|[2606.26603](http://arxiv.org/abs/2606.26603)|null|
 |**2026-06-24**|**Learning Action Priors for Cross-embodiment Robot Manipulation**|Dong Jing et.al.|[2606.26095](http://arxiv.org/abs/2606.26095)|null|
@@ -270,7 +272,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260629>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260630>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
