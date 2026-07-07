@@ -1,4 +1,4 @@
-## Updated on 2026.07.06
+## Updated on 2026.07.07
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -13,6 +13,9 @@
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-07-06**|**Do Vision-Language-Action Models Mean What They Say? On the Role of Faithfulness in Embodied Reasoning**|Matthew Foutter et.al.|[2607.04681](http://arxiv.org/abs/2607.04681)|null|<think> 好的，我现在需要处理用户的查询，他要求用中文精简总结一篇论文，严格按照指定的格式，并且控制字数在300字以内。首先，我得仔细阅读用户提供的论文摘要，理解其中的核心内容。  用户给的论文标题是“Do Vision-Language-Action Models Mean What They Say? On the Role of Faithfulness in Embodied Reasoning”，摘要里提到Embodied Chain-of-Thought（SoTA）在机器人决策中的应用，但质疑其是否真正反映内部决策过程。问题在于区分功能推理和忠实推理，指出SoTA对忠实性的策略不足，可能导致中间步骤掩盖因果联系。方法部分他们开发了Pinocchio作为行为批评家，评估观察接地和步骤连贯性，用强化学习进行后训练。结论是后训练提升了忠实性，并在合成数据集上表现更好。  接下来，我需要按照用户指定的格式：问题、方法、结论，每部分用方括号括起来，内容精简，突出创新点，避免技术细节。用户强调要在一行内输出，不要换行，所以需要确保各部分用竖线分隔，并且总字数不超过限制。  首先，问题部分要简明指出当前SoTA的不足，即功能推理与忠实推理的差距，导致中间步骤可能不真实。方法部分要提到Pinocchio作为行为批评家，用于评估和强化学习后训练。结论部分则强调提升的指标和效果，如4%、18%的提升，以及合成数据集的1.6倍响应。  需要注意用户要求避免技术细节，比如具体的评估方法或基准，所以可能需要简化。同时要确保核心创新点突出，比如Pinocchio的使用和后训练策略的有效性。最后检查字数，确保不超过300字，并且格式正确，没有换行符或其他解释。 </think> [问题] SoTA在机器人决策中功能推理与忠实推理存在差距，中间步骤可能掩盖因果联系导致政策泛化受限[方法]提出Pinocchio行为批评家通过观察接地性和步骤连贯性评估忠实性，设计强化学习后训练优化政策[结论]后训练使SoTA模型在驾驶基准中提升4%和18%的忠实性及轨迹误差，合成数据集政策对罕见场景响应增强1.6倍，实现更可靠可解释的具身智能。|
+|**2026-07-06**|**PixelPilot: Scalable Vision-Language-Action Models for End-to-End Autonomous Driving**|Pin Tang et.al.|[2607.04637](http://arxiv.org/abs/2607.04637)|null|<think> 好的，我现在需要处理用户的这个请求。首先，用户希望我精简总结一篇关于自动驾驶的论文，严格按照问题、方法、结论的格式，控制在300字以内，并且突出核心创新点，避免技术细节。  首先，我得仔细阅读论文的摘要，理解其中的主要问题和作者提出的方法。论文的标题是PixelPilot: Scalable Vision-Language-Action Models for End-to-End Autonomous Driving。摘要里提到现有的VLAs在预测3D轨迹时存在两个问题：一是2D到3D预测依赖相机参数，导致数据扩展性差；二是直接优化3D空间容易收敛到平凡解，过度依赖车辆状态而非视觉理解。  接下来，作者提出的方法是PixelPilot，核心创新点在于分阶段的规划与提升。规划阶段是2D到2D的任务，避免相机参数的问题，提升阶段在推理时将2D轨迹升维到3D，充分利用视觉信息。另外，他们用了知识注入的策略，通过GRPO优化中间奖励，确保从视觉感知到空间规划的因果链。  现在需要把这些内容浓缩到问题、方法、结论三个部分，每部分简洁明了。问题部分要概括现有方法的两个缺陷，方法部分突出分阶段规划和知识注入策略，结论则强调性能提升和扩展性。  需要注意的是用户要求严格按照格式，所有内容在同一行，无换行符，不包含其他解释。所以必须确保结构正确，语言精炼，同时不超过字数限制。可能还需要检查是否有技术细节需要删减，比如具体的技术名称如GRPO可以保留，但不需要详细解释。  最后，确保总字数在300字以内。现在组合起来：  问题：现有VLA依赖相机参数导致数据扩展性差，且3D优化易收敛平凡解，过度依赖车辆状态。 方法：PixelPilot采用分阶段规划（2D到2D）与升维（仅推理时3D），结合知识注入的GRPO优化因果链。 结论：在开放和闭环测试中表现最佳，验证其扩展性和视觉推理优势。  检查是否符合要求，结构正确，核心点突出，无技术细节，字数应该合适。确认无误后输出。 </think> 问题：现有VLA依赖相机参数导致数据扩展性差，且3D优化易收敛平凡解，过度依赖车辆状态。方法：PixelPilot采用分阶段规划（2D到2|
+|**2026-07-05**|**A Perception-Manipulation Robotics System for Food Cutting**|Xinyuan Luo et.al.|[2607.04367](http://arxiv.org/abs/2607.04367)|null|<think> 好的，我现在需要帮用户精简总结一篇论文，按照指定的格式：问题、方法、结论，总字数控制在300字以内。用户特别强调要突出核心创新点，避免技术细节，直接输出总结，并且所有内容在同一行内，不能有换行符或其他解释。  首先，我得仔细阅读用户提供的论文摘要。论文标题是“A Perception-Manipulation Robotics System for Food Cutting”，摘要里提到烹饪机器人中切割任务的关键性，挑战在于食物多样性的处理，需要不同的切割策略和刀具。提出的系统是一个感知-操作框架，包括刀具选择模块和自适应切割阶段。刀具选择模块用初步固定试切的数据来选刀，自适应切割用强化学习平衡速度和能耗。实验显示刀具选择100%成功，并与固定策略、人类操作员比较，性能高且接近人类。  接下来，我需要按照用户给的格式来组织内容。问题部分要简明指出核心挑战，即食物多样性和需要不同刀具策略。方法部分要突出创新点：基于试切的力数据选刀，强化学习自适应切割。结论部分强调高成功率、与人类相当的性能，以及系统的高效性。  需要注意用户要求避免技术细节，比如具体的算法名称可能可以简化，但用户例子中用了强化学习（RL），所以可能需要保留。同时要确保字数在限制内，可能需要精简语言，比如用“自适应强化学习”代替详细描述。  然后检查是否符合格式要求：问题、方法、结论，同一行，无换行，无其他解释。用户给的例子中，每个部分用方括号括起，中间用竖线分隔，所以需要严格按照这个格式。同时总字数要控制在300字以内，但用户提供的例子显然更短，所以可能实际需要更简洁。  最后，确保没有遗漏核心创新点：刀具选择模块的成功率和自适应切割阶段。结论中的实验结果，如100%成功率和与人类相当的性能。可能还需要提到系统的高效性，如平衡速度和能耗。  现在将这些整合成一行，确保每个部分准确，语言精炼，符合用户的所有要求。 </think> 【问题】食物多样性导致需不同切割策略及刀具选择挑战；【方法】基于试切力数据的刀具智能选型+自适应强化学习切割优化；【结论】实现100%未见过食材选刀成功率，切割性能接近人类且兼顾效率|
 |**2026-07-02**|**EAGLE-360: Embodied Active Global-to-Local Exploration in 360 $^\circ$**|Jingtao Xu et.al.|[2607.02479](http://arxiv.org/abs/2607.02479)|null|
 |**2026-07-02**|**WorldSample: Closed-loop Real-robot RL with World Modelling**|Yuquan Xue et.al.|[2607.02431](http://arxiv.org/abs/2607.02431)|null|
 |**2026-07-02**|**Actuator Reality Shaping for Zero-Shot Sim-to-Real Robot Learning**|Satoshi Yamamori et.al.|[2607.02205](http://arxiv.org/abs/2607.02205)|null|
@@ -145,12 +148,14 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260706>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260707>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-07-06**|**Cortex: A Bidirectionally Aligned Embodied Agent Framework for Long-horizon Manipulation**|Jiaqi Peng et.al.|[2607.05377](http://arxiv.org/abs/2607.05377)|null|<think> 好的，我现在需要处理用户的请求，帮他精简总结一篇论文。首先，我得仔细阅读用户提供的所有信息，确保理解他的需求。用户要求用中文，严格按照【问题】【方法】，总字数控制在300字以内，并且要突出核心创新点，避免技术细节。输出格式必须严格，所有内容在同一行，不要换行符或其他解释。  首先，我需要解析论文摘要中的问题和方法。问题部分主要提到现有的VLA模型在长周期任务中存在Markovian限制，依赖当前观察，导致长程规划困难。而分层双系统方法存在高层语义与底层运动学之间的差距。结论部分则指出Cortex框架通过双向对齐和定制规划接口解决了这些问题，提升了性能，并在多个任务中表现优异。  接下来，我需要将问题和方法部分用简洁的语言概括。问题要突出长周期任务中的Markovian限制和语义与运动学的差距。方法部分要强调双向对齐、32种标准技能、数据生成中的 tractability 原则，以及事件平衡采样和任务上下文到技能约束的转换。结论部分需要提到性能提升和零样本适应新任务的能力。  然后，我需要检查是否符合字数要求。用户要求300字以内，所以要尽量精简，避免冗长。同时要确保不包含技术细节，比如具体的数值或实验数据，除非是核心创新点。例如，提到性能提升的百分比可能属于结论部分，但用户可能希望保留，因为这是成果的体现。  另外，用户特别强调输出格式，必须严格按照【问题】【方法】，总字数限制，并且所有内容在同一行。因此，我需要确保没有换行符，使用正确的分隔符，并且各部分之间用括号明确标出。  现在，我需要将上述分析转化为符合要求的总结。问题部分要简明扼要，方法部分突出创新点，结论部分强调成果。同时，要确保语言流畅，信息准确，没有遗漏关键点。例如，Cortex的32种标准技能和事件平衡采样是核心创新，必须包含在内。而数据生成和模拟数据的具体小时数可能属于技术细节，可以省略，除非必要。  最后，检查字数是否在限制内，确保格式正确，没有多余内容。可能需要多次调整措辞，比如将“通过双向对齐”简化为“双向对齐”，或者合并句子|
+|**2026-07-06**|**KAM-WM: Kinematic Affordance Maps from Latent World Models for Robot Manipulation**|Xinyu Shao et.al.|[2607.04652](http://arxiv.org/abs/2607.04652)|null|<think> 好的，我现在需要帮用户总结这篇论文。首先，用户的要求很明确，用中文精简总结，严格按照问题、方法、结论的格式，控制在300字以内，突出核心创新点，避免技术细节，并且所有内容在同一行，不要换行符。  首先，我得仔细阅读论文摘要。论文标题是KAM-WM，主要解决机器人在抓取任务中需要视觉先验的问题。问题部分应该包括当前方法的不足，比如静态的分割掩码只能定位区域，无法指导如何开始交互。方法部分要提到他们提出的框架，从冻结的视频世界模型中提取Kinematic Affordance Map（KAM），使用Flow Matching和Perceiver压缩，结合扩散策略。结论部分则是实验结果和意义，比如在LIBERO和RoboTwin上的表现，以及方向信息的贡献。  接下来要确保核心创新点突出。用户强调避免技术细节，所以不需要提到Flow Matching的具体实现，而是说“基于冻结视频世界模型”和“单步隐式速度”。结论中的比较结果和意义也要简明，比如提到部分增益来自方向信息。  然后检查格式是否符合要求。问题、方法、结论三个部分，用竖线分隔，全部在同一行，没有换行。字数要控制在300字以内，现在大概的总结可能需要调整，确保简洁。  可能需要注意术语的准确翻译，比如“Kinematic Affordance Map”翻译为“运动功能图”，“Perceiver”可能不需要翻译，保留英文。另外，实验数据如成功率要准确无误，单位也要正确。  最后，检查是否有冗余信息，比如“without rollout or world-model fine-tuning”可以简化为“无需回滚或世界模型微调”，但用户要求避免技术细节，可能可以省略，但关键点如“冻结模型”需要保留。确保每个部分的信息都准确且简洁，符合用户的要求。 </think> 问题：现有静态视觉先验仅定位抓取区域无法指导初始动作；机器人抓取需融合交互位置与初始动作方向。方法：提出KAM-WM框架，基于冻结视频世界模型单步隐式速度生成运动功能图（KAM）指导交互，结合Perceiver压缩与扩散策略控制。结论：在LIBERO和RoboTwin2.0上平均成功率90.6%和65.7%-22.4%，验证方向信息对动作|
 |**2026-07-02**|**VT-WAM: Visual-Tactile World Action Model for Contact-Rich Manipulation**|Shuai Tian et.al.|[2607.02503](http://arxiv.org/abs/2607.02503)|null|
 |**2026-07-02**|**EAGLE-360: Embodied Active Global-to-Local Exploration in 360 $^\circ$**|Jingtao Xu et.al.|[2607.02479](http://arxiv.org/abs/2607.02479)|null|
 |**2026-07-02**|**WorldSample: Closed-loop Real-robot RL with World Modelling**|Yuquan Xue et.al.|[2607.02431](http://arxiv.org/abs/2607.02431)|null|
@@ -288,7 +293,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260706>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260707>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
