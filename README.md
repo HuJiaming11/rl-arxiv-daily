@@ -1,4 +1,4 @@
-## Updated on 2026.07.20
+## Updated on 2026.07.21
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -13,6 +13,7 @@
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-07-20**|**Importance Sampling and PCA for Finding Failures in Commercial Autonomous Vehicles**|Hailey Warner et.al.|[2607.18106](http://arxiv.org/abs/2607.18106)|null|<think> 好的，我需要帮用户总结这篇论文，严格按照要求的格式，控制在300字以内。首先，用户给了一个结构：问题、方法、结论，每部分要突出核心创新点，避免技术细节。  先看论文摘要。问题部分，用户提到现有的方法主要在学术仿真环境中测试，而商业系统的自动驾驶系统更复杂，所以问题应该是验证这些方法在商业系统中的有效性。方法部分，他们用了两种算法：AST和DiFS，然后结合PCA进行统计分析，最后通过聚类和逆变换恢复轨迹。结论应该是这些方法能发现传统方法忽略的故障，并转化为可操作的诊断。  需要注意用户强调突出创新点，所以问题要明确现有方法的局限，方法要强调AST和DiFS的创新，以及PCA的应用，结论则要说明结果的有效性和实用性。同时要避免技术细节，比如具体怎么训练模型，不用提。还要确保总字数不超过300字，每部分简洁。  现在检查是否符合格式：问题、方法、结论，同一行，无换行，无其他解释。需要确保用中文，并且每个部分用方括号括起来。可能用户给的例子中有空格，但要求不要换行，所以可能需要调整标点。比如用【问题】【方法】【结论】直接连在一起，中间没有换行。可能需要测试一下字数，确保不超过限制。最后再检查一遍是否遗漏核心创新点，比如AST和DiFS的应用，PCA的分类和轨迹恢复，以及实际场景的应用验证。 </think> 【问题】传统罕见故障检测方法在商业自动驾驶系统中的有效性不足，无法有效识别复杂场景下的感知级缺陷；【方法】创新性结合自适应强化学习轨迹搜索（AST）、扩散模型故障采样（DiFS）与主成分分析（PCA）分类诊断，通过聚类和逆变换恢复通用故障模式；【结论】该方法成功发现蒙特卡洛忽略的合流与切入场景碰撞故障，构建从故障发现到系统性诊断的闭环路径。|
 |**2026-07-17**|**Data and Learning Where it Matters for Contact-Rich Manipulation**|Oliver Hausdörfer et.al.|[2607.15982](http://arxiv.org/abs/2607.15982)|null|
 |**2026-07-16**|**WorkDrive: Roadwork Chain of Causation for Autonomous Driving**|Tianyi Jiang et.al.|[2607.14727](http://arxiv.org/abs/2607.14727)|null|
 |**2026-07-13**|**Robust In-Hand Manipulation via Priors in Reinforcement Learning and Mechanical Design**|Yifei Chen et.al.|[2607.12105](http://arxiv.org/abs/2607.12105)|null|
@@ -155,12 +156,13 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260720>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260721>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-07-20**|**MEVION: Low-Cost Open-Source Data Collection System for Powerful and High-Speed Dual-Arm Manipulation**|Kento Kawaharazuka et.al.|[2607.17970](http://arxiv.org/abs/2607.17970)|null|<think> 好的，我需要帮用户用中文精简总结这篇论文，严格按照【问题】【方法】，总字数控制在300字以内。首先，我得仔细阅读用户提供的论文摘要和具体要求。  论文标题是MEVION，一个低成本开源的双臂机械臂数据采集系统。摘要里提到，现有的系统比如ALOHA虽然低成本开源，但在力和速度上有局限，难以处理重物或快速操作。所以MEVION的目标是解决这个问题，同时保持低成本和开源。  用户要求突出核心创新点，避免技术细节。我需要先确定问题和方法。问题应该是双臂机械臂数据采集系统在力和速度上的不足，而方法则是MEVION的设计，包括结构、关节设计、成本控制等。结论部分可能需要提到效果，比如支持数据采集和模仿学习，但用户给的例子中结论部分被省略了，可能用户希望只总结问题和方法？  不过用户给的示例输出里只有【问题】【方法】，可能结论部分不需要？需要再仔细看用户的要求。用户提供的示例输出是：  【问题】双臂机械臂数据采集系统在力和速度上受限，难以处理重物或快速操作；【方法】MEVION采用闭链肘关节设计、轻量化结构及商业组件，成本约1.4万美元，支持高精度数据采集与模仿学习。  所以用户希望只总结问题和方法，结论可能被省略了？或者可能用户示例中的结论部分被包含在方法里？需要确认。根据用户的要求，严格按照【问题】【方法】，总字数控制在300字以内，所以可能不需要结论部分。但原论文摘要里提到了结论，比如“支持模仿学习”，可能需要包含在方法里。  现在要提取核心创新点：闭链肘关节、轻量化结构、商业组件、低成本（14k美元）、支持高精度数据采集和模仿学习。问题部分要说明现有系统的不足，即力和速度不够，无法处理重物或快速操作。方法部分要说明MEVION的设计和优势，包括闭链机制、结构设计、成本等。  需要注意避免技术细节，比如具体的扭矩数值、组件数量等，用户示例中没有提到这些。所以需要概括，比如“闭链肘关节设计”、“轻量化结构”、“商业组件”等。  然后检查字数，确保不超过300字。用户示例中的输出是两行，但用户要求所有内容在同一行|
 |**2026-07-17**|**Dynamics-Aware Meta-Imitation for Generalization to Unseen Robotic Manipulation**|Zhenduo Shang et.al.|[2607.15880](http://arxiv.org/abs/2607.15880)|null|
 |**2026-07-16**|**WorkDrive: Roadwork Chain of Causation for Autonomous Driving**|Tianyi Jiang et.al.|[2607.14727](http://arxiv.org/abs/2607.14727)|null|
 |**2026-07-16**|**BridgeFlow: Fast and Robust SE(2)-Equivariant Motion Planning with Flow Matching**|Xinzhe Zhou et.al.|[2607.14725](http://arxiv.org/abs/2607.14725)|null|
@@ -311,7 +313,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260720>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260721>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
