@@ -1,4 +1,4 @@
-## Updated on 2026.07.27
+## Updated on 2026.07.29
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -158,12 +158,14 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260727>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260729>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-07-28**|**S2A2: Audio-Visual Imitation Learning for Manipulation Tasks Using Acoustic Spatial Information**|Kaneyoshi Hiratsuka et.al.|[2607.26047](http://arxiv.org/abs/2607.26047)|null|<think> 好的，我现在需要处理用户的查询，帮他精简总结一篇论文。首先，用户的要求很明确，要用中文，严格按照【问题】【方法】，总字数控制在300字以内，突出核心创新点，避免技术细节，并且所有内容在同一行内，不能换行，也不能有其他解释。  首先，我得仔细阅读用户提供的论文摘要。论文标题是S2A2: Audio-Visual Imitation Learning for Manipulation Tasks Using Acoustic Spatial Information。摘要里提到，论文引入了新的基于声学信息的模仿学习任务，机器人需要利用听觉线索来确定操作目标，这些任务需要声源定位和识别来进行主动探索。然后他们提出了一个多模态模仿学习框架S2A2，整合了视觉特征和声学的空间与频谱信息。还提到了他们整合了不同的策略，比如ACT、Diffusion Policy等，仿真实验和真实机器人实验的结果都支持他们的方法。  接下来，我需要按照用户给的格式来总结：问题、方法、结论。用户要求突出核心创新点，避免技术细节。所以问题部分应该说明研究的核心挑战，也就是机器人如何利用声学信息进行操作任务。方法部分要突出S2A2框架，整合视觉和声学空间/频谱信息，以及不同策略的结合。结论部分则强调在需要位置和音色任务中的有效性，以及真实机器人实验的验证。  需要注意字数控制，300字以内。现在需要检查每个部分是否简洁，有没有冗余的信息。比如，问题部分可以简化为“机器人需利用声学信息定位操作目标并主动探索”，方法部分提到框架名称和整合的信息类型，以及策略的整合，结论部分提到仿真和真实实验的结果。  然后要确保所有内容在同一行，没有换行符，所以需要用空格分隔。同时不能包含其他解释，直接输出总结内容。现在需要检查是否符合这些格式要求，有没有遗漏核心创新点，比如声学空间信息的整合和不同策略的结合，以及实验验证的有效性。  最后，整合所有部分，确保不超过字数，并且格式正确。可能需要调整措辞，比如“提出多模态S2A2框架”这样的表达更简洁。确认无误后，输出结果。 </think> 【问题】机器人需利用声学信息定位操作目标并主动探索，传统方法缺乏声学空间与频谱信息的整合；【方法】提出|
+|**2026-07-28**|**Tri-Manual Visuomotor Imitation Learning of Robot Policies**|James Zhao et.al.|[2607.25731](http://arxiv.org/abs/2607.25731)|null|<think> 好的，我需要帮用户总结这篇论文。首先，用户要求用中文精简总结，严格按照【问题】【方法】，总字数控制在300字以内。用户还强调要突出核心创新点，避免技术细节，直接输出总结，格式必须严格，同一行内，不要换行或其他解释。  先看论文标题和摘要。问题在于三手动操作中，单个人只能同时控制两个手臂，导致传统双手动操作的方法不适用。传统方法假设操作者与机器人的控制通道数量匹配，但三手动系统需要同时协调三个手臂，而人只能控制两个，因此可能存在模式切换的问题，导致行为克隆出现延迟，而不是任务本身需要的延迟。  方法部分，论文提出了TriManPolicy系统，核心是Dependency-Aware Tri-Arm Scheduling（DATS）。关键点在于重新调整演示数据的顺序，保持局部传感器运动段，根据任务顺序和手臂使用限制进行重新排列，训练一个同步策略。用户强调要突出创新点，所以需要强调 DATS 的核心机制，即保留局部段并重新调度，而部署时不需要依赖图或调度器。  结论部分，在六个实际任务中，使用DATS调整后的演示数据训练的策略在协调效率上更优，任务成功率相当，同时 offline 分析显示监督方式变化而非仅仅去除空闲期。  现在需要将这些信息浓缩成问题、方法、结论三个部分，每部分用中文，不超过300字，同一行，无换行。要注意避免技术细节，比如具体的六个任务类型不需要提，重点在创新点和结果。  检查格式是否正确，确保没有换行，所有内容在同一行。例如：  【问题】三手动操作中单操作者无法同步控制三臂，传统行为克隆导致界面延迟而非任务延迟；【方法】TriManPolicy通过Dependency-Aware Tri-Arm Scheduling（DATS）重新调度演示数据，保留局部运动段并按任务约束调整顺序；【结论】在六项任务中，DATS训练的同步策略提升协调效率且任务成功率相当，offline分析显示监督方式变化而非仅去除空闲期。  确认字数是否符合，核心创新点是否突出，技术细节是否被省略。例如，“DATS”需要解释为重新调度演示数据，保留局部段，按约束调整顺序，而结论部分强调结果和核心发现。 </think> 【问题】三手动操作中|
 |**2026-07-23**|**GuidedAttention: Interpretable and Correctable Visual Attention for OOD-Robust Robot Manipulation via Imitation Learning**|Masaki Murooka et.al.|[2607.21049](http://arxiv.org/abs/2607.21049)|null|
 |**2026-07-22**|**PerceptDrive: Perception Prior World-Action Modeling with Adaptive Expert Routing for End-to-End Autonomous Driving**|Yushan Liu et.al.|[2607.20175](http://arxiv.org/abs/2607.20175)|null|
 |**2026-07-22**|**Diffusion ReRoll: Revisable Denoising for Robotic Sequential Prediction**|Seonsoo Kim et.al.|[2607.19919](http://arxiv.org/abs/2607.19919)|null|
@@ -318,7 +320,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260727>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260729>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
