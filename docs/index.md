@@ -27,13 +27,14 @@ layout: default
   table th:nth-child(6), table td:nth-child(6) { width: 60%; }  /* 摘要（最后一列） */
 </style>
 
-## Updated on 2026.08.10
+## Updated on 2026.08.15
 > Usage instructions: [here](./docs/README.md#usage)
 
 ## Reinforcement Learning
 
 | Publish Date | Title | Authors | PDF | Code | 摘要 |
 |:---------|:-----------------------|:---------|:------|:------|:-------------------------------------|
+|**2026-08-13**|**FIRE-VLA: Failure-Informed Self-Evolution for Vision-Language-Action Models in Autonomous Driving**|Hao Dou et.al.|[2608.13395](http://arxiv.org/abs/2608.13395)|null|<think> 好的，我现在需要处理用户的请求，帮他精简总结这篇论文。首先，我得仔细阅读用户提供的资料，确保理解每个部分的要求。  用户的要求很明确：用中文精简总结论文，严格按照【问题】【方法】，总字数控制在300字以内，并且突出核心创新点，避免技术细节。输出格式必须严格按照指定，所有内容在同一行，没有换行符，不包含其他解释。  首先，我需要解析论文的问题和方法部分。论文标题是FIRE-VLA，主要针对自动驾驶中的视觉语言行动模型在强化学习中的问题。问题在于当所有采样轨迹都表现不佳时，传统的GRPO方法无法有效识别失败区域，导致排名失败变得困难。核心问题在于如何处理这些无法通过相对奖励信号解决的失败情况。  接下来是方法部分。论文提出FIRE-VLA框架，将未解决的失败转化为特权监督。具体来说，低奖励、低多样性的轨迹组会触发自蒸馏，从冻结的模型副本中提取教师信息。教师和学生参数相同，但教师能观察未来的隐藏轨迹。监督仅作用于学生生成的前缀和答案令牌，同时保留GRPO。更新后的政策作为下一轮的教师，无需外部大模型，提高了效率。实验结果显示在nuScenes数据集上显著降低了错误和失败率。  现在需要将这些信息浓缩成符合格式的总结。问题部分要突出传统方法的不足，方法部分强调核心创新点，如自蒸馏、特权监督、参数共享和动态教师。同时要确保字数控制在300字以内，避免技术细节，比如具体的参数名称或实验数据，但用户提供的摘要中有一些关键指标，可能需要简要提及，如错误降低和失败率下降。  需要检查是否符合所有格式要求：问题、方法、结论三个部分，每部分用方括号括起，内容在同一行，无换行符。用户特别强调不要包含其他解释，所以必须严格按照指示输出。  可能遇到的难点是如何在有限的字数内准确传达核心创新点，同时避免遗漏重要信息。例如，FIRE-VLA如何动态更新教师，以及自蒸馏的具体机制，需要简明扼要地表达。此外，实验结果中的具体数值可能需要简化，比如提到“显著降低”而不是具体数字，但用户示例中包含了具体数值，所以可能需要保留关键数据点。  最后，需要确保语言精简，用词准确，突出|
 |**2026-08-06**|**Beyond Flat Policies: Hierarchical Post-Training for Embodied Agents in Robotic Manipulation**|He Kong et.al.|[2608.05999](http://arxiv.org/abs/2608.05999)|null|
 |**2026-08-04**|**GORDON: Graph-based Object-centric Rewards for Decomposition of Long-Horizon Manipulation**|Andrea Protopapa et.al.|[2608.03753](http://arxiv.org/abs/2608.03753)|null|
 |**2026-08-02**|**RL Bootstrapping of OpenVLA-OFT for a Novel Robot Embodiment**|Damir Nurtdinov et.al.|[2608.01013](http://arxiv.org/abs/2608.01013)|null|
@@ -192,6 +193,7 @@ layout: default
 
 | Publish Date | Title | Authors | PDF | Code | 摘要 |
 |:---------|:-----------------------|:---------|:------|:------|:-------------------------------------|
+|**2026-08-13**|**FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving**|Zekai Li et.al.|[2608.12932](http://arxiv.org/abs/2608.12932)|null|<think> 好的，我需要帮用户总结这篇论文，按照他们的格式要求。首先，用户给了一个论文的标题和摘要，需要提取问题、方法和结论，每部分都要精简，控制在300字以内。  先看问题部分。摘要里提到VLA模型在自动驾驶中的应用，但计算成本太高，无法实时控制。核心挑战是四个阶段的计算瓶颈，比如视觉编码重复、语言模型预填充重复、推理 tokens 串行生成、流动匹配去噪不均匀。用户要求避免技术细节，所以需要概括成几个关键点，比如多阶段计算瓶颈、实时性不足。  接下来是方法部分。论文提出FlashDrive，是一个算法和系统协同设计的框架，针对四个阶段。核心创新点包括：时间重叠启用流式KV缓存重用，非自回归扩散草稿用于推测解码，自适应步缓存集中计算，加上CUDA图编译和内核融合。需要把这些创新点简化，突出算法和系统的结合，以及具体的技术 shortcut。  结论部分要说明应用后的效果，比如在Alpamayo模型上，延迟从717ms降到151ms，4.7倍提升，准确率几乎不变，速度提升到6.6Hz，接近实时。还要提到推动了自动驾驶的实时部署。  现在要确保各部分不超过字数，并且严格按照格式，同一行，无换行，无解释。检查是否有冗余，比如“算法系统协同设计”是否准确，是否突出创新点。可能用户希望问题部分明确四个阶段，但用户要求避免技术细节，所以可能需要更概括。确认问题中的四个阶段是否必须提及，但摘要中问题部分确实提到四个瓶颈，所以可能需要保留，但用更简洁的语言。比如“多阶段计算瓶颈（视觉编码冗余、语言预填充重复、串行推理、非均匀去噪）”这样。  最后检查是否符合所有要求：核心创新点突出，技术细节少，格式正确，字数控制。确保问题、方法、结论各部分清晰，没有多余信息。 </think> 问题：Vision-Language-Action模型实时性不足，存在视觉编码冗余、语言预填充重复、串行推理和去噪不均四阶段计算瓶颈；结论：FlashDrive通过算法系统协同设计将延迟从717ms降至151ms（4.7x），实现6.6Hz实时推理，精度损失<1%，推动自动驾驶端|
 |**2026-08-06**|**$ω$ -0: A Latent Predictive World Action Model for Concurrent Humanoid Loco-Manipulation**|Zhe Li et.al.|[2608.06375](http://arxiv.org/abs/2608.06375)|null|
 |**2026-08-06**|**VIDP: Variable Impedance Diffusion Policy for Compliant Robot Manipulation from Diverse Demonstrations**|Hisham Khalil et.al.|[2608.06210](http://arxiv.org/abs/2608.06210)|null|
 |**2026-08-06**|**SkillMemo: Expert-guided Skill Memory Framework for Compositional Embodied Manipulation**|Changyuan Wang et.al.|[2608.05970](http://arxiv.org/abs/2608.05970)|null|
