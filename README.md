@@ -1,4 +1,4 @@
-## Updated on 2026.08.16
+## Updated on 2026.08.17
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -13,7 +13,7 @@
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
-|**2026-08-13**|**FIRE-VLA: Failure-Informed Self-Evolution for Vision-Language-Action Models in Autonomous Driving**|Hao Dou et.al.|[2608.13395](http://arxiv.org/abs/2608.13395)|null|<think> 好的，我现在需要帮用户总结这篇论文，按照指定的格式：问题、方法、结论，并且控制在300字以内，还要突出核心创新点，避免技术细节。首先，我得仔细阅读论文的摘要，抓住关键点。  论文标题是FIRE-VLA，关于自动驾驶中的VLA模型的自我进化。问题部分应该是在说传统强化学习在处理VLA模型时，当所有轨迹样本都不理想时，GRPO方法无法有效识别失败区域，导致排名失败信号不足。这可能就是问题所在。  接下来是方法。FIRE-VLA引入了一个失败驱动的自我进化框架，将未解决的失败转化为特权监督。具体来说，低奖励和高低多样性组会触发自我蒸馏，使用冻结的初始模型作为教师。教师和学生参数相同，但教师能看到未来的轨迹。监督仅作用于生成的前缀和回答令牌，同时保持GRPO。更新后的策略作为下一轮的教师，适应失败分布变化，不需要外部大教师。这里的关键创新点是自我蒸馏和动态教师更新，以及如何利用现有模型作为教师。  结论部分提到在nuScenes数据集上，FIRE-VLA减少了平均误差和持久失败率，特别是在处理罕见严重回滚时有效，而普通轨迹提升不大。这说明方法有效，但效果主要来自严重失败案例。  现在需要将这些内容精简，确保问题、方法、结论各部分简洁，突出创新点，比如自我蒸馏、动态教师、特权监督，同时避免技术细节如参数规模、具体数据集大小等。还要注意字数限制，可能需要合并句子，使用更简洁的表达。例如，问题可以简化为传统方法在失败区域排名不足；方法部分强调自我蒸馏和动态教师更新；结论指出误差和失败率降低，主要来自严重回滚。  最后检查格式是否符合要求，同一行内，没有换行，严格按照问题、方法、结论的顺序，总字数控制在300以内。可能需要多次调整，比如将“使用冻结的初始模型”简化为“冻结模型作为教师”，确保每个部分的信息准确且精炼。 </think> 问题：传统强化学习在VLA模型失败区域排名失败信号不足，导致无法有效识别行为异常；方法：FIRE-VLA通过失败驱动自我蒸馏，利用冻结模型作为动态教师更新，将低效失败转化为特权监督并保持GRPO优化；结论：在nuScenes数据|
+|**2026-08-13**|**FIRE-VLA: Failure-Informed Self-Evolution for Vision-Language-Action Models in Autonomous Driving**|Hao Dou et.al.|[2608.13395](http://arxiv.org/abs/2608.13395)|null|<think> 好的，我现在需要帮用户精简总结这篇论文。首先，用户的要求很明确，要用中文，按照【问题】【方法】【结论】的格式，控制在300字以内，突出核心创新点，避免技术细节，并且所有内容在同一行，不要换行。  首先，我得仔细阅读论文的摘要，抓住核心内容。论文标题是FIRE-VLA，主要针对自动驾驶中的VLA模型在强化学习中的问题。问题部分应该包括现有方法的不足，比如GRPO在处理所有轨迹差劲时无法有效识别失败行为，导致失败区域无法改进。  接下来是方法部分，用户强调要突出创新点，所以需要提到FIRE-VLA框架，特别是将未解决的失败转化为特权监督，引入自蒸馏，冻结的模型作为教师，参数相同但教师能看到未来轨迹，监督仅针对回答令牌，同时保持GRPO。这些是关键点，但要注意避免技术细节，比如具体的参数调整或实现步骤。  结论部分需要说明效果，比如在nuScenes数据集上的表现，降低平均误差和失败率，主要来自严重滚动的改进，而不是普遍提升。要确保数据准确，比如G=4的L2从1.848降到1.500，失败率从13.03%到11.20%。  然后检查是否符合格式要求，所有内容在同一行，没有换行符，使用正确的标签。还要注意字数，确保不超过300字。可能需要多次调整，比如合并句子，使用更简洁的表达，比如“通过自蒸馏将失败轨迹转化为特权监督”来替代详细描述。  最后，验证是否遗漏了核心创新点，比如动态路由失败分布、无需外部教师、保持GRPO等，确保这些都被涵盖。同时确认数据准确，没有错误。完成后，再检查一遍格式和字数，确保完全符合用户的要求。 </think> 【问题】自动驾驶VLA模型强化学习中GRPO在所有轨迹差劲时无法有效识别失败行为，导致失败区域改进困难；现有方法依赖外部教师且无法动态路由失败分布【方法】FIRE-VLA将未解决失败轨迹转化为特权监督，通过冻结模型自蒸馏生成教师，仅监督回答令牌并保持GRPO，动态路由失败分布且无需外部教师【结论】在nuScenes数据集上降低G=4平均误差1.348m，失败率11.|
 |**2026-08-06**|**Beyond Flat Policies: Hierarchical Post-Training for Embodied Agents in Robotic Manipulation**|He Kong et.al.|[2608.05999](http://arxiv.org/abs/2608.05999)|null|
 |**2026-08-04**|**GORDON: Graph-based Object-centric Rewards for Decomposition of Long-Horizon Manipulation**|Andrea Protopapa et.al.|[2608.03753](http://arxiv.org/abs/2608.03753)|null|
 |**2026-08-02**|**RL Bootstrapping of OpenVLA-OFT for a Novel Robot Embodiment**|Damir Nurtdinov et.al.|[2608.01013](http://arxiv.org/abs/2608.01013)|null|
@@ -168,13 +168,13 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260816>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260817>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
-|**2026-08-13**|**FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving**|Zekai Li et.al.|[2608.12932](http://arxiv.org/abs/2608.12932)|null|<think> 好的，我现在需要处理用户的查询，帮他精简总结这篇论文。首先，用户的要求很明确，要严格按照【问题】【方法】，总字数控制在300字以内，并且突出核心创新点，避免技术细节。直接输出总结内容，同一行内，不要换行，没有其他解释。  首先，我需要仔细阅读论文摘要，理解核心问题和方法。论文标题是FlashDrive，主要针对自动驾驶中的VLA模型实时性不足的问题。问题部分应该包括VLA模型的高计算成本和四个具体瓶颈：视觉编码重复计算、语言预填充冗余、推理串行低熵、流量匹配去噪计算不均。方法部分需要总结他们的解决方案，比如四个轻量算法：时序KV缓存、扩散drafter、自适应步缓存，加上CUDA优化。结论则是性能提升，延迟降低到151ms，接近实时。  接下来要确保问题和方法部分准确，同时避免技术细节。用户强调要突出创新点，所以需要抓住每个瓶颈对应的解决方案，但不用深入解释技术如何实现。比如，时序缓存复用、扩散模型用于推理、自适应缓存，以及系统级优化。  然后检查字数，确保在300字以内。可能需要调整用词，比如“four sequential bottlenecks”简化为“four sequential bottlenecks”，保持简洁。同时注意格式，严格按照要求的标签和结构，不要换行，用空格分隔。  最后，确认是否所有要求都满足：问题、方法、结论各部分，核心创新点突出，无技术细节，同一行输出，无换行。可能需要多次调整，比如将“applied to Alpamayo 1.5-10B with W4A8 quantization”简化为“applied to Alpamayo with W4A8”，确保简洁。同时确保结论中的性能数据准确，如延迟从717ms到151ms，准确率几乎不变。  现在组合起来，确保语句连贯，符合格式要求。可能需要多次迭代，比如检查是否有冗余信息，是否每个部分都准确对应问题和方法，结论是否明确。最终生成符合用户要求的总结。 </think> 【问题】Vision-Language-Action models for autonomous driving suffer high computational cost due to four sequential bottlenecks: redundant visual encoding, language prefill recomputation, serial low-entropy reasoning tokens, and uniform flow-matching denoising.|
+|**2026-08-13**|**FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving**|Zekai Li et.al.|[2608.12932](http://arxiv.org/abs/2608.12932)|null|<think> 好的，我现在需要帮用户精简总结这篇论文。首先，用户的要求很明确，要严格按照【问题】【方法】，总字数控制在300字以内，并且突出核心创新点，避免技术细节。用户还特别强调要直接输出总结内容，严格按照格式，所有内容在同一行，不要换行符和其他解释。  首先，我得仔细阅读论文摘要，理解其核心问题和方法。论文的标题是FlashDrive，主要解决VLA模型在自动驾驶中的实时性问题。问题部分提到VLA模型虽然能实现端到端推理，但计算成本过高，无法实时控制。具体挑战包括四个阶段的结构性问题：视觉编码浪费计算、语言模型预填充重复计算、推理令牌串行生成、流匹配去噪均匀应用计算。用户需要我总结这些问题，但必须简洁，所以可能需要概括为四个阶段的结构性瓶颈。  接下来是方法部分。论文提出FlashDrive，是一个算法与系统协同设计的框架，针对四个阶段同时优化。核心创新点包括：时序重叠启用流KV缓存复用、利用低熵和强相关性的推理生成非自回归扩散草稿、自适应步缓存集中计算、结合CUDA图编译和内核融合。这些都需要提炼成简洁的要点，避免技术细节，比如“CUDA Graph compilation”可以简化为“系统级编译优化”。  结论部分需要说明结果，比如将延迟从717ms降到151ms，保持精度，频率提升到6.6Hz。用户要求总字数在300字以内，所以每个部分都要非常精炼。  现在需要检查是否符合格式要求：问题、方法、结论三个部分，用【】括起，中间用空格分隔，所有内容在同一行，无换行符。同时要确保核心创新点突出，比如算法和系统的协同设计，四个阶段的优化，以及具体的提升数据。  可能的难点是如何在有限的字数内涵盖所有关键点，同时保持语句通顺。需要反复调整用词，比如将“addressing any one stage in isolation leaves the others untouched”转化为“需同步优化四阶段结构瓶颈”，这样更简洁。同时，确保每个部分不超过字数限制，可能需要多次删减和调整。  最后，检查是否遗漏了重要数据，如模型大小（1.5-10B）、量化（W4A8）、速度提升（4.7x）、频率（6.6Hz|
 |**2026-08-06**|**$ω$ -0: A Latent Predictive World Action Model for Concurrent Humanoid Loco-Manipulation**|Zhe Li et.al.|[2608.06375](http://arxiv.org/abs/2608.06375)|null|
 |**2026-08-06**|**VIDP: Variable Impedance Diffusion Policy for Compliant Robot Manipulation from Diverse Demonstrations**|Hisham Khalil et.al.|[2608.06210](http://arxiv.org/abs/2608.06210)|null|
 |**2026-08-06**|**SkillMemo: Expert-guided Skill Memory Framework for Compositional Embodied Manipulation**|Changyuan Wang et.al.|[2608.05970](http://arxiv.org/abs/2608.05970)|null|
@@ -349,7 +349,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260816>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260817>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
