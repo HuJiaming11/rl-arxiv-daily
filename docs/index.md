@@ -27,7 +27,7 @@ layout: default
   table th:nth-child(6), table td:nth-child(6) { width: 60%; }  /* 摘要（最后一列） */
 </style>
 
-## Updated on 2026.08.17
+## Updated on 2026.08.18
 > Usage instructions: [here](./docs/README.md#usage)
 
 ## Reinforcement Learning
@@ -193,6 +193,7 @@ layout: default
 
 | Publish Date | Title | Authors | PDF | Code | 摘要 |
 |:---------|:-----------------------|:---------|:------|:------|:-------------------------------------|
+|**2026-08-14**|**PILOT: Privileged Imitation Learning for End-to-End Motion Planning of Autonomous UAVs under Partial Observability**|Qingrui Zhang et.al.|[2608.14082](http://arxiv.org/abs/2608.14082)|null|<think> 好的，我需要帮用户总结这篇论文，严格按照指定的格式：问题、方法、结论，总字数控制在300字以内。首先，我得仔细阅读论文摘要，抓住核心内容。  问题部分，用户提到自主无人机在复杂环境中导航受限于部分可观测性和动态约束。我需要简明扼要地概括，突出这两个关键点。  方法部分，论文提出了PILOT框架，结合了特权模仿学习和时空感知融合模块。核心创新点包括双目标损失函数、TCN模块和轨迹参数化层。要避免技术细节，比如具体用到了哪些网络结构，但需要说明模块的作用，比如TCN整合历史数据，轨迹层处理约束。  结论部分，要强调性能与专家相当，计算开销降低80%，实际部署验证效果。需要提到跨域泛化，比如室内外零样本应用。  用户要求严格按照格式，所有内容在同一行，无换行，无解释。要注意字数限制，可能需要多次精简。比如问题部分可以合并成“复杂环境中自主无人机受限于部分可观测性和动态约束的端到端运动规划难题”。方法部分突出双目标损失、时空感知融合、轨迹参数化。结论部分强调性能、开销、部署效果。  检查是否有遗漏的核心创新点，比如安全性和动态要求的正则化，结构化轨迹的显式约束处理。确保每个部分都涵盖关键点，同时保持语言简洁。最后确认总字数是否在300以内，格式是否正确。 </think> 问题：复杂环境中自主无人机受限于部分可观测性和动态约束的端到端运动规划难题；方法：提出PILOT框架，通过双目标损失函数融合安全/动态约束的正则化与专家策略迁移，结合时空卷积网络融合历史深度图与里程计构建隐式上下文感知，并设计轨迹参数化层显式嵌入连续性/动态一致性/障碍物软惩罚约束；结论：实验表明PILOT在四旋翼与固定翼上达到专家相当性能且计算开销降低83%，成功完成室内外零样本部署验证跨域泛化能力。|
 |**2026-08-13**|**FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving**|Zekai Li et.al.|[2608.12932](http://arxiv.org/abs/2608.12932)|null|
 |**2026-08-06**|**$ω$ -0: A Latent Predictive World Action Model for Concurrent Humanoid Loco-Manipulation**|Zhe Li et.al.|[2608.06375](http://arxiv.org/abs/2608.06375)|null|
 |**2026-08-06**|**VIDP: Variable Impedance Diffusion Policy for Compliant Robot Manipulation from Diverse Demonstrations**|Hisham Khalil et.al.|[2608.06210](http://arxiv.org/abs/2608.06210)|null|
