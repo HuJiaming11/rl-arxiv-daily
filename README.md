@@ -1,4 +1,4 @@
-## Updated on 2026.08.18
+## Updated on 2026.08.19
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -13,6 +13,8 @@
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-08-17**|**HAF: Adapting Generalist VLAs to Humanoid Whole-Body Loco-manipulation via Hierarchical Action Flow and Spectral Latent RL**|Langzhe Gu et.al.|[2608.16837](http://arxiv.org/abs/2608.16837)|null|<think> 好的，我现在需要处理用户的查询，帮他总结一篇论文。首先，我得仔细阅读用户的要求，确保完全理解。用户希望用中文精简总结，严格按照【问题】【方法】，总字数控制在300字以内。还要突出核心创新点，避免技术细节，直接输出总结内容，格式严格，同一行内，不换行，不包含其他解释。  首先，我需要解析论文标题和摘要。论文标题是HAF: Adapting Generalist VLAs to Humanoid Whole-Body Loco-manipulation via Hierarchical Action Flow and Spectral Latent RL。摘要中提到的问题是，现有的通用VLA模型不适用于人形机器人的全身运动协调，尤其是单阶段架构难以有效协调步态、腰部姿势和双手操作。另外，离线行为克隆的模型在现实部署中表现不佳，而在线强化学习需要大量计算且存在安全风险。  接下来，用户要求总结为【问题】【方法】，所以需要先提炼问题。问题部分应包括通用VLA模型在全身运动中的适用性问题，单阶段架构的协调困难，离线训练的局限性，以及在线RL的高计算和安全隐患。  然后是方法部分，核心创新点。HAF分为两个部分：HAF-VLA和HAF-Steer。HAF-VLA是分层动作流生成器，基于预训练的流匹配VLA，分三阶段处理动作去噪，保留运动学依赖。HAF-Steer是离线到在线的潜在RL流程，利用流匹配可逆性和DCT降维，限制优化子空间，训练正则化SAC策略，避免更新大VLA主干，提升效率。  需要注意避免技术细节，比如具体的KV缓存、DCT降维的具体步骤等，保持简洁。同时确保总字数在300字以内，检查格式是否正确，是否在同一行，没有换行符或其他解释。  现在开始组织语言。问题部分要简明扼要，方法部分突出两个模块的创新点。确保每个部分不超过两句话，用简洁的词汇连接。例如：  问题：人形机器人全身运动协调困难，单阶段VLA架构难以有效整合步态、腰部与双手操作，离线训练模型部署不佳且在线RL计算成本高、存在安全风险。  方法：提出HAF框架，包括HAF-VLA分层动作流生成器（预训练VLA|
+|**2026-08-17**|**The Ethical Decision Head: Operationalizing Normative Ethics in Autonomous Vehicles via Reinforcement Learning from Human Feedback**|Thomas Mbrice et.al.|[2608.16710](http://arxiv.org/abs/2608.16710)|null|<think> 好的，我需要帮用户总结这篇论文，按照要求的格式【问题】【方法】，总字数控制在300字以内，还要突出核心创新点，避免技术细节。首先，我得仔细阅读论文摘要，抓住关键点。  论文的问题是关于自动驾驶在L4/L5级别时如何处理道德决策的问题。现有的系统不仅要确保安全，还要处理道德重量。作者提出了Ethical Decision Head（EDH），这是一个结合强化学习的框架，用可微的奖励信号编码伦理推理，让政策梯度代理学习符合道德的驾驶行为。这里的核心创新点应该是将伦理框架转化为可微的奖励信号，并利用人类反馈进行强化学习。  接下来是方法部分。他们用了两个伦理框架：功利主义（最小化总伤亡）和康德主义（强制遵守类别命令）。训练是通过PPO算法，使用Bradley-Terry模型从200个场景的人类偏好对中进行训练。结果发现康德主义框架更容易学习，因为它简化为常数预测任务，用于验证训练稳定性。而功利主义框架显示人类评价者奖励自我牺牲而非纯粹最小化伤亡，模型也学到了这一点。这说明RLHF学到的伦理是实际人类行为，而非哲学定义的。  用户要求避免技术细节，所以不需要提到CARLA环境、PPO的具体步骤等。要确保总结在300字以内，并且严格按照问题、方法、结论的顺序，同一行不换行。现在需要检查字数，确保不超过限制，同时突出创新点：将伦理转化为可微奖励，对比两种框架的学习结果，揭示人类实际偏好与理论差异。  可能需要注意术语的简化，比如“可微的奖励信号”可以保留，但不需要解释微分。结论部分要强调人类反馈中的自我牺牲偏好，以及康德框架的作用。确保每个部分都简洁，没有冗余信息。最后检查格式是否正确，没有换行符，所有内容在同一行。 </think> 【问题】自动驾驶在L4/L5级别需处理道德决策，如何将哲学伦理转化为可执行算法；【方法】提出Ethical Decision Head框架，通过可微奖励信号将功利主义与康德主义伦理编码为强化学习目标，利用200对人类偏好标注训练Bradley-Terry模型进行PPO优化；【结论】康德主义因简化为常数预测任务验证训练稳定性，功利主义模型却反映人类偏好更倾向自我牺牲而非纯粹伤亡最小化，揭示|
 |**2026-08-13**|**FIRE-VLA: Failure-Informed Self-Evolution for Vision-Language-Action Models in Autonomous Driving**|Hao Dou et.al.|[2608.13395](http://arxiv.org/abs/2608.13395)|null|
 |**2026-08-06**|**Beyond Flat Policies: Hierarchical Post-Training for Embodied Agents in Robotic Manipulation**|He Kong et.al.|[2608.05999](http://arxiv.org/abs/2608.05999)|null|
 |**2026-08-04**|**GORDON: Graph-based Object-centric Rewards for Decomposition of Long-Horizon Manipulation**|Andrea Protopapa et.al.|[2608.03753](http://arxiv.org/abs/2608.03753)|null|
@@ -168,12 +170,14 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260818>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260819>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-08-17**|**HAF: Adapting Generalist VLAs to Humanoid Whole-Body Loco-manipulation via Hierarchical Action Flow and Spectral Latent RL**|Langzhe Gu et.al.|[2608.16837](http://arxiv.org/abs/2608.16837)|null|<think> 好的，我需要帮用户用中文精简总结这篇论文，严格按照问题、方法、结论的格式，控制在300字以内。首先，我得仔细阅读论文摘要，抓住核心内容。  问题部分：论文提到通用VLA模型不适用于人形机器人的全身运动协调，传统单阶段架构难以有效整合行走、腰部姿态和双臂操作，而且离线行为克隆的模型在实际部署中表现不佳，在线强化学习需要大量计算并存在安全风险。  方法部分：作者提出了HAF框架，分为HAF-VLA和HAF-Steer。HAF-VLA通过分层动作流生成器分解全身动作，使用预训练的流匹配VLA，分三阶段处理并保留运动依赖。HAF-Steer则用离线到在线的潜在强化学习，结合流匹配可逆性和DCT降维，限制优化到噪声子空间，训练正则化SAC策略，不更新大模型，提高效率。  结论部分：实验表明HAF在七个任务中优于单阶段基线，提升全身协调和任务表现，有效解决了问题。  需要确保语言简洁，突出创新点，避免技术细节。检查字数，确保不超过300字，格式正确，同一行无换行。可能需要注意术语的准确转换，比如“flow-matching VLA”翻译为“流匹配VLA”是否合适。确认问题、方法、结论各部分信息完整，没有遗漏关键点。最后，按照用户要求，直接输出总结内容，不添加其他解释。 </think> 问题：通用视觉语言行动模型难以适配人形机器人全身运动协调，传统单阶段架构存在动作维度高、依赖性强、离线克隆模型欠佳及在线强化学习计算成本高且存在安全风险等瓶颈；方法：提出HAF框架，包含HAF-VLA（分层动作流生成器）和HAF-Steer（潜在离线到在线强化学习管道），前者通过预训练流匹配VLA分三阶段解耦全身动作并保留运动依赖，后者利用流匹配可逆性和DCT降维优化策略，限制优化空间并训练正则化SAC策略以避免更新大模型；结论：HAF在七项真实任务中显著优于单阶段基线，提升全身动作协调性及任务性能，有效解决适配问题且计算高效安全。|
+|**2026-08-17**|**SurgVIL: Scaling Surgical Robot Imitation Learning with Open-source Surgical Videos**|Xinhao Chen et.al.|[2608.16058](http://arxiv.org/abs/2608.16058)|null|<think> 好的，用户让我用中文精简总结这篇论文，严格按照【问题】【方法】，总字数控制在300字以内。首先，我需要仔细阅读论文的摘要，理解核心内容。  问题部分，论文提到学习型手术机器人自主化需要大量同步的视频和机器人动作的数据，但这类数据在临床或真实组织中非常稀缺，因为机器人运动学参数通常无法在受控研究系统中外泄。而使用的研究平台数据（假体数据）虽然准确，但缺乏视觉多样性。所以问题应该是数据稀缺且视觉多样性不足。  方法部分，作者提出了SurgVIL框架，结合了假体数据的运动学标签和开源手术视频，通过弱监督估计近似运动学来扩展数据。他们评估了在两个达芬奇机器人任务上的效果，显示添加手术视频能提升在真实组织和分布外场景的泛化能力。  结论需要指出方法有效，为从假体训练到通用政策提供 scalable 路径。用户要求突出创新点，避免技术细节，所以不能深入讲具体的评估指标或模型结构，而是强调数据结合和泛化效果。  现在要检查格式是否正确，确保问题、方法、结论在同一行，用【】括起来，无换行，总字数不超过300。可能需要调整措辞，比如“结合”换成“融合”，“评估”换成“验证”更简洁。确保核心创新点明确：利用开源视频弥补假体数据不足，弱监督估计，提升泛化能力。  最后检查字数，确保符合要求。可能需要多次精简，比如“通过弱监督估计近似运动学”可以简化为“通过弱监督估计运动学参数”。确认所有要求都满足后输出。 </think> 【问题】学习型手术机器人需大量同步视频与动作数据但临床/真实组织数据稀缺且视觉多样性不足假体数据准确但缺乏真实场景多样性【方法】SurgVIL融合假体数据运动学标签与开源手术视频通过弱监督估计运动学参数构建大规模训练集在针穿刺和胆囊切除任务中验证效果【结论】该方法显著提升达芬奇机器人对真实组织及分布外场景的泛化能力为从假体训练到通用手术政策提供可扩展路径|
 |**2026-08-14**|**PILOT: Privileged Imitation Learning for End-to-End Motion Planning of Autonomous UAVs under Partial Observability**|Qingrui Zhang et.al.|[2608.14082](http://arxiv.org/abs/2608.14082)|null|<think> 好的，我需要帮用户总结这篇论文，严格按照指定的格式：问题、方法、结论，总字数控制在300字以内。首先，我得仔细阅读论文摘要，抓住核心内容。  问题部分，用户提到自主无人机在复杂环境中导航受限于部分可观测性和动态约束。我需要简明扼要地概括，突出这两个关键点。  方法部分，论文提出了PILOT框架，结合了特权模仿学习和时空感知融合模块。核心创新点包括双目标损失函数、TCN模块和轨迹参数化层。要避免技术细节，比如具体用到了哪些网络结构，但需要说明模块的作用，比如TCN整合历史数据，轨迹层处理约束。  结论部分，要强调性能与专家相当，计算开销降低80%，实际部署验证效果。需要提到跨域泛化，比如室内外零样本应用。  用户要求严格按照格式，所有内容在同一行，无换行，无解释。要注意字数限制，可能需要多次精简。比如问题部分可以合并成“复杂环境中自主无人机受限于部分可观测性和动态约束的端到端运动规划难题”。方法部分突出双目标损失、时空感知融合、轨迹参数化。结论部分强调性能、开销、部署效果。  检查是否有遗漏的核心创新点，比如安全性和动态要求的正则化，结构化轨迹的显式约束处理。确保每个部分都涵盖关键点，同时保持语言简洁。最后确认总字数是否在300以内，格式是否正确。 </think> 问题：复杂环境中自主无人机受限于部分可观测性和动态约束的端到端运动规划难题；方法：提出PILOT框架，通过双目标损失函数融合安全/动态约束的正则化与专家策略迁移，结合时空卷积网络融合历史深度图与里程计构建隐式上下文感知，并设计轨迹参数化层显式嵌入连续性/动态一致性/障碍物软惩罚约束；结论：实验表明PILOT在四旋翼与固定翼上达到专家相当性能且计算开销降低83%，成功完成室内外零样本部署验证跨域泛化能力。|
 |**2026-08-13**|**FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving**|Zekai Li et.al.|[2608.12932](http://arxiv.org/abs/2608.12932)|null|
 |**2026-08-06**|**$ω$ -0: A Latent Predictive World Action Model for Concurrent Humanoid Loco-Manipulation**|Zhe Li et.al.|[2608.06375](http://arxiv.org/abs/2608.06375)|null|
@@ -350,7 +354,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260818>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260819>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
