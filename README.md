@@ -1,4 +1,4 @@
-## Updated on 2026.08.31
+## Updated on 2026.09.01
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -181,12 +181,14 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260831>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260901>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-08-30**|**AcrossWAM1.0:A Modular Latent World-Action Stack for Compact Robot Policies**|Yafei Zhang et.al.|[2608.29937](http://arxiv.org/abs/2608.29937)|null|<think> 好的，我现在需要处理用户的这个请求。用户希望我精简总结一篇论文，按照指定的格式输出，并且严格控制字数在300字以内。首先，我要仔细阅读用户提供的论文摘要，理解其中的核心问题和创新点。  论文标题是AcrossWAM1.0，主要讲的是一个模块化的潜在世界-动作堆栈，用于紧凑的机器人策略。摘要中提到LaWAM存在模型、多模态主干和部署检查点紧密耦合的问题，而AcrossWAM1.0进行了模块化改进。用户要求突出核心创新点，避免技术细节，所以我要抓住模块化设计、参数减少和可验证部署这几个关键点。  接下来，我需要按照用户指定的格式来组织内容：问题、方法、结论，每部分都要简洁。问题部分要说明LaWAM的不足，方法部分强调模块化设计和参数优化，结论则突出成果和贡献。同时要注意总字数限制，可能需要多次精简，比如将“multimodal backbone”简化为“多模态主干”，“bitwise identical”改为“参数完全一致”等。  还要检查是否符合用户的其他要求，比如所有内容在同一行，不换行，不包含其他解释。可能需要调整用词，确保信息准确且符合字数限制。例如，用户提到“突出核心创新点”，所以需要确保模块化、参数减少和可验证部署这三个点都明确体现。  最后，验证总结是否符合格式要求，确保没有遗漏任何部分，并且语言简洁明了。可能需要多次调整，比如将“验证部署流程”简化为“可验证部署”，确保每个部分不超过字数。同时检查是否有技术细节被错误保留，比如具体的参数数值是否必要，根据用户要求，可能需要保留关键数据如97.45%的成功率，但确保不冗长。  完成这些步骤后，生成最终的总结内容，确保严格遵循用户的格式和字数要求，同时准确传达论文的核心贡献。 </think> 问题：LaWAM存在世界模型、多模态主干与部署检查点耦合且难以复现的问题；   方法：模块化拆分政策适配器、保留潜在世界解码器、流匹配专家，分离训练教师与推理图，优化部署流程；   结论：参数量减少42.4%至1.47亿，保持与原2B模型参数完全一致，97.45%任务成功率满足|
+|**2026-08-30**|**Self-Aware Active Learning Enables Continual Improvement in Autonomous Driving**|Dong Hu et.al.|[2608.29772](http://arxiv.org/abs/2608.29772)|null|<think> 嗯，用户让我用中文精简总结一篇论文，按照【问题】【方法】，总字数控制在300字以内。首先，我需要仔细阅读论文的摘要，找出核心的问题和方法。  论文的问题是说基于学习的自动驾驶系统在熟悉条件下表现可靠，但面对罕见分布偏移和长尾事件时容易突然失败。主要原因是这些系统主要被动学习，缺乏估计自身能力不足、及时寻求帮助并将安全关键遭遇转化为针对性改进的机制。  接下来是方法部分，他们提出了SAGE框架，即自我意识引导探索。这个框架通过学习预测世界模型，生成两个在线内在信号：恐惧（评估短期预测风险和模型不确定性）和好奇心（衡量预测误差带来的新颖性）。好奇心自适应调整恐惧的干预阈值，让代理根据上下文调节风险。当预测的恐惧超过阈值时，代理会将控制权转移给专家或回退策略，并利用接管轨迹进行有针对性的模仿学习。同时，恐惧被整合到策略优化和评估中，作为安全导向的约束来减少适应过程中的性能下降。  结论部分需要突出核心创新点，避免技术细节。用户要求严格按照格式输出，所有内容在同一行，不要换行，不要其他解释。所以需要确保问题、方法、结论各部分简洁，字数达标。  现在检查是否符合要求：问题部分要简明，方法突出SAGE的创新点，结论说明效果。确保总字数在300以内。可能需要调整用词，比如“主动学习框架”改为“框架”更简洁。确认没有技术细节，比如具体场景名称可以省略，只保留关键结果。最后检查格式是否正确，没有换行符，用空格分隔。 </think> 【问题】基于学习的自动驾驶系统在罕见分布偏移和长尾事件中易突发失效，因缺乏主动评估自身能力不足、及时求援及将安全事件转化为针对性改进的机制。   【方法】提出自我意识引导探索（SAGE）框架，通过预测世界模型生成“恐惧”（评估短期风险与模型不确定性）和“好奇心”（衡量预测误差的新颖性）两个在线信号，自适应调节恐惧干预阈值，触发安全事件时转交控制权并基于接管轨迹进行模仿学习，同时将恐惧作为安全约束优化策略。   【结论】SAGE在模拟、路测及真实场景中显著提升鲁棒性，降低安全违规，保持任务性能|
 |**2026-08-27**|**Diffusion Policies for Short-Horizon Planning in Robot Crowd Navigation**|Wendong Li et.al.|[2608.27158](http://arxiv.org/abs/2608.27158)|null|
 |**2026-08-26**|**$R^3$ : Training Robots to Reason in Natural Language via Reinforcement Learning**|Lehong Wu et.al.|[2608.26053](http://arxiv.org/abs/2608.26053)|null|
 |**2026-08-26**|**VISTA: Visually Inferred Spatial ConTact Attention for Contact-Rich Manipulation**|Jiayi Chen et.al.|[2608.25872](http://arxiv.org/abs/2608.25872)|null|
@@ -382,7 +384,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260831>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260901>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
