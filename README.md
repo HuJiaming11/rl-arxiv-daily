@@ -1,4 +1,4 @@
-## Updated on 2026.09.03
+## Updated on 2026.09.04
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -181,12 +181,14 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260903>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260904>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-09-03**|**A Low-Cost, Open Platform for End-to-End Autonomous Driving on a Miniature Ackermann Vehicle**|Gustavo Claudio Karl Couto et.al.|[2609.04147](http://arxiv.org/abs/2609.04147)|null|<think> 好的，我现在需要帮用户精简总结这篇论文。首先，用户的要求很明确，要严格按照【问题】【方法】，总字数控制在300字以内，用中文，并且突出核心创新点，避免技术细节。  首先看论文标题和摘要。标题提到的是一个低成本、开源的自动驾驶平台，用于微型Ackermann车辆。问题部分应该围绕为什么需要这样的平台，可能包括传统方法在真实环境中的验证困难，或者模拟与现实的差距。方法部分需要提取核心创新点，比如他们用了物理车加打印赛道、数据收集工具、轨迹注册和Webots数字孪生，还有命令条件的行为克隆和合成数据训练。结论则是平台的效果和成果，比如误差数据、数字孪生的效果提升，以及开源支持复现。  接下来要确保问题和方法部分简洁。问题可能包括传统自动驾驶验证的挑战，如真实环境测试成本高、模拟与实际差距大。方法要突出低成本开源平台、命令条件的行为克隆、数字孪生优化和合成数据训练。结论部分要强调平台的实用性和成果，比如误差降低、完成所有路线等。  需要注意用户要求不要技术细节，所以避免提到具体的误差数值或方法的具体实现，比如“轨迹注册”可以简化为“数据整合”。同时要检查字数，确保不超过300字。最后，严格按照格式输出，同一行，无换行符，不包含其他解释。可能需要多次调整，确保信息准确且符合格式要求。 </think> 【问题】传统自动驾驶验证依赖高成本真实环境测试或存在模拟-现实数据差距，需低成本开源平台实现闭环验证与数据迁移【方法】构建融合物理车、打印赛道、Webots数字孪生及数据工具的开源平台，采用命令条件行为克隆训练政策，通过扩大数字孪生摄像头视角（58→120度）和合成数据训练结合真实数据优化图像转换，实现低误差（6.1cm）轨迹跟踪与全路线闭环控制【结论】平台显著降低验证成本，数字孪生优化使误差从35.6cm降至3.3cm，合成数据+真实数据训练的混合政策唯一实现全路线闭环，为sim-to-real研究提供基准。|
+|**2026-09-03**|**MINERVA: How Small Can a Manipulation Policy Be and Still Solve LIBERO?**|Kohei Sendai et.al.|[2609.03715](http://arxiv.org/abs/2609.03715)|null|<think> 好的，用户让我用中文精简总结这篇论文，严格按照问题、方法、结论的格式，控制在300字以内，还要突出核心创新点，避免技术细节。首先，我需要仔细阅读论文摘要，抓住关键信息。  问题部分应该说明研究的目标，即确定LIBERO基准所需的模型容量下限。方法部分要提到MINERVA的设计，比如小参数政策、实验范围等。结论则包括结果，比如0.54M参数政策的表现，以及任务依赖性和计算效率。  要注意用户强调的核心创新点，比如模型容量下限的首次估计，还有计算效率的提升。同时要避免技术细节，比如具体的训练参数或实验设置，可能需要简化。还要检查格式是否正确，所有内容在同一行，不换行，不包含其他解释。  现在需要把问题、方法、结论分别提炼出来。问题可能写成“探索LIBERO基准的模型容量下限”；方法包括MINERVA的紧凑设计、多维度实验验证；结论是0.54M参数政策达到95.1%效果，计算高效，任务依赖性强，容量下限明确。最后检查字数和格式是否符合要求。 </think> 问题：探索LIBERO基准的模型容量下限；方法：提出MINERVA紧凑型VLA政策（0.54M参数）并通过多维度实验验证其泛化性、鲁棒性及效率；结论：0.54M参数政策达到95.1%平均成功率（仅低于最优基准2.4点），证明LIBERO仅需百万级参数即可高效解决，且计算速度达SmolVLA的113倍，揭示任务依赖性强、抗扰动差等核心特性。|
 |**2026-09-01**|**Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation**|Haoyuan Deng et.al.|[2609.01596](http://arxiv.org/abs/2609.01596)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
 |**2026-09-01**|**Does Imitation Learning Preserve Temporal Robustness in Dexterous Manipulation? An Expert-Learner Comparison Across Task Execution Speeds**|Clinton Enwerem et.al.|[2609.01453](http://arxiv.org/abs/2609.01453)|null|<think> 嗯，用户让我总结这篇论文，而且要求很具体。首先，我需要仔细阅读论文标题和摘要，抓住核心问题和方法。论文标题问的是模仿学习是否保持灵巧抓取任务中的时间鲁棒性，比较专家和学习的表现在不同执行速度下的差异。  摘要里提到，通常评估模仿学习政策对场景、物体或指令变化的鲁棒性，但较少考察执行速度的影响。他们用ParcelStow任务，比较专家和ACT政策在不同速度下的成功率。结果显示，专家在最高速度下的成功率84%，而ACT只有53%，差距挺大的。失败分析主要在插入对齐和相对运动交接阶段。  用户要求按照问题、方法、结论的格式，控制在300字以内，突出创新点，避免技术细节。我需要确保每个部分简洁，用关键词。问题部分要说明研究的是模仿学习在不同执行速度下的鲁棒性保持。方法部分提到在ParcelStow任务中对比专家和ACT，测试不同速度。结论要指出ACT性能下降更严重，成功率差距大，失败原因等。  还要注意不要换行，所有内容在同一行，用【】括起来。检查字数，确保不超过限制。可能用户是研究者或学生，需要快速了解论文核心，所以重点放在比较结果和结论，而不是具体实验步骤。要确认是否遗漏了核心创新点，比如ACT的参数初始化影响和失败阶段分析。确保不包含技术细节，比如GitHub链接等。 </think> 【问题】如何评估模仿学习在灵巧抓取任务中不同执行速度下的时间鲁棒性保持能力；【方法】通过ParcelStow任务对比专家与ACT政策在相同初始条件、速度倍率下的成功率及失败模式；【结论】ACT政策在最高速度时成功率（53%）显著低于专家（84%），其参数初始化差异导致性能下降幅度达34-48个百分点，失败主因是插入对齐与相对运动交接阶段失误，且未成功案例均因未触发力闭合。|
 |**2026-08-30**|**AcrossWAM1.0:A Modular Latent World-Action Stack for Compact Robot Policies**|Yafei Zhang et.al.|[2608.29937](http://arxiv.org/abs/2608.29937)|null|<think> 好的，我现在需要处理用户的这个请求。用户希望我精简总结一篇论文，按照指定的格式输出，并且严格控制字数在300字以内。首先，我要仔细阅读用户提供的论文摘要，理解其中的核心问题和创新点。  论文标题是AcrossWAM1.0，主要讲的是一个模块化的潜在世界-动作堆栈，用于紧凑的机器人策略。摘要中提到LaWAM存在模型、多模态主干和部署检查点紧密耦合的问题，而AcrossWAM1.0进行了模块化改进。用户要求突出核心创新点，避免技术细节，所以我要抓住模块化设计、参数减少和可验证部署这几个关键点。  接下来，我需要按照用户指定的格式来组织内容：问题、方法、结论，每部分都要简洁。问题部分要说明LaWAM的不足，方法部分强调模块化设计和参数优化，结论则突出成果和贡献。同时要注意总字数限制，可能需要多次精简，比如将“multimodal backbone”简化为“多模态主干”，“bitwise identical”改为“参数完全一致”等。  还要检查是否符合用户的其他要求，比如所有内容在同一行，不换行，不包含其他解释。可能需要调整用词，确保信息准确且符合字数限制。例如，用户提到“突出核心创新点”，所以需要确保模块化、参数减少和可验证部署这三个点都明确体现。  最后，验证总结是否符合格式要求，确保没有遗漏任何部分，并且语言简洁明了。可能需要多次调整，比如将“验证部署流程”简化为“可验证部署”，确保每个部分不超过字数。同时检查是否有技术细节被错误保留，比如具体的参数数值是否必要，根据用户要求，可能需要保留关键数据如97.45%的成功率，但确保不冗长。  完成这些步骤后，生成最终的总结内容，确保严格遵循用户的格式和字数要求，同时准确传达论文的核心贡献。 </think> 问题：LaWAM存在世界模型、多模态主干与部署检查点耦合且难以复现的问题；   方法：模块化拆分政策适配器、保留潜在世界解码器、流匹配专家，分离训练教师与推理图，优化部署流程；   结论：参数量减少42.4%至1.47亿，保持与原2B模型参数完全一致，97.45%任务成功率满足|
@@ -386,7 +388,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260903>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260904>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
