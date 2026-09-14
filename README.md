@@ -1,4 +1,4 @@
-## Updated on 2026.09.10
+## Updated on 2026.09.14
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -13,9 +13,9 @@
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
-|**2026-09-09**|**HaWMPO: Hallucination-Aware World Model-based Policy Optimization for Generalist Robot Policy**|Zengjue Chen et.al.|[2609.09941](http://arxiv.org/abs/2609.09941)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
-|**2026-09-04**|**Human-Human & Human-Robot Interaction Transformer (H2INT) for Robot Navigation in Dense and Uncertain Crowds**|Ao Shen et.al.|[2609.05300](http://arxiv.org/abs/2609.05300)|null|<think> 好的，我需要帮用户用中文精简总结这篇论文，严格按照问题、方法、结论的格式，控制在300字以内。首先，我得仔细阅读论文摘要，抓住核心内容。  问题部分，用户提到安全导航在密集人群中需要处理行人的动态变化，但现有方法的问题在于生成行人运动时独立于机器人或假设均匀的相互性，忽略了互动不确定性。这应该是问题的核心。  方法部分，论文提出了H2INT框架，结合强化学习和Transformer。核心创新点包括保留机器人条件下的行人运动变化，通过响应性参数动态调整，响应性不作为输入而是通过相对位置推断，两阶段门控Transformer编码人际关系，以及课程学习逐步增加难度。需要突出这些点，避免技术细节。  结论部分，实验显示H2INT在模拟环境中表现优于基线，安全性和鲁棒性更好，还能迁移到不同布局，消融实验验证了编码和门控更新的有效性，真实机器人部署也验证了在稀疏观测下的有效性。  现在要确保总结符合格式，问题、方法、结论各部分简洁，不超过300字。注意用户要求所有内容在同一行，不换行，不带其他解释。需要检查字数，可能需要调整用词更精炼，比如“强化学习框架”可以简化为“强化学习框架”，“课程逐步增加难度”改为“渐进式课程学习”更简洁。最后确认是否符合所有要求，没有遗漏核心创新点，如响应性参数、两阶段门控Transformer、课程学习等。 </think> 问题：安全机器人密集人群导航需处理动态行人运动与机器人交互不确定性，现有方法忽略机器人条件下的行人运动关联及响应性差异；   方法：提出H2INT框架，通过强化学习结合两阶段门控Transformer编码人-人、人-机关系，引入响应性参数动态调整行人运动，响应性由机器人相对位置推断而非直接输入，采用渐进式课程学习提升交互难度；   结论：实验验证H2INT在模拟环境中导航安全性和鲁棒性优于基线，支持跨布局迁移，消融实验证实层级关系编码和门控更新的有效性，真实机器人部署验证了稀疏观测下的有效性。|
-|**2026-09-04**|**Morphology and actuation as inductive biases in robotic hand manipulation**|Zalán Tari et.al.|[2609.05206](http://arxiv.org/abs/2609.05206)|null|<think> 好的，我需要帮用户用中文精简总结这篇论文，严格按照问题、方法、结论的格式，控制在300字以内。首先，用户强调要突出核心创新点，避免技术细节，所以得先理解论文的核心内容。  论文的标题提到形态和驱动作为诱导偏置在机械臂抓握中的作用。摘要里说，他们提出了一种统一框架，分析运动学和驱动阶段的组合，通过条件化的任务雅可比矩阵和驱动矩阵来研究两种设计理念的机械手。应用在四个形态学方面，比如关节轴几何、驱动器与自由度比例等。结果发现解剖学精确性没有统一优势，比如斜轴关节对拇指有帮助但对长指不利，分支肌腱网络在长指有效但影响拇指。最后用强化学习实验验证。  用户要求总结成问题、方法、结论三部分，每部分简洁。问题部分要说明机械手设计中的结构选择如何影响协调和控制难度。方法部分要突出他们提出的框架，分阶段分析，结合四个形态学参数，用数字模型导出参数，并通过强化学习验证。结论部分要总结形态和驱动作为诱导偏置的重要性，以及不同设计优缺点。  需要注意字数限制，避免换行，所有内容在同一行。检查是否遗漏核心创新点，比如分阶段分析、四个参数、强化学习验证。确保不包含技术细节，比如具体的算法名称（PPO、DDPG等）可能不需要提及，但用户例子中结论提到了，可能需要保留。不过用户例子中的结论部分确实提到了预测与实验验证，所以可能需要保留。但用户要求避免技术细节，可能可以简化为“通过强化学习实验验证”。  现在组合起来：  问题：机械手形态与驱动设计影响关节协调与控制难度，缺乏统一设计准则； 方法：提出分阶段分析框架，基于任务雅可比与驱动矩阵，研究四形态参数（关节轴几何、驱动器-DOF比、耦合架构、权威分配），通过数字模型导出参数并强化学习验证； 结论：形态与驱动作为诱导偏置影响任务表现，不同设计各有优劣（如斜轴改善拇指但不利长指，分支肌腱提升长指控制但削弱拇指）。  检查字数是否符合，是否突出创新点，是否严格按照格式。可能需要调整用词更准确，比如“分阶段分析框架”是否准确，论文中是分运动|
+|**2026-09-09**|**HaWMPO: Hallucination-Aware World Model-based Policy Optimization for Generalist Robot Policy**|Zengjue Chen et.al.|[2609.09941](http://arxiv.org/abs/2609.09941)|null|
+|**2026-09-04**|**Human-Human & Human-Robot Interaction Transformer (H2INT) for Robot Navigation in Dense and Uncertain Crowds**|Ao Shen et.al.|[2609.05300](http://arxiv.org/abs/2609.05300)|null|
+|**2026-09-04**|**Morphology and actuation as inductive biases in robotic hand manipulation**|Zalán Tari et.al.|[2609.05206](http://arxiv.org/abs/2609.05206)|null|
 |**2026-08-27**|**Diffusion Policies for Short-Horizon Planning in Robot Crowd Navigation**|Wendong Li et.al.|[2608.27158](http://arxiv.org/abs/2608.27158)|null|
 |**2026-08-27**|**GRAFT: Grounded and Efficient Online Reinforcement Adaptation for Fine-Grained Robot Manipulation**|Yibo Qiu et.al.|[2608.27079](http://arxiv.org/abs/2608.27079)|null|
 |**2026-08-26**|**$R^3$ : Training Robots to Reason in Natural Language via Reinforcement Learning**|Lehong Wu et.al.|[2608.26053](http://arxiv.org/abs/2608.26053)|null|
@@ -184,16 +184,16 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20260910>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260914>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
-|**2026-09-09**|**MotionCanvas: Learning Implicit Motion Planning from Composable Kinematic Cues**|Zeyu Ling et.al.|[2609.10457](http://arxiv.org/abs/2609.10457)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
-|**2026-09-04**|**Towards Neuro-Symbolic Procedural Reasoning for Long-Horizon Vision-Language-Action Manipulation**|Vivek Chavan et.al.|[2609.05369](http://arxiv.org/abs/2609.05369)|null|<think> 好的，我现在需要处理用户的查询，帮他精简总结一篇论文。首先，我得仔细阅读用户的要求，确保完全理解。用户希望用中文，严格按照【问题】【方法】，总字数控制在300字以内，并且突出核心创新点，避免技术细节。同时，输出必须严格按照指定格式，在同一行内，不换行，不含其他解释。  首先，我需要解析论文的摘要。论文的问题是关于VLA模型在长程任务中的脆弱性，具体表现是不能处理需要持久任务状态、依赖推理、条件决策和可靠视觉锚定的问题。方法部分提到了神经符号框架，结合了学习控制、显式任务图和多模态记忆，任务图处理依赖和分支条件，记忆保持关键信息，人类示范提供额外指导。结论部分指出结构化符号推理和示范引导的视觉指导是互补的机制。  接下来，我需要按照用户给的格式来组织内容。问题部分要简洁，方法部分突出创新点，比如任务图、记忆模块、人类示范指导。结论要强调两者的互补性。同时要注意字数限制，确保不超过300字，并且不包含技术细节，比如具体的实验部分或评估指标。  可能会遇到的难点是如何在有限的字数内准确传达核心创新点。需要确保问题和方法部分的信息不遗漏关键点，同时语言要精炼。例如，问题中的“长程任务脆弱性”需要明确，方法中的“任务图”和“记忆模块”是重点，而人类示范部分要提到伪注视和调整训练。结论部分要总结两者的互补作用。  另外，用户强调不要换行，所以必须检查格式是否正确，所有内容是否在同一行。可能需要多次调整措辞，确保符合格式要求。同时避免使用专业术语过多，保持简洁明了。  现在，我需要将上述分析转化为符合要求的总结。先写问题，再方法，最后结论，确保每部分不超过规定字数，并且整体连贯。例如：  问题：VLA模型在长程任务中存在脆弱性，难以处理持久状态、依赖推理、条件决策和可靠视觉锚定。 方法：提出神经符号框架，结合任务图（编码依赖、分支条件）和多模态记忆（存储步骤、上下文、视觉证据），通过人类示范的伪注视调整训练，优化对象选择、子目标调度和状态验证。 结论：结构化符号推理与示范引导的|
-|**2026-09-04**|**HaptiNet: Networked Haptic Robots Enable Physical Co-presence in Geographically-Unconstrained Rehabilitation**|Chenyang Sun et.al.|[2609.04799](http://arxiv.org/abs/2609.04799)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
-|**2026-09-04**|**Dressing in Motion: A Human Motion-Aware Diffusion Policy for Robot-Assisted Dressing**|Haoxiang Sun et.al.|[2609.04759](http://arxiv.org/abs/2609.04759)|null|<think> 好的，我现在需要处理用户的查询，帮他精简总结一篇论文。首先，我要仔细阅读用户的要求，确保完全理解。用户希望用中文，严格按照【问题】【方法】，总字数控制在300字以内，突出核心创新点，避免技术细节，并且严格按照格式输出，所有内容在同一行，不要换行符和其他解释。  首先，我需要解析论文的摘要。论文标题是“Dressing in Motion: A Human Motion-Aware Diffusion Policy for Robot-Assisted Dressing”。摘要中提到，机器人穿衣辅助对有身体障碍的老年人有帮助，但人在运动时的穿衣困难，因为复杂的服装-人体接触和遮挡问题。他们提出了一种视觉运动策略，从静态专家演示中学习穿衣技巧，并推广到动态用户运动场景。关键点包括：基于扩散政策的服装-人体交互几何，学习部分观察的点云，使用PDE扩散进行物体中心表示，捕捉手臂轴分布，采样运动相关区域并注册连续观察，近似手臂运动并自适应轨迹。评估结果显示优于基线，在进度、运动自由度和舒适度上表现更好。  接下来，我需要按照用户要求的格式总结：问题、方法、结论。问题部分要简明，突出挑战。方法部分要提炼核心创新点，比如扩散政策、PDE扩散、运动相关区域采样等。结论部分要总结结果和优势。  需要注意避免技术细节，比如“PDE扩散”可能需要简化，但用户要求突出核心创新点，所以可能需要保留术语。同时，总字数要控制在300字以内，所以要精炼语言。例如，问题可以写成“机器人辅助穿衣面临人体动态运动下服装-人体复杂接触与遮挡导致动作对齐困难的问题”。方法部分需要提到扩散政策、PDE扩散、运动相关区域采样和轨迹自适应。结论部分强调在模拟和真实测试中优于基线，提升进度、自由度和舒适度。  检查格式是否正确，确保没有换行符，所有内容在同一行。可能需要多次调整，确保字数符合要求。同时，用户提供的示例输出可能是一个参考，但需要根据实际内容调整。例如，用户示例中的方法部分提到了“扩散政策”和“PDE扩散”，但可能需要更准确的关键词。  最后，确认是否所有要求都满足：格式正确，核心创新点突出，技术细节避免，字数控制，同一行输出。可能|
+|**2026-09-09**|**MotionCanvas: Learning Implicit Motion Planning from Composable Kinematic Cues**|Zeyu Ling et.al.|[2609.10457](http://arxiv.org/abs/2609.10457)|null|
+|**2026-09-04**|**Towards Neuro-Symbolic Procedural Reasoning for Long-Horizon Vision-Language-Action Manipulation**|Vivek Chavan et.al.|[2609.05369](http://arxiv.org/abs/2609.05369)|null|
+|**2026-09-04**|**HaptiNet: Networked Haptic Robots Enable Physical Co-presence in Geographically-Unconstrained Rehabilitation**|Chenyang Sun et.al.|[2609.04799](http://arxiv.org/abs/2609.04799)|null|
+|**2026-09-04**|**Dressing in Motion: A Human Motion-Aware Diffusion Policy for Robot-Assisted Dressing**|Haoxiang Sun et.al.|[2609.04759](http://arxiv.org/abs/2609.04759)|null|
 |**2026-09-03**|**A Low-Cost, Open Platform for End-to-End Autonomous Driving on a Miniature Ackermann Vehicle**|Gustavo Claudio Karl Couto et.al.|[2609.04147](http://arxiv.org/abs/2609.04147)|null|
 |**2026-09-03**|**MINERVA: How Small Can a Manipulation Policy Be and Still Solve LIBERO?**|Kohei Sendai et.al.|[2609.03715](http://arxiv.org/abs/2609.03715)|null|
 |**2026-09-01**|**Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation**|Haoyuan Deng et.al.|[2609.01596](http://arxiv.org/abs/2609.01596)|null|
@@ -395,7 +395,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20260910>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260914>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
