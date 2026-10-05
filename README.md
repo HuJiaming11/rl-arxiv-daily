@@ -1,4 +1,4 @@
-## Updated on 2026.10.02
+## Updated on 2026.10.05
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -201,13 +201,13 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20261002>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261005>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
-|**2026-10-01**|**Robot Learning on Discrete Surfaces: Theory and Applications**|Matteo Dalle Vedove et.al.|[2610.01910](http://arxiv.org/abs/2610.01910)|null|<think> 好的，用户让我用中文精简总结这篇论文，严格按照问题、方法、结论的格式，控制在300字以内，并且要突出核心创新点，避免技术细节。首先，我需要仔细阅读论文的摘要，抓住关键点。  论文的问题是说现有的机器人学习和运动生成框架把表面当作约束，忽略了它们的内在几何结构，特别是多面体网格这种CAD和3D重建的标准输出。多面体网格没有被充分利用，导致性能不足。  接下来是方法部分，作者提出了一个统一的离散黎曼几何框架，直接在多面体网格上做学习。他们定义了对数映射、指数映射、平移和投影等工具，这些在面、边、顶点处都有效。然后应用在三个学习范式中：改进的DMPs、带有几何核的GP和RFM。这些方法都利用了离散几何特性，比如指数映射的改进和平移，核函数的调整，以及生成质量提升。  结论部分需要说明这些方法在仿真和真实场景中的验证，比如跨表面泛化、轨迹规划和抛光运动规划，效果优于现有方法，训练时间减少，证明框架的有效性。  现在要确保不遗漏核心创新点，比如统一框架、离散黎曼几何工具、三个应用场景的改进，以及实验验证。同时要避免技术细节，比如具体的算法步骤或参数设置。还要注意格式，所有内容在同一行，用【】括起来，不要换行。  检查字数，确保不超过300字。可能需要调整用词，比如“多面体网格”可以简化为“多面体网格”或“网格表面”，但用户例子中用了“多面体网格”，所以保持原样。最后确认结构是否正确，问题、方法、结论是否清晰，有没有突出创新点。 </think> 【问题】机器人学习框架忽视多面体网格的离散几何特性导致性能不足；【方法】提出统一离散黎曼几何框架，定义对数/指数映射、平移及投影工具，应用于动态运动规划（DMPs）、高斯过程（GP）及流匹配（RFM）；【结论】在仿真和真实场景中实现跨表面泛化、轨迹规划及运动生成质量提升，训练效率优于传统方法。|
+|**2026-10-01**|**Robot Learning on Discrete Surfaces: Theory and Applications**|Matteo Dalle Vedove et.al.|[2610.01910](http://arxiv.org/abs/2610.01910)|null|
 |**2026-09-25**|**Enabling a Unified Cross-Domain Representation for Two-Finger Gripper Manipulation via Interaction-Centric Modeling**|Guanlin Li et.al.|[2609.31207](http://arxiv.org/abs/2609.31207)|null|
 |**2026-09-25**|**Impedance Cloning: Learning Equilibrium Point Parameters for Contact-Rich Manipulation**|Hayato Takahashi et.al.|[2609.30842](http://arxiv.org/abs/2609.30842)|null|
 |**2026-09-25**|**RoboMonitor: Label-Efficient Runtime Monitoring of Robot Task Execution via Predictive Representation Learning**|Abhiroop Ajith et.al.|[2609.30715](http://arxiv.org/abs/2609.30715)|null|
@@ -444,7 +444,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20261002>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261005>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
