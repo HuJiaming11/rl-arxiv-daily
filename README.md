@@ -1,4 +1,4 @@
-## Updated on 2026.10.05
+## Updated on 2026.10.08
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -13,6 +13,8 @@
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-10-07**|**HuMBLE: Human Motion-Driven Behavior Learning for Embodied Locomotion**|Mike Zhang et.al.|[2610.10489](http://arxiv.org/abs/2610.10489)|null|<think> 好的，我现在需要帮用户总结一篇论文，按照他们给的格式，用中文，控制在300字以内。首先，我得仔细阅读用户提供的论文摘要，理解核心内容。  论文标题是HuMBLE，全称是Human Motion-Driven Behavior Learning for Embodied Locomotion。摘要里提到的问题有两个：现有的控制器要么机械感强，要么依赖人类数据但泛化能力差。方法部分提到了他们用了一个学习框架，先通过蒸馏得到轻量级先验策略，再通过多任务强化学习优化。结论是验证了三个机器人上的效果，比纯RL的更好。  用户要求突出核心创新点，避免技术细节，严格按照问题、方法、结论的格式，且所有内容在同一行，不要换行。我需要确保不遗漏关键点，同时语言精简。  首先，问题部分要简明指出当前的两个问题。方法部分要说明他们的框架的两个主要步骤：蒸馏和细调。结论部分强调结果和对比。需要注意字数限制，可能需要用更简练的词汇，比如“教师-学生蒸馏”代替详细描述，以及“多任务强化学习”来概括细调过程。确保每个部分不超过关键点，不超过300字。检查是否有技术细节需要删减，比如具体的数据集名称或机器人型号可能不需要，但用户提到要突出核心创新，所以可能需要保留验证部分的结果对比。最后确保格式正确，没有换行，用逗号分隔各部分。 </think> 问题：传统人形机器人运动控制器机械感强或依赖数据泛化差；方法：HuMBLE框架通过教师-学生蒸馏生成轻量级生物力学先验策略，结合多任务强化学习扩展指令覆盖与鲁棒性；结论：在Atlas和Unitree机器人上实现可实时 steer的生物仿生运动，相比纯RL方法更轻量且保持人类步态特征|
+|**2026-10-07**|**Decoding Neural Population Dynamics through Robotic Analog**|Wenhui Chen et.al.|[2610.09977](http://arxiv.org/abs/2610.09977)|null|<think> 好的，我现在需要帮用户精简总结这篇论文，按照问题、方法、结论的格式，控制在300字以内。首先，我得仔细阅读用户提供的摘要，找出核心内容。  论文标题是“Decoding Neural Population Dynamics through Robotic Analog”，摘要里提到动物研究表明运动皮层神经群体的旋转动力学与精确动作有关，但物理效果未知。他们开发了一个机器人模型，用人工肌肉、多模态传感器和强化学习的神经网络控制器。机器人能准确运动，抗损伤，神经动力学类似动物。发现神经旋转产生与抓取方向垂直的振荡调整轨迹，优化路径调整，这和灵长类数据一致。还揭示了传感器和肌肉冗余下的能量原理，以及学习过程中的灵感时刻，连接生物和人工系统。这些发现为理解神经动力学如何贡献准确和灵活运动提供了新视角，启发未来仿生机器人。  用户要求突出核心创新点，避免技术细节。我需要先确定问题是什么。问题应该是神经动力学如何导致动作效果还不清楚，尤其是旋转动力学的作用。方法部分要提到他们开发的机器人模型，包括人工肌肉、传感器和强化学习训练。结论部分要总结他们发现的神经振荡优化轨迹，能量原理，以及学习中的灵感时刻，以及这些对机器人开发的启示。  现在要确保每个部分简洁，用最少的字表达清楚。问题部分要说明神经群体旋转动力学与动作效果的关系不明确。方法部分强调机器人模型和强化学习训练。结论部分列出主要发现和影响。  检查字数，确保不超过300字。可能需要调整用词，比如“开发”换成“构建”，“训练”换成“强化学习优化”等。确保每个部分不超过一两句话，避免冗长。最后检查格式是否严格按照要求，同一行，无换行，无解释。 </think> 问题：神经群体旋转动力学如何物理实现精准动作及其机制不明确；方法：构建人工肌肉机器人系统并训练强化学习神经网络控制器；结论：发现神经旋转驱动垂直抓取方向的振荡轨迹调整优化运动，揭示冗余传感器的能量优化原理及学习中的灵感时刻，为仿生机器人提供神经动力学实现新范式。|
 |**2026-09-25**|**See to Reach, Feel to Grasp: Learning A Blind Grasp Reflex for Anthropomorphic Robotic Hands**|Alexander Alexiev et.al.|[2609.31323](http://arxiv.org/abs/2609.31323)|null|
 |**2026-09-24**|**Temporal Gradient Inversion for Private Trajectory Reconstruction in Embodied Reinforcement Learning**|Sudip Bhujel et.al.|[2609.30258](http://arxiv.org/abs/2609.30258)|null|
 |**2026-09-24**|**Res-HIL: Human-Guided Residual Reinforcement Learning for Sample-Efficient Dexterous Manipulation**|Mariia Iavorskaia et.al.|[2609.30023](http://arxiv.org/abs/2609.30023)|null|
@@ -201,12 +203,13 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20261005>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261008>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-10-07**|**RoboPrompt: Intuitive Robot Policy Steering with Sparse Human Input**|Yanwen Zou et.al.|[2610.10534](http://arxiv.org/abs/2610.10534)|null|<think> 好的，我现在需要帮用户总结这篇论文，按照指定的格式来。首先，用户的要求很明确，要精简总结，控制在300字以内，严格按照【问题】【方法】，总字数要少，不能有换行符，也不能有其他解释。  先看论文的问题部分。摘要里提到，现有的端到端机器人策略通过模仿学习，数据多样性不足，导致现实中的零样本部署困难。共享自主方法需要远程操作，但专用硬件和培训限制了大规模部署。其他方法把人类指导作为额外输入，但需要架构改动和专门训练，适用性差。所以问题应该是现有方法在数据多样性和部署灵活性上有不足，难以有效引导策略。  接下来是方法部分。论文提出了RoboPrompt，核心创新点在于将人类意图翻译与基础策略解耦，使用可重用的模块将人类输入（轨迹、目标点、粗方向）转化为动作草稿，再通过扩散或流匹配动态优化。关键点是不修改基础架构，也不需要微调，通过噪声空间控制平衡意图和策略优先级。另外，结合在线策略改进的DAgger，迭代后成功率提升，干预次数减少。  结论部分需要总结效果。实验显示在多个任务和策略上成功率提升15.5%-21.3%，人类干预减少44%-81.9%，说明方法有效且高效。  现在要确保所有内容在同一行，没有换行，用【】括起来，避免技术细节，突出创新点。检查字数，确保不超过300字。可能需要调整措辞，比如“可重用模块”、“噪声空间控制”这些核心点要保留。同时注意用户强调的格式，比如问题、方法、结论各部分用【】分隔，中间用竖线，所有内容连续。 </think> 【问题】现有机器人策略依赖数据多样性不足的模仿学习，共享自主方法受限于硬件和培训成本，其他方法需架构改动和专用训练，难以灵活引导策略行为；【方法】提出RoboPrompt，通过可重用模块将人类输入（轨迹/目标点/方向）转化为动作草稿，结合扩散/流匹配动态优化，在噪声空间平衡意图与策略优先级，无需修改基础架构或微调；【结论】实验显示成功率提升15.5%-21.3%，人类干预减少44%-81.9%，支持在线策略迭代优化。|
 |**2026-10-01**|**Robot Learning on Discrete Surfaces: Theory and Applications**|Matteo Dalle Vedove et.al.|[2610.01910](http://arxiv.org/abs/2610.01910)|null|
 |**2026-09-25**|**Enabling a Unified Cross-Domain Representation for Two-Finger Gripper Manipulation via Interaction-Centric Modeling**|Guanlin Li et.al.|[2609.31207](http://arxiv.org/abs/2609.31207)|null|
 |**2026-09-25**|**Impedance Cloning: Learning Equilibrium Point Parameters for Contact-Rich Manipulation**|Hayato Takahashi et.al.|[2609.30842](http://arxiv.org/abs/2609.30842)|null|
@@ -444,7 +447,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20261005>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261008>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
