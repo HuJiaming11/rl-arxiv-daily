@@ -1,4 +1,4 @@
-## Updated on 2026.10.12
+## Updated on 2026.10.14
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -203,12 +203,15 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20261012>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261014>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-10-11**|**$Δ$ Flow Matching for Robot Foundation Models**|Kuangji Zuo et.al.|[2610.15794](http://arxiv.org/abs/2610.15794)|null|<think> 嗯，用户让我总结一篇关于Δ Flow Matching的论文，要求用中文精简，控制在300字以内，严格按照问题、方法、结论的格式，而且所有内容要在一行内，不能换行。首先，我需要仔细阅读论文的摘要，抓住核心创新点和关键信息。  问题部分，论文指出传统的flow matching方法在生成动作和未来视觉状态时，都从固定的高斯先验开始，忽略了时间连续性，导致训练成本高，特别是WAM需要额外分支。方法部分，他们提出了Δ-flow，用最近的行动历史加轻微噪声作为源，减少传输到残差Δ，从而高效学习，单步推断。结论部分，应用在VLA和WAM模型上，显著提升了效率和效果，比如ImageWAM训练时间减少，LoRA fine-tuning效果更好，速度提升，还保持了动作平滑，并在LIBERO-Plus上达到SOTA。  接下来要确保不包含技术细节，突出创新点。问题要简洁说明传统方法的不足，方法强调Δ-flow的核心改进，结论展示结果和优势。注意字数限制，可能需要合并句子，比如将速度提升和效果提升放在一起。还要检查格式是否正确，同一行，没有换行符，不添加其他解释。可能需要调整用词，比如“单步推断”代替“单步采样”，更准确。最后确认是否符合用户的所有要求，特别是格式和字数。 </think> 问题：传统flow matching模型依赖固定高斯先验生成动作与视觉状态，忽略时间连续性导致训练成本高且需多次采样；WAM需额外分支进一步增加复杂度。方法：提出Δ-flow，利用近期行动历史加噪声构建动态源，将高斯分布迁移转化为学习残差Δ，实现单步高效推断。结论：在VLA和WAM中应用后，ImageWAM训练效率提升15倍（1→6→1 epoch），Fast-WAM效率提升4倍（8→2 epoch），LoRA fine-tuning单次训练超越基线5次效果，速度提升达4.45倍，同时保持4.5倍动作平滑度，在LIBERO-Plus达到SOTA泛化性能，且无需额外训练即可迁移至预训练WAM模型。|
+|**2026-10-11**|**SurgiCLAW: An Interpretable Atomic-Skill Agent for Precision Robotic Micromanipulation**|Angen Ye et.al.|[2610.15766](http://arxiv.org/abs/2610.15766)|null|<think> 好的，用户让我用中文精简总结这篇论文，严格按照问题、方法、结论的格式，控制在300字以内，还要突出核心创新点，避免技术细节。首先，我需要仔细阅读论文摘要，找出关键点。  论文标题是SurgiCLAW，一个可解释的原子技能代理用于高精度手术机器人操作。问题部分应该包括当前在手术机器人中的不足，比如低层动作预测精度不够、决策不透明、数据不足。方法部分要提到他们的分层技能框架，MLLM只处理视觉理解和技能选择，执行交给确定性控制程序。还有他们构建的数据集和三个奖励函数。结论则是他们的准确率和任务成功率。  用户强调要精简，所以需要去掉技术细节，比如具体的数据集构建方法，奖励函数的具体类型，但保留核心创新点，比如分层结构、可解释性、数据增强和奖励优化。同时注意格式，所有内容在同一行，不用换行，严格按照问题、方法、结论的顺序。  现在检查字数，确保不超过300字。可能需要调整措辞，比如“ confinement”翻译成“约束”更简洁。确认核心点都涵盖：问题中的不足，方法中的分层框架和数据奖励，结论中的准确率和成功率。最后确保没有技术细节，比如“视觉和状态扰动”可以简化为“数据增强”。 </think> 问题：手术机器人低层动作预测精度不足、决策不透明且数据稀缺；方法：构建分层技能框架约束大语言模型专注于视觉理解与原子技能选择，结合数据增强与三重奖励优化，将执行交由确定性控制程序；结论：在脑机接口植入任务中实现94.6%技能选择准确率、93.0% Macro-F1，闭环机器人试验任务成功率88.0%。|
+|**2026-10-11**|**Vision-Predictor-Action: Towards Efficient Embodied AI via Neuro-Symbolic JEPA Predictors**|Yeonseok Lee et.al.|[2610.15556](http://arxiv.org/abs/2610.15556)|null|<think> 好的，我现在需要帮用户总结这篇论文，按照他们的格式要求。首先，我得仔细阅读用户提供的论文摘要，理解核心内容。用户要求分问题、方法、结论三个部分，每部分要简洁，总字数控制在300字以内，还要突出创新点，避免技术细节。  首先看问题部分。论文提到VLA模型用LLM逐个生成动作，导致推理延迟随序列长度增加，闭环控制频率受限。这里的问题就是长序列动作生成带来的延迟和控制频率问题。  接下来是方法。他们提出了VPA，用神经符号结构代替自回归解码器。核心创新点包括共享视觉编码器、冻结文本编码器、JEPA预测器、决策器选择技能，以及flow-matching生成整个动作块。需要把这些关键点提炼出来，但不用详细技术细节，比如具体的编码器类型或参数数量。  然后是结论。结果显示模型参数少，推理快，训练时间短，在LIBERO-10上表现不错。需要强调结果中的关键数据，比如参数量、推理时间、训练时间和成功率，但不用提代码或链接。  现在要检查是否符合格式：三个部分在同一行，无换行符，严格按问题、方法、结论顺序。确保字数足够精简，突出创新点，比如神经符号预测架构、共享编码、快速决策等。同时避免技术术语过多，比如“flow-matching solver”可以简化为“生成完整动作块”。  可能需要注意用户提到的“总字数控制在300字以内”，但实际输出可能更短。需要确保每个部分的信息准确且不冗余。比如问题部分要简明，方法部分列出主要创新点，结论部分用关键数据支持。  最后检查是否有遗漏的核心创新点，比如目标条件、联合嵌入架构、阈值处理等。确保结论中的结果部分提到训练时间、参数量、推理速度和成功率，这些都是用户关心的重点。  现在整合所有信息，确保格式正确，没有多余内容，严格按用户要求输出。 </think> 问题：Vision-Language-Action模型通过LLM逐帧生成动作导致长序列推理延迟和闭环控制频率受限；方法：提出神经符号VPA架构，采用共享视觉编码器、冻结文本编码器、神经符号技能选择器、JEPA预测器及flow-matching动作生成，通过联合嵌入架构和单步决策减少序列依赖；结论：在LIB|
 |**2026-10-07**|**RoboPrompt: Intuitive Robot Policy Steering with Sparse Human Input**|Yanwen Zou et.al.|[2610.10534](http://arxiv.org/abs/2610.10534)|null|
 |**2026-10-01**|**Robot Learning on Discrete Surfaces: Theory and Applications**|Matteo Dalle Vedove et.al.|[2610.01910](http://arxiv.org/abs/2610.01910)|null|
 |**2026-09-25**|**Enabling a Unified Cross-Domain Representation for Two-Finger Gripper Manipulation via Interaction-Centric Modeling**|Guanlin Li et.al.|[2609.31207](http://arxiv.org/abs/2609.31207)|null|
@@ -447,7 +450,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20261012>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261014>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
