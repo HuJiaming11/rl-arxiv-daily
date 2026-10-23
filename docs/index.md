@@ -27,7 +27,7 @@ layout: default
   table th:nth-child(6), table td:nth-child(6) { width: 60%; }  /* 摘要（最后一列） */
 </style>
 
-## Updated on 2026.10.19
+## Updated on 2026.10.23
 > Usage instructions: [here](./docs/README.md#usage)
 
 ## Reinforcement Learning
@@ -230,6 +230,7 @@ layout: default
 
 | Publish Date | Title | Authors | PDF | Code | 摘要 |
 |:---------|:-----------------------|:---------|:------|:------|:-------------------------------------|
+|**2026-10-22**|**Revisiting Distribution Matching for State-to-Vision Policy Distillation in Laparoscopic Robotic Manipulation**|Mingyu Sheng et.al.|[2610.31010](http://arxiv.org/abs/2610.31010)|null|<think> 好的，我现在需要帮用户精简总结这篇论文，按照指定的格式来。首先，用户的要求很明确，要严格按照【问题】【方法】，总字数控制在300字以内，突出核心创新点，避免技术细节，直接输出总结内容，并且所有内容在同一行内，不要换行和其他解释。  首先，我得仔细阅读论文的摘要和标题。论文的标题是“Revisiting Distribution Matching for State-to-Vision Policy Distillation in Laparoscopic Robotic Manipulation”，看起来是关于在腹腔镜机器人操作中，从状态到视觉的策略蒸馏。摘要里提到，端到端的控制策略通过强化学习（RL）训练，但需要精确的物理状态，这在手术环境中难以可靠获取。视觉基础的RL可以避免显式状态估计和人工感知管道，但纯RL方法在手术操作中仍有挑战。模仿学习（IL）需要大量专家示范，这在微创手术中难以获得。因此，他们提出了一种状态到视觉的策略蒸馏框架，使用状态基策略作为教师，视觉基策略学习RGB观察和机器人本体感觉信息，比纯RL需要更少的专家示范，性能也更优。实验在模拟环境中进行，结果显示他们的方法在任务间表现更一致和稳定。  接下来，我需要按照用户给的格式来总结：问题、方法、结论。问题部分要说明当前存在的挑战，比如纯RL难以训练视觉策略，IL需要大量专家数据。方法部分要突出他们的创新点，即结合状态到视觉的蒸馏，使用状态策略作为教师，视觉策略结合RGB和本体感觉，减少专家数据需求。结论部分要总结实验结果，显示他们的方法在稳定性和任务间一致性上优于现有方法。  需要注意避免技术细节，比如具体的实验设置或数据量，只保留核心点。同时要确保总字数在300字以内，所以每个部分需要简洁。检查是否符合格式要求，所有内容在同一行，没有换行，也没有多余的解释。  现在开始组织语言。问题部分：腹腔镜机器人操作中，纯RL难以训练高效视觉策略，IL需大量专家数据。方法部分：提出状态到视觉策略蒸馏框架，教师为状态基策略，学生结合RGB和本体感觉信息，减少专家需求并提升性能。结论部分：实验表明该方法在模拟环境中稳定且任务间一致，优于纯RL和IL。  检查字数，确保不超过限制。最后确认格式是否正确|
 |**2026-10-15**|**MOSS: Mode-Oriented Source Shaping for Robot Flow Matching Policies**|Zirun Ma et.al.|[2610.22193](http://arxiv.org/abs/2610.22193)|null|
 |**2026-10-15**|**Trajectory-based Diffusion from One-shot Human Video for Generalizable Manipulation**|Guoping Pan et.al.|[2610.21792](http://arxiv.org/abs/2610.21792)|null|
 |**2026-10-11**|**$Δ$ Flow Matching for Robot Foundation Models**|Kuangji Zuo et.al.|[2610.15794](http://arxiv.org/abs/2610.15794)|null|
