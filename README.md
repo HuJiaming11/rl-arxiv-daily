@@ -1,4 +1,4 @@
-## Updated on 2026.10.24
+## Updated on 2026.10.25
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -205,13 +205,13 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20261024>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261025>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
-|**2026-10-22**|**Revisiting Distribution Matching for State-to-Vision Policy Distillation in Laparoscopic Robotic Manipulation**|Mingyu Sheng et.al.|[2610.31010](http://arxiv.org/abs/2610.31010)|null|<think> 好的，我现在需要处理用户的查询，帮他精简总结一篇论文。首先，我要仔细阅读用户提供的具体要求。用户希望用中文，严格按照【问题】【方法】，总字数控制在300字以内，并且要突出核心创新点，避免技术细节。同时，必须严格按照格式输出，所有内容在同一行，不要换行符和其他解释。  首先，我需要解析论文的摘要内容。论文的问题是关于在腹腔镜机器人操作中，纯基于视觉的强化学习（RL）方法在训练控制策略时面临挑战，因为难以可靠获取精确的物理状态，而模仿学习（IL）需要大量专家示范，这在微创手术中难以获得。因此，作者提出了一个状态到视觉的政策蒸馏框架，使用基于状态的政策（教师）和结合RGB观察与机器人本体感觉信息（学生）的视觉政策，减少专家示范需求并提升性能。  接下来，我需要将问题和方法部分提炼出来。问题部分要简明指出挑战，即视觉RL在手术中训练困难，IL需要大量专家数据。方法部分要突出核心创新，即状态到视觉蒸馏框架，结合教师（状态政策）和学生（视觉+本体感觉），减少专家数据需求，提升稳定性和性能。结论部分则要总结实验结果，证明该方法在模拟环境中表现更一致稳定。  然后，检查字数是否符合要求。用户要求总字数300以内，当前草稿大约在200字左右，符合要求。同时，确保不包含技术细节，如具体的实验设置或数据，只保留核心点。  最后，按照格式要求，确保每个部分用【】括起，用中文，无换行，同一行内。需要检查是否有遗漏的核心创新点，比如结合RGB和本体感觉信息，以及减少专家示范的需求，这些都要明确提到。同时，避免使用专业术语过多，保持简洁。  可能需要注意的陷阱：用户强调不要技术细节，所以需要避免提到具体的实验任务或环境，只说“模拟环境”。另外，确保问题和方法之间的逻辑连贯，结论部分呼应问题和方法的结果。确认所有内容在同一行，没有换行符，使用空格分隔各部分。完成后，再次检查是否符合所有格式和内容要求。 </think> 【问题】腹腔镜机器人操作中视觉强化学习训练困难且依赖专家示范，模仿学习需大量专家数据且性能不稳定；【方法】提出状态-视觉政策蒸馏框架，教师|
+|**2026-10-22**|**Revisiting Distribution Matching for State-to-Vision Policy Distillation in Laparoscopic Robotic Manipulation**|Mingyu Sheng et.al.|[2610.31010](http://arxiv.org/abs/2610.31010)|null|<think> 好的，我现在需要帮用户总结这篇论文，按照他们给的格式：问题、方法、结论，控制在300字以内。首先，我得仔细阅读论文摘要，抓住核心内容。  论文标题是关于在腹腔镜机器人操作中使用状态到视觉的策略蒸馏。摘要里提到，端到端控制策略通过强化学习（RL）成为传统手术机器人控制的新方法，但需要精确的物理状态，这在手术环境中难以可靠获取。视觉基础RL可以避免状态估计和人工感知管道，但纯RL方法在手术操作中训练视觉策略有挑战。模仿学习（IL）需要大量专家示范，而手术中获取这些示范困难。因此，他们提出状态到视觉策略蒸馏框架，使用状态基策略作为导师，视觉策略学习RGB和机器人本体感觉信息，比IL需要更少的专家示范且性能更优。实验在模拟环境中进行，结果显示他们的方法性能更一致稳定。  接下来要提炼问题、方法和结论。问题部分需要说明现有方法的不足：RL训练视觉策略困难，IL需要大量专家示范。方法部分突出他们的创新点：状态到视觉蒸馏，结合RGB和本体感觉，减少专家需求。结论强调实验结果，性能更优且稳定。  注意用户要求突出核心创新点，避免技术细节，所以不用提具体实验任务或细节。要确保语言简洁，符合格式要求，所有内容在同一行，无换行，不包含其他解释。检查字数是否在300以内，可能需要调整用词。比如“状态基策略”可以简化为“状态基策略”，“本体感觉信息”可以保留。确认每个部分不超过限定的字数，最后组合成符合要求的字符串。 </think> 问题：视觉RL训练困难且模仿学习依赖大量专家示范；方法：提出状态到视觉策略蒸馏框架，利用状态基策略与RGB+本体感觉信息训练视觉策略；结论：该框架性能更优稳定且减少专家需求，优于纯RL和IL方法。|
 |**2026-10-15**|**MOSS: Mode-Oriented Source Shaping for Robot Flow Matching Policies**|Zirun Ma et.al.|[2610.22193](http://arxiv.org/abs/2610.22193)|null|
 |**2026-10-15**|**Trajectory-based Diffusion from One-shot Human Video for Generalizable Manipulation**|Guoping Pan et.al.|[2610.21792](http://arxiv.org/abs/2610.21792)|null|
 |**2026-10-11**|**$Δ$ Flow Matching for Robot Foundation Models**|Kuangji Zuo et.al.|[2610.15794](http://arxiv.org/abs/2610.15794)|null|
@@ -455,7 +455,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20261024>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261025>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
