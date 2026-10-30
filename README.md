@@ -1,4 +1,4 @@
-## Updated on 2026.10.26
+## Updated on 2026.10.30
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -13,6 +13,8 @@
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-10-29**|**Event2Reward: Learning Robotic Rewards from Progress Relations**|Junnan Nie et.al.|[2610.39212](http://arxiv.org/abs/2610.39212)|null|摘要生成失败：429 Client Error: Too Many Requests for url: https://open.bigmodel.cn/api/paas/v4/chat/completions|
+|**2026-10-28**|**Robotic Data Inoculation**|Qiyang Li et.al.|[2610.39054](http://arxiv.org/abs/2610.39054)|null|<think> 好的，我现在需要处理用户的查询，帮他精简总结一篇论文。首先，我得仔细阅读用户的要求。用户希望用中文，严格按照【问题】【方法】，总字数控制在300字以内，并且突出核心创新点，避免技术细节。同时，输出格式必须严格按照指定，同一行内，不要换行符，其他解释也不能有。  首先，我需要解析论文的摘要内容。论文标题是Robotic Data Inoculation，主要问题在于机器人学习系统依赖高质量示范数据，但数据收集缺乏系统性，传统方法如在线强化学习（RL）影响安全性和效率，而DAgger-style方法需要政策失败后人类纠正。结论是提出Data Inoculation（DI），通过共享控制框架，人类远程操作的同时，残差政策扰动命令，训练时与后续目标一致，从而收集更有用的数据，提升下游性能。  接下来，我需要按照用户指定的格式来组织内容。问题部分要简明扼要，说明现有数据收集的不足。方法部分要突出DI的核心创新，即共享控制和残差政策。结论部分强调DI的有效性和对比结果。  需要注意避免技术细节，比如具体如何训练残差政策，或者实验的具体任务名称，但可以提到三个挑战性任务。同时要确保总字数不超过300字，可能需要多次精简。  现在开始草拟：  问题：机器人学习依赖高质量数据但收集困难，传统方法效率低且不安全。  方法：提出DI共享控制框架，人类远程操作+残差政策扰动，残差政策在线训练，与后续目标一致。  结论：DI在三个任务中效果优于行为克隆和 offline RL，提升下游性能。  检查字数是否符合，确保格式正确，没有换行，没有多余解释。可能需要调整措辞，比如“残差政策”是否易懂，或者是否需要更简化的表达。比如“残差政策”可以保留，因为用户要求突出核心创新点，可能不需要更通俗的说法。  最终确认是否符合所有要求，特别是格式和字数限制。确保问题、方法、结论各部分清晰，核心创新点突出，如共享控制、残差政策、在线训练、人类持续纠正等。 </think> 【问题】机器人学习依赖高质量示范数据但收集困难，传统方法效率低且不安全，数据覆盖不足导致政策易偏离分布；【方法】提出Data Inoculation共享控制框架|
 |**2026-10-15**|**Value as Memory: Online Value-Guided Post-training for General Robot Policies**|Wenye Yu et.al.|[2610.22368](http://arxiv.org/abs/2610.22368)|null|
 |**2026-10-15**|**Sim-to-Real Reinforcement Learning for Path-Safe Target Reaching in Robotic Harvesting of Hydroponic Lettuce**|Al Bashir et.al.|[2610.22337](http://arxiv.org/abs/2610.22337)|null|
 |**2026-10-07**|**HuMBLE: Human Motion-Driven Behavior Learning for Embodied Locomotion**|Mike Zhang et.al.|[2610.10489](http://arxiv.org/abs/2610.10489)|null|
@@ -205,12 +207,13 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20261026>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261030>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-10-29**|**RAIBO-Wagon: Real-Time Navigation System for a Legged Robot Towing a Wagon**|Insung Yang et.al.|[2610.39267](http://arxiv.org/abs/2610.39267)|null|<think> 好的，我需要帮用户总结这篇论文，按照指定的格式：问题、方法、结论，控制在300字以内，突出核心创新点，避免技术细节。首先，我得仔细阅读用户提供的论文摘要。  问题部分应该指出当前腿部机器人拖拽货物的挑战，特别是复杂动力学和狭窄空间实时导航的问题。方法部分要提到他们提出的框架，结合CFM和MPPI控制，使用FDM。结论则是成功率和应用情况。  用户强调要精简，所以得去掉具体的技术术语，比如“Forward Dynamics Model”可以简化为“动力学模型”。同时要确保不换行，所有内容在同一行。检查字数，确保不超过300字。可能用户是研究者或工程师，需要快速了解论文亮点，所以重点放在创新点：解决初始化问题和加速收敛，以及实际测试结果。确认格式正确，没有多余的解释，直接输出总结。 </think> 问题：腿部机器人拖拽非受控物体在狭窄空间实时导航面临复杂耦合动力学和路径可行性挑战；方法：创新融合条件流匹配加速收敛与基于动力学模型的模型预测路径积分控制，构建闭环导航框架；结论：在40次户外试验中成功率达85%，拖拽40kg货物通过15米狭窄空间，计算与感知全嵌入式实现。|
 |**2026-10-22**|**Revisiting Distribution Matching for State-to-Vision Policy Distillation in Laparoscopic Robotic Manipulation**|Mingyu Sheng et.al.|[2610.31010](http://arxiv.org/abs/2610.31010)|null|
 |**2026-10-15**|**MOSS: Mode-Oriented Source Shaping for Robot Flow Matching Policies**|Zirun Ma et.al.|[2610.22193](http://arxiv.org/abs/2610.22193)|null|
 |**2026-10-15**|**Trajectory-based Diffusion from One-shot Human Video for Generalizable Manipulation**|Guoping Pan et.al.|[2610.21792](http://arxiv.org/abs/2610.21792)|null|
@@ -455,7 +458,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20261026>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261030>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
