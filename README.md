@@ -1,4 +1,4 @@
-## Updated on 2026.11.02
+## Updated on 2026.11.03
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -13,6 +13,7 @@
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-11-02**|**BeyondContact: A Reinforcement Learning Framework for Airflow-Based Non-Contact Manipulation**|Peiyu Yang et.al.|[2611.03059](http://arxiv.org/abs/2611.03059)|null|<think> 好的，我现在需要处理用户的请求，帮他总结一篇论文。首先，我得仔细看看用户的具体要求。用户希望用中文精简总结，严格按照【问题】【方法】，总字数控制在300字以内，并且突出核心创新点，避免技术细节。同时，输出格式要严格，所有内容在同一行，不要换行符，不要其他解释。  首先，我需要理解论文的内容。论文的标题是“BeyondContact: A Reinforcement Learning Framework for Airflow-Based Non-Contact Manipulation”。摘要里提到接触式抓取的局限性，比如末端执行器的可达性和物体的机械性质。而气流可以非接触施加力，但缺乏合适的仿真，阻碍了强化学习在气流抓取中的应用。他们开发了Isaac Lab的扩展模块，支持大规模并行训练，使用实验模型计算力和扭矩，训练了一个混合的推吹策略（HPB）和一个矩形重定向策略（RR），设计了轻量高速吹风机与夹爪共存，在真实世界中HPB成功率达80%，RR的 heading误差2.6度，代码在GitHub。  接下来，用户要求的问题部分要明确论文解决的问题。这里的问题应该是接触式抓取的局限性和缺乏适合的仿真阻碍RL应用。方法部分需要突出他们的创新点：开发扩展模块、混合策略、轻量吹风机。结论部分要说明实验结果和成果。  需要注意用户强调避免技术细节，比如具体的模型名称（HPB、RR）可能需要简化，但用户给的例子中还是用了缩写，所以可能需要保留。核心创新点是扩展模块、混合策略、吹风机设计，以及成功率和误差数据。  然后要检查字数，确保不超过300字。可能需要精简语言，比如“实验ally identified”可以翻译为“实验验证”或“实验确定”。同时要确保格式正确，所有内容在同一行，用【】括起来，中间用【】分隔问题、方法、结论，没有换行。  最后，检查是否符合所有要求：中文、精简、核心创新点、正确格式、无换行，字数控制。可能需要多次调整，比如问题部分是否准确，方法是否突出创新，结论是否包含关键数据。确保每个部分简洁，比如问题部分两句话，方法部分三到四点，结论部分结果和代码。 </think> 【问题】接触式抓取受限于末端执行器可达性和物体机械特性，|
 |**2026-10-29**|**MUSBRIC: LEGO-Compatible Pneumatic Muscle Bricks for Reconfigurable Musculoskeletal Robots**|Qiyao Wang et.al.|[2610.40285](http://arxiv.org/abs/2610.40285)|null|
 |**2026-10-29**|**Event2Reward: Learning Robotic Rewards from Progress Relations**|Junnan Nie et.al.|[2610.39212](http://arxiv.org/abs/2610.39212)|null|
 |**2026-10-28**|**Robotic Data Inoculation**|Qiyang Li et.al.|[2610.39054](http://arxiv.org/abs/2610.39054)|null|
@@ -208,12 +209,13 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20261102>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261103>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-11-02**|**Visuo-tactile Diffusion Policy for Robotic Manipulation with Auxiliary Tactile Dynamics Prediction**|Kaihong Ouyang et.al.|[2611.02677](http://arxiv.org/abs/2611.02677)|null|<think> 好的，我现在需要帮用户总结一篇论文，按照他们给的格式来。首先，用户的要求很明确，要精简总结，控制在300字以内，分问题、方法、结论三部分，并且要突出核心创新点，避免技术细节。  先看看论文标题和摘要。标题是“Visuo-tactile Diffusion Policy for Robotic Manipulation with Auxiliary Tactile Dynamics Prediction”，看起来是关于结合视觉和触觉的扩散策略，用于机械臂抓取等长时任务。摘要里提到，长时机器人装配需要可靠的感知和行动，视觉提供全局信息，触觉提供局部接触线索，特别是在接触状态变化时。他们提出的方法是四步历史的视觉和触觉数据来生成动作序列，使用循环时间表示整合多模态信息，还有一个辅助目标预测触觉图像两步后的变化，只在训练时用，不增加推理时间。实验结果显示成功率提高了16.3个百分点。  接下来要按照问题、方法、结论的结构来总结。问题部分要说明机器人长时任务中多模态感知的不足，特别是触觉的重要性。方法部分要突出结合视觉和触觉的扩散策略，以及辅助目标预测触觉变化，但不要详细讲技术细节。结论部分强调性能提升。  需要确保核心创新点突出，比如辅助预测和训练与推理分离。同时要检查字数，确保不超过300字。用户还特别强调不要换行符，所有内容在同一行，所以要注意格式。可能用户需要这个总结用于快速阅读或报告，所以简洁是关键。需要避免任何技术术语过多，比如“四步历史”可以简化为“多模态时序数据”，而“循环时间表示”可以简化为“整合多模态的循环时间表示”。  最后检查是否符合所有要求：格式正确，核心创新点明确，字数控制。确保没有遗漏重要信息，比如实验结果中的成功率提升。现在把这些整合成三部分，用中文，严格按格式输出。 </think> 问题：长时机器人装配中多模态感知与动作控制不足，触觉对动态接触状态变化感知缺失；方法：融合视觉-触觉四步时序数据构建扩散策略，通过循环时间表示整合多模态信息，训练时加入触觉图像两步动态预测辅助目标（不增加推理开销）；结论：在MuJoCo装配实验中|
 |**2026-10-29**|**SwapBot: Tool-Centric Robot Manipulation via Interchangeable End-Effectors and Tactile Sensing**|Yunchu Zhang et.al.|[2610.40646](http://arxiv.org/abs/2610.40646)|null|
 |**2026-10-29**|**AcrossDEX 1.0: From Human Motion Pretraining to Bimanual Dexterous Manipulation across Hand Embodiments**|Xiaoyu Yang et.al.|[2610.40210](http://arxiv.org/abs/2610.40210)|null|
 |**2026-10-29**|**Learning Safe Flow Matching Robot Policies from Binary Feasibility Oracles**|Jianming Ma et.al.|[2610.40075](http://arxiv.org/abs/2610.40075)|null|
@@ -462,7 +464,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20261102>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261103>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
