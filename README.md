@@ -1,4 +1,4 @@
-## Updated on 2026.11.11
+## Updated on 2026.11.12
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -219,12 +219,14 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20261111>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261112>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-11-10**|**From Prediction to Action: Learning Physical Context for Deformable Linear Object Manipulation**|Chengxiao Dong et.al.|[2611.14274](http://arxiv.org/abs/2611.14274)|null|<think> 好的，我现在需要处理用户的查询，帮他精简总结这篇论文。首先，我得仔细阅读用户的要求，确保完全理解。用户希望用中文，严格按照【问题】【方法】，总字数控制在300字以内，突出核心创新点，避免技术细节，直接输出总结内容，并且所有内容在同一行内，不要换行，不要其他解释。  首先，我需要分析论文的摘要。论文标题是“From Prediction to Action: Learning Physical Context for Deformable Linear Object Manipulation”，摘要主要讲的是预测能力与决策能力的区别。问题部分应该是指出虽然准确的预测表示不一定对动作选择最有用，尤其是在处理可变形线性物体时。方法部分提到了 Geometry-Pointer-Flow (GPF) 框架，将抓取位置选择与运动生成分离，并比较了不同物理上下文表示。结论是物理上下文应基于支持决策来评估，而不是预测准确性。  接下来要确保符合格式要求。用户给的例子是【问题】...【方法】...【结论】，所以需要把这三部分提炼出来。要注意字数限制，300字以内，所以每部分要简洁。核心创新点包括GPF框架和物理上下文在决策中的应用差异，而不是预测。需要避免技术细节，比如具体的百分比或参数数量，但用户例子中包含了部分数据，可能需要保留关键数字。  然后检查是否有换行符，确保所有内容在同一行。可能需要调整句子结构，使用更简洁的表达。例如，问题部分可以总结为“可变形物体控制中预测能力与决策能力的差异导致实际动作选择效果不足”。方法部分提到GPF框架和不同物理上下文的比较，结论强调评估标准的变化。  最后，验证是否符合所有要求：格式正确，核心创新点突出，字数控制，没有多余内容。可能需要多次调整，确保信息准确且简洁。例如，用户例子中的具体数据是否必要？根据用户要求，避免技术细节，但核心创新点可能需要关键数据支撑，所以保留百分比可能合适。但需要确认是否属于核心创新点。例如，GPF的参数减少和速度提升可能属于方法的核心，而结论中的9.9%误差减少和零样本表现是关键结论。  最终整合成三部分，确保不超过300字，并且严格按格式输出，无换行，无其他解释。 </think> 【问题】可变形物体控制中预测|
+|**2026-11-10**|**DexSeed: Expanding Human Hand-Object Interactions into Robot Demonstrations for Dexterous Policy Learning**|Huaijin Pi et.al.|[2611.14092](http://arxiv.org/abs/2611.14092)|null|<think> 好的，我现在需要处理用户的查询，帮他精简总结一篇论文。首先，我得仔细阅读用户的要求，确保完全理解。用户希望用中文，严格按照【问题】【方法】，总字数控制在300字以内，并且突出核心创新点，避免技术细节。输出格式必须严格，同一行内，不要换行符和其他解释。  首先看论文标题和摘要。标题是DexSeed，主要研究如何从人类手-物体交互生成多样化的机器人示范，用于灵巧的VLA学习。摘要提到现有方法依赖成本高的远程操作示例，而人类手-物体数据是可重用的，但现有方法主要复制给定交互。需要扩展这些交互为VLA训练数据，覆盖不同物体、抓取位置、机械臂和手指动作，以及视觉观察。DexSeed的框架能低成本生成机器人数据，关键是将人类序列扩展，保持抓握，并在物理仿真中实现动作。具体方法包括按抓握模式组织序列，用InteractionMesh进行重定位和机械臂轨迹增强，RL手指控制策略生成可执行回滚，记录观察和动作与抓握描述调优VLA。实验显示优于基线，仿真和实际部署验证了效果。  接下来，我需要提炼问题和方法。问题部分要说明现有方法的不足，即依赖高成本示例，无法有效扩展人类交互到机器人数据，需要覆盖多物体、位置、动作和视觉。方法部分要突出核心创新点：基于抓握模式扩展人类序列，物理仿真中的轨迹跟踪，交互网格重定位和轨迹增强，RL手指控制，以及生成数据调优VLA。结论部分需要提到实验结果，比如接触精度和执行可靠性提升，仿真和实际部署验证。  要注意避免技术细节，比如具体如何组织序列、InteractionMesh的具体机制等，保持简洁。同时要确保问题和方法清晰，突出创新点。检查字数，确保不超过300字，并且格式正确，没有换行符，所有内容在同一行。可能需要多次调整，比如合并句子，使用更简练的表达方式。例如，问题可以总结为现有方法依赖高成本示例，无法有效扩展人类交互到机器人多场景VLA数据。方法则是提出DexSeed框架，通过抓握模式扩展序列，物理仿真实现动作，交互网格重定位和轨迹增强，RL手指控制生成数据，用于调优VLA。结论部分实验|
 |**2026-11-05**|**Latent RL Priors for Data-Efficient Dexterous Manipulation**|Yixiao Wang et.al.|[2611.08458](http://arxiv.org/abs/2611.08458)|null|
 |**2026-11-05**|**MOMASPLAT: Dynamic Novel-View Demonstration Augmentation for Mobile Manipulation**|Sateesh Kumar et.al.|[2611.08372](http://arxiv.org/abs/2611.08372)|null|
 |**2026-11-05**|**Learning the Task or Learning the Verifier? Rethinking Criteria Exposure in Embodied Self-Improvement**|Wenbo Huang et.al.|[2611.08318](http://arxiv.org/abs/2611.08318)|null|
@@ -484,7 +486,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20261111>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261112>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
