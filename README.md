@@ -1,4 +1,4 @@
-## Updated on 2026.11.16
+## Updated on 2026.11.17
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -13,6 +13,9 @@
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-11-16**|**Competent Autonomous Driving Through Fine Tuning Vision Language Action Models with Symbolic Traffic Rules**|Barkin Dagda et.al.|[2611.20648](http://arxiv.org/abs/2611.20648)|null|<think> 好的，我现在需要处理用户的查询，帮他精简总结一篇论文。首先，用户的要求很明确，要用中文，按照【问题】【方法】，总字数控制在300字以内，并且要突出核心创新点，避免技术细节。用户还特别强调严格按照格式输出，所有内容在同一行，不要换行符，不要其他解释。  首先，我需要仔细阅读用户提供的论文摘要，理解其核心内容。论文标题是“通过符号化交通规则微调视觉语言行动模型实现胜任的自动驾驶”，摘要里提到VLA模型在自动驾驶中的应用，但准确预测动作不保证遵守交通规则。论文提出的方法是将符号化的交通规则反馈到策略优化中，结合监督微调和强化学习，用PyReason将英国公路代码转化为可执行的逻辑规则，覆盖速度适应、保持车距和道路用户优先级。评估结果显示在CARLA模拟器上，规则通过率从92.9%提升到97.6%，没有违反优先级规则的情况。  接下来，我需要按照用户给的格式来组织内容。问题部分要简明扼要，指出VLA模型在遵守交通规则上的不足。方法部分要突出核心创新点，即符号化规则反馈和监督强化学习结合，以及使用PyReason处理规则。结论部分要强调结果，提升的合规性和准确率。  需要注意避免技术细节，比如具体的CARLA模拟器、三个RL方法的具体名称等，用户要求不包含这些。同时要确保总字数在300字以内，所以需要精简语言，合并信息。例如，将“监督微调”和“强化学习优化”合并为“监督微调与强化学习优化结合”，用“符号化交通规则”代替“用PyReason将英国公路代码转化为可执行的逻辑规则”。  最后检查格式是否符合要求，所有内容在同一行，没有换行符，严格按照【问题】【方法】，【结论】的顺序，并且没有多余的解释。确保核心创新点突出，比如符号化规则反馈和评估结果。确认字数是否在限制内，可能需要多次调整措辞来压缩字数。 </think> 【问题】VLA模型在自动驾驶中难以确保遵守交通规则；【方法】融合符号化交通规则反馈与监督强化学习优化，将英国公路代码编码为可执行逻辑规则，通过视觉语言模型提取场景特征评估行动后果；【结论】规则通过率|
+|**2026-11-16**|**Fuzzy Explainable Continual Hierarchical Reinforcement Learning for Robotic Navigation**|Peng Qin et.al.|[2611.20427](http://arxiv.org/abs/2611.20427)|null|<think> 好的，我现在需要处理用户的查询，帮他精简总结一篇论文。首先，我要仔细阅读用户的要求，确保完全理解。用户希望用中文，按照【问题】【方法】，总字数控制在300字以内，并且严格按照指定的格式输出，不能有换行符或其他解释。  论文的标题是Fuzzy Explainable Continual Hierarchical Reinforcement Learning for Robotic Navigation。摘要里提到，持续机器人导航需要强化学习策略在适应新环境的同时保留已有知识，而可解释的强化学习要学习有意义的代表行为。但这两个目标有冲突，因为持续学习强调策略稳定性，而可解释性需要自适应探索。现有方法很少同时处理这两个问题。论文提出了FECHRL方法，分两阶段行为克隆策略，平衡快速适应和可解释行为演化，从强模仿指导过渡到自主强化学习。还用了模糊critic基于T-S模糊系统，缓解值外推错误，提高训练稳定性。实验证明在序列多场景导航中有效统一了持续学习和可解释性，保持知识保留和有意义的解释。  接下来，我需要按照用户给的模板来总结：问题、方法、结论。核心创新点要突出，避免技术细节。问题部分要说明持续学习与可解释性的冲突。方法部分要提到两阶段行为克隆和模糊critic。结论部分强调统一框架，稳定保留知识和可解释行为。  要注意字数限制，确保不超过300字。同时，用户要求所有内容在同一行内，没有换行符，所以需要检查格式是否正确。可能还需要调整用词，使语言更精简，比如“解决持续学习与可解释性冲突”而不是详细描述问题。确保每个部分的关键词都准确，比如“两阶段行为克隆策略”、“T-S模糊系统”等。  最后，检查是否符合所有要求：格式正确，无多余内容，核心创新点突出，字数合适。确认无误后，输出结果。 </think> 【问题】持续机器人导航需平衡环境适应与知识保留，但强化学习政策稳定性与可解释行为探索存在冲突；【方法】提出FECHRL框架，采用两阶段行为克隆策略（初期强模仿指导过渡至自主学习）结合T-S模糊系统构建的模糊critic缓解值外推误差；【结论】实现持续学习与可解释性统一，在多场景实验中达成稳定知识保留和可解释行为演化|
+|**2026-11-15**|**Cleanly-DINO: Efficiently Learning Visual Task Spaces for Robotics**|Adrian Röfer et.al.|[2611.20137](http://arxiv.org/abs/2611.20137)|null|<think> 好的，我现在需要帮用户总结这篇论文，按照他们的格式要求。首先，我得仔细阅读用户提供的论文摘要，找出核心问题和方法。  论文标题是“Cleanly-DINO: Efficiently Learning Visual Task Spaces for Robotics”，摘要里提到的问题是，传统的任务学习依赖物体姿态变化，比如抓取，但像清洁这样的任务更多是视觉状态的变化，所以任务表示不明确。方法部分，他们提出了Cleanly-DINO，使用任务相关区域掩码和冻结的ViT特征，通过投影隔离任务空间，然后拟合进展指标。还提到了在真实机器人擦拭流程中的应用。  用户要求突出核心创新点，避免技术细节，控制在300字以内，严格按照问题、方法、结论的格式，同一行，无换行。需要确保不遗漏关键点，比如任务空间的视觉状态变化、投影隔离、进展指标、跨领域应用和实际部署。  可能需要注意术语的简化，比如“projection”翻译为“投影”，“progression metric”是“进展指标”。还要检查是否符合字数限制，可能需要精简语言，比如“评估其定位不完整任务区域和跨视觉领域泛化能力”这样更简洁。  最后确认格式是否正确，没有换行，所有内容在一行，问题、方法、结论用中文，不包含其他解释。确保核心创新点如视觉状态任务空间、投影隔离、进展指标、跨领域和实际应用都涵盖进去。 </think> 问题：传统机器人任务学习依赖物体姿态变化，清洁类任务需从视觉状态变化中抽象任务空间存在表示不明确问题；方法：提出Cleanly-DINO，基于任务相关区域掩码和冻结ViT特征，通过投影隔离任务空间并拟合进展指标，评估其定位不完整任务区域和跨视觉领域泛化能力，应用于强化学习作为观察编码器和奖励信号，并在真实机器人擦拭流程中验证执行指导效果；结论：有效实现清洁任务视觉空间学习，支持跨域迁移和实际部署。|
 |**2026-11-05**|**Latent RL Priors for Data-Efficient Dexterous Manipulation**|Yixiao Wang et.al.|[2611.08458](http://arxiv.org/abs/2611.08458)|null|
 |**2026-11-05**|**Reinforcing End-to-End Autonomous Driving Safety via Negative-Aware Planning in a Unified World-Action Model**|Zihao Zhang et.al.|[2611.08111](http://arxiv.org/abs/2611.08111)|null|
 |**2026-11-05**|**TactileLab: Sim-to-Real Dexterous Robot Manipulation with Efficient Shear-Sensitive Tactile Simulation**|Yijiong Lin et.al.|[2611.07881](http://arxiv.org/abs/2611.07881)|null|
@@ -219,12 +222,13 @@
 |**2026-03-16**|**Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning**|Heng Zhou et.al.|[2603.14811](http://arxiv.org/abs/2603.14811)|null|
 |**2026-03-15**|**HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task**|Xiaoya Lu et.al.|[2603.14367](http://arxiv.org/abs/2603.14367)|null|
 
-<p align=right>(<a href=#updated-on-20261116>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261117>back to top</a>)</p>
 
 ## Imitation Learning & SFT
 
 |Publish Date|Title|Authors|PDF|Code|摘要|
 |---|---|---|---|---|---|
+|**2026-11-16**|**Competent Autonomous Driving Through Fine Tuning Vision Language Action Models with Symbolic Traffic Rules**|Barkin Dagda et.al.|[2611.20648](http://arxiv.org/abs/2611.20648)|null|<think> 好的，我现在需要帮用户总结这篇论文。首先，用户的要求很明确，要用中文精简总结，严格按照问题、方法、结论的格式，控制在300字以内，突出核心创新点，避免技术细节，并且所有内容要在一行内，不换行，不包含其他解释。  首先，我得仔细阅读论文的摘要，找出问题的核心。摘要里提到VLA模型虽然能统一处理感知、推理和控制，但准确预测动作并不保证遵守交通规则。所以问题应该是VLA模型在遵守交通规则上的不足。  接下来是方法部分。论文提出的方法是结合监督微调和使用强化学习优化，引入符号化的交通规则反馈。具体来说，他们用英国道路代码的规则，用PyReason转化为可执行的逻辑规则，然后通过冻结的视觉语言模型提取场景谓词，结合车辆状态评估候选动作的后果。评估用了CARLA模拟器的离线数据，比较了三种RL方法。  结论部分，结果显示方法提升了动作预测准确性和规则遵守率，最佳方案将规则通过率从92.9%提升到97.6%，且零违规。这说明符号规则反馈能有效提升VLA的政策对齐。  现在需要把这些浓缩成问题、方法、结论三个部分，每部分用中文，不超过300字。要注意避免技术细节，比如具体用PyReason和CARLA这些可能属于技术细节，但用户要求突出创新点，所以可能需要保留PyReason作为符号化规则的工具，而CARLA可能可以简略。另外，用户要求直接输出，所以不能有任何解释，严格按照格式。  检查是否符合要求：是否在同一行，有没有换行符，是否包含其他内容。可能需要多次调整，确保字数足够精简，同时涵盖所有关键点。例如，问题部分要明确点出VLA模型在遵守交通规则上的不足；方法部分要说明结合监督微调和强化学习，符号规则反馈，以及评估方式；结论部分强调提升的百分比和零违规的结果。  最后，确保所有内容连贯，没有技术术语堆砌，突出创新点，比如符号规则反馈和RL结合，以及评估结果的有效性。可能还需要调整用词，比如“融合”代替“结合”更正式，但用户可能接受。确认总字数是否在300以内，现在看起来应该没问题。 </think> 问题：Vision-language-action models缺乏有效交通规则约束导致自动驾驶政策偏离规范|
 |**2026-11-10**|**From Prediction to Action: Learning Physical Context for Deformable Linear Object Manipulation**|Chengxiao Dong et.al.|[2611.14274](http://arxiv.org/abs/2611.14274)|null|
 |**2026-11-10**|**DexSeed: Expanding Human Hand-Object Interactions into Robot Demonstrations for Dexterous Policy Learning**|Huaijin Pi et.al.|[2611.14092](http://arxiv.org/abs/2611.14092)|null|
 |**2026-11-05**|**Latent RL Priors for Data-Efficient Dexterous Manipulation**|Yixiao Wang et.al.|[2611.08458](http://arxiv.org/abs/2611.08458)|null|
@@ -486,7 +490,7 @@
 |**2026-03-16**|**HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing**|Konstantin Gubernatorov et.al.|[2603.15257](http://arxiv.org/abs/2603.15257)|null|
 |**2026-03-16**|**KiRAS: Keyframe Guided Self-Imitation for Robust and Adaptive Skill Learning in Quadruped Robots**|Xiaoyi Wei et.al.|[2603.15179](http://arxiv.org/abs/2603.15179)|null|
 
-<p align=right>(<a href=#updated-on-20261116>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20261117>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/HuJiaming11/rl-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/HuJiaming11/rl-arxiv-daily/graphs/contributors
